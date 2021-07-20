@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{345E8678-DED0-4DEA-8AE8-70A047242906}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Storyline", "Storyline\Storyline.csproj", "{C2DAB9FD-5E7D-46C3-A595-D1DF7ED28B07}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C2DAB9FD-5E7D-46C3-A595-D1DF7ED28B07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2DAB9FD-5E7D-46C3-A595-D1DF7ED28B07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2DAB9FD-5E7D-46C3-A595-D1DF7ED28B07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2DAB9FD-5E7D-46C3-A595-D1DF7ED28B07}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C2DAB9FD-5E7D-46C3-A595-D1DF7ED28B07} = {345E8678-DED0-4DEA-8AE8-70A047242906}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7B930860-4F48-4DB5-9AFB-22384032810C}
+	EndGlobalSection
+EndGlobal

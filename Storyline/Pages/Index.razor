@@ -1,0 +1,23 @@
+﻿@page "/"
+@using Storyline.Models
+
+@code{
+    protected IEnumerable<StoryEvent> StoryEvents;
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        if (firstRender)
+        {
+            LoadData();
+        }
+
+        base.OnAfterRender(firstRender);
+    }
+
+    protected void LoadData()
+    {
+
+    }
+}
+
+<StoryEvents Title="Resident Evil" StoryEvents="@StoryEvents"></StoryEvents>
