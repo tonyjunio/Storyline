@@ -1,15 +1,14 @@
 ﻿using Microsoft.AspNetCore.Components;
-using Storyline.Models;
 using System.Collections.Generic;
 
-namespace Storyline.Shared
+namespace Storyline.Shared.StoryEvent
 {
-    public class StoryEventsBase : ComponentBase
+    public class DisplayBase : ComponentBase
     {
         [Parameter]
         public string Title { get; set; }
 
         [Parameter]
-        public IEnumerable<StoryEvent> StoryEvents { get; set; }
+        public IEnumerable<Models.StoryEvent> StoryEvents { get; set; }
     }
 }

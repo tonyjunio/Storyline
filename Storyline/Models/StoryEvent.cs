@@ -12,8 +12,8 @@ namespace Storyline.Models
         public DateTime EventTime { get; set; }
         public string BannerImage { get; set; }
         public IEnumerable<string> CharacterTags { get; set; }
-        public IEnumerable<Organization> OrganizationTags { get; set; }
-        public IEnumerable<Virus> VirusTags { get; set; }
+        public IEnumerable<string> OrganizationTags { get; set; }
+        public IEnumerable<string> VirusTags { get; set; }
     }
 
 }

@@ -2,9 +2,19 @@
   {
     "title": "Racoon City Incident",
     "summary": "The beginning of the horror.",
+    "eventtime": "1998-01-01",
+    "bannerimage": "",
+    "charactertags": [ "leon.k", "claire.r", "ada.w" ],
+    "organizationtags": [ "umbrella", "stars", "usa.gov" ],
+    "virustags": [ "tvirus", "gvirus" ]
+  },
+  {
+    "title": "Racoon City Incident",
+    "summary": "The beginning of the horror.",
     "eventtime": "1996-01-01",
     "bannerimage": "",
-    "charactertags": [ "leon" ],
-    "organizationtags": [ "leon" ]
+    "charactertags": [ "leon.k", "claire.r", "ada.w" ],
+    "organizationtags": [ "umbrella", "stars", "usa.gov" ],
+    "virustags": [ "tvirus", "gvirus" ]
   }
 ]

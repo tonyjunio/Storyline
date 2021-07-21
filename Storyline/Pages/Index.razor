@@ -1,23 +1,27 @@
 ﻿@page "/"
 @using Storyline.Models
+@inject HttpClient Http
 
 @code{
     protected IEnumerable<StoryEvent> StoryEvents;
 
-    protected override void OnAfterRender(bool firstRender)
+    protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        if (firstRender)
-        {
-            LoadData();
-        }
-
-        base.OnAfterRender(firstRender);
+        await this.LoadDataAsync();
     }
 
-    protected void LoadData()
+    protected async Task LoadDataAsync()
     {
+        try
+        {
+            this.StoryEvents = await Http.GetFromJsonAsync<IEnumerable<StoryEvent>>("sample-data/storyline-residentevil.json");
+        }
+        catch (Exception)
+        {
 
+            throw;
+        }
     }
 }
 
-<StoryEvents Title="Resident Evil" StoryEvents="@StoryEvents"></StoryEvents>
+<Storyline.Shared.StoryEvent.Display Title="Resident Evil" StoryEvents="this.StoryEvents"></Storyline.Shared.StoryEvent.Display>
