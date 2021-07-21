@@ -1,0 +1,27 @@
+﻿@page "/"
+@inherits IndexBase
+
+<CascadingValue Name="RefAddEditForm" Value="this.RefAddEditEventForm">
+    <CascadingValue Name="RefEventsDisplay" Value="this.RefEventsDisplay">
+
+        <div class="top-menu">
+            <input type="text" class="form-control event-txt-search" value="" placeholder="Search..." />
+            <button class="btn btn-primary" type="button" @onclick="CreateStoryEvent">
+                <i class="fa fa-plus fa-2x"></i>
+            </button>
+        </div>
+
+        @*Off Canvas: Add/Edit Event *@
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="mainOffCanvas" aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasExampleLabel">Add/Edit Story Event</h5>
+                <i class="fa fa-times" data-bs-dismiss="offcanvas" aria-label="Close"></i>
+            </div>
+            <div class="offcanvas-body">
+                <Storyline.WebApp.Shared.StoryEvent.AddEdit @ref="RefAddEditEventForm"></Storyline.WebApp.Shared.StoryEvent.AddEdit>
+            </div>
+        </div>
+
+        <Storyline.WebApp.Shared.StoryEvent.Display @ref="RefEventsDisplay" Title="Resident Evil" StoryEvents="this.StoryEvents"></Storyline.WebApp.Shared.StoryEvent.Display>
+    </CascadingValue>
+</CascadingValue>

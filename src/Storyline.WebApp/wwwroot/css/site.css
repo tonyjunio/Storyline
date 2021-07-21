@@ -1,0 +1,205 @@
+@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
+
+* {
+    transition: all 0.5s;
+}
+
+body {
+    overflow-y: hidden;
+}
+
+.content {
+    padding-top: 1.1rem;
+}
+
+.valid.modified:not([type=checkbox]) {
+    outline: 1px solid #26b050;
+}
+
+.invalid {
+    outline: 1px solid red;
+}
+
+.validation-message {
+    color: red;
+}
+
+#blazor-error-ui {
+    background: #ffffe030;
+    bottom: 0;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+    color: #fda7a7;
+    display: none;
+    left: 0;
+    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+    #blazor-error-ui .dismiss {
+        cursor: pointer;
+        position: absolute;
+        right: 0.75rem;
+        top: 0.5rem;
+    }
+
+
+
+body::-webkit-scrollbar {
+    width: 1em;
+}
+
+body::-webkit-scrollbar-track {
+    box-shadow: inset 0px -10px 15px 3px rgb(60 60 60 / 91%);
+    background: #000000;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #444444;
+    /* outline: 1px solid #51285f; */
+    border: 1px solid #656565;
+}
+
+
+/* */
+
+.top-menu {
+    display: flex;
+    position: fixed;
+    right: 10px;
+    top: 10px;
+}
+
+.event-txt-search {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 1.3rem;
+    border: 1px solid #390f3e;
+    min-width: 300px;
+}
+
+.story-events {
+    display: flex;
+    bottom: -12vh;
+    height: 85vh;
+    position: relative;
+}
+
+    .story-events .event-backdrop {
+        background-size: cover;
+        display: flex;
+        overflow: hidden;
+        box-shadow: -82px 49px 46px -32px #0e0b0ea6;
+        border-right: 1px solid #525252;
+        border-bottom: 20px solid #770c0c;
+        background-position: center top;
+    }
+
+        .story-events .event-backdrop:hover {
+        border-bottom-color: #d8d8d8;
+        border-bottom-width: 30px;
+        }
+            .story-events .event-backdrop:hover .event {
+            background: #0000008c;
+            }
+            .story-events .event-backdrop:hover article h2 {
+            color: #ffffff;
+            }
+
+    .story-events .event {
+        width: 28vw;
+        background: #000000a1;
+        margin: 0;
+        padding: 20px 25px 30px;
+        position: relative;
+        min-width: 290px;
+    }
+
+        .story-events .event > button {
+            background-color: #00000066;
+            border: 1px solid #ffffff1a;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            color: #6b6b6b;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+
+            .story-events .event > button.btn .fa {
+            }
+
+        .story-events .event article {
+        }
+
+            .story-events .event article h2 {
+                border-bottom: 1px solid #bf2929;
+                padding-bottom: 20px;
+                font-size: 2.2rem;
+                padding-right: 30px;
+                color: #bf2929;
+            }
+
+            .story-events .event article .event-time {
+                font-size: 1.2rem;
+                color: #000000;
+                text-align: center;
+                background: #bf2929;
+                display: inline-block;
+                padding: 0px 10px;
+                position: relative;
+                top: -20px;
+                left: 20px;
+                border-radius: 2px;
+            }
+
+            .story-events .event article p {
+                color: #9c9c9c;
+            }
+
+            .story-events .event article .characters, .story-events .event article .organizations, .story-events .event article .viruses {
+                align-items: center;
+                display: flex;
+                font-size: 0.7rem;
+                margin-bottom: 5px;
+                padding: 0;
+            }
+
+            .story-events .event article .character, .story-events .event article .organization, .story-events .event article .virus {
+                background-color: #ffffff0f;
+                display: inline-block;
+                height: 100px;
+                margin: 0px 3px 0 0;
+                padding: 0px;
+                text-align: center;
+                width: 75px;
+                color: #b9645f;
+            }
+
+
+.save-event-form {
+}
+
+    .save-event-form .collection-info {
+    }
+        .save-event-form .collection-info span {
+            color: #000000;
+            background: #ffffff;
+            padding: 1px 5px;
+            margin: 2px;
+            display: inline-block;
+            border-radius: 2px;
+            display: inline-flex;
+            align-items: center;
+            font-weight: 600;
+        }
+            .save-event-form .collection-info span .fa {
+                color: #000000;
+                cursor: pointer;
+                font-size: 1.2rem;
+                margin-left: 3px;
+            }
+                .save-event-form .collection-info span .fa:hover {
+                    color: #982323;
+                }

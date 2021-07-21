@@ -1,0 +1,82 @@
+﻿@inherits DisplayBase
+
+<div style="
+    background-image: url(https://www.teamhitless.com/wp-content/uploads/2021/06/1718854918_preview_resident-evil-2-remake-ps4-eu-22jun18.png);
+    display: inline-block;
+    width: 420px;
+    height: 200px;
+    position: fixed;
+    top: -47px;
+    z-index: 0;
+    background-position: center;"></div>
+
+@if (this.StoryEvents != null)
+{
+<div class="story-events">
+    @foreach (var story in this.StoryEvents.OrderBy(x => x.EventTimeStart))
+        {
+    <div class="event-backdrop" style="background-image:url(@story.BannerImage)">
+        <div class="event">
+            <button @onclick="@(() => EditStoryEvent(story))">
+                <i class="fa fa-pencil-alt fa-lg"></i>
+            </button>
+            <article>
+                <h2>@story.Title</h2>
+                <div class="event-time">@($"{story.EventTimeStart:MMMM yyyy}")@((story.EventTimeEnd.HasValue ? $" - {story.EventTimeEnd:MMMM yyyy}" : ""))</div>
+                <p class="summary">@story.Summary</p>
+
+                @if (story.CharacterTags != null)
+                            {
+                <div class="characters">
+                    @foreach (var entry in story.CharacterTags)
+                                    {
+                    <span class="character">@entry</span>
+                                    }
+                </div>
+                            }
+
+                @if (story.OrganizationTags != null)
+                            {
+                <div class="organizations">
+                    @foreach (var entry in story.OrganizationTags)
+                                    {
+                    <span class="character">@entry</span>
+                                    }
+                </div>
+                            }
+
+                @if (story.VirusTags != null)
+                            {
+                <div class="viruses">
+                    @foreach (var entry in story.VirusTags)
+                                    {
+                    <span class="character">@entry</span>
+                                    }
+                </div>
+                            }
+
+                @if (story.GameTags != null)
+                            {
+                <div class="viruses">
+                    @foreach (var entry in story.GameTags)
+                                    {
+                    <span class="character">@entry</span>
+                                    }
+                </div>
+                            }
+
+                @if (story.MovieTags != null)
+                            {
+                <div class="viruses">
+                    @foreach (var entry in story.MovieTags)
+                                    {
+                    <span class="character">@entry</span>
+                                    }
+                </div>
+                            }
+            </article>
+        </div>
+    </div>
+        }
+</div>
+}
