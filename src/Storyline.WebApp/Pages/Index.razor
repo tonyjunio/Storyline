@@ -1,0 +1,10 @@
+﻿@page "/"
+@inherits IndexBase
+
+
+<button class="btn btn-primary" @onclick="@(async() => await this.LoadDataAsync())">Load</button>
+<button class="btn btn-primary" @onclick="@this.GenerateText">Test</button>
+
+<b>@this.Data</b>
+
+<Storyline.WebApp.Shared.StoryEvent.Display Title="Resident Evil" StoryEvents="this.StoryEvents"></Storyline.WebApp.Shared.StoryEvent.Display>

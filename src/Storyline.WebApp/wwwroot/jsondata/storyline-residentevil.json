@@ -1,0 +1,32 @@
+﻿[
+  {
+    "eventid": "0f97eb20032e45bdb21b8507bf692790",
+    "title": "Mansion Incident",
+    "summary": "Stars Alpha team's investigation in the Arklay mountains.",
+    "eventtime": "1998-07-24",
+    "bannerimage": "",
+    "charactertags": [ "chris.r", "jill.v", "wesker", "burry.b" ],
+    "organizationtags": [ "umbrella", "stars" ],
+    "virustags": [ "tvirus", "gvirus" ]
+  },
+  {
+    "eventid": "b35618afde7445458c22451a0b7bafe4",
+    "title": "Racoon City Destruction Incident",
+    "summary": "The beginning of the horror.",
+    "eventtime": "1998-09-25",
+    "bannerimage": "",
+    "charactertags": [ "leon.k", "claire.r", "ada.w" ],
+    "organizationtags": [ "umbrella", "stars", "usa.gov" ],
+    "virustags": [ "tvirus", "gvirus" ]
+  },
+  {
+    "eventid": "e9387187f0b6488084f6cff1db9073b5",
+    "title": "Damnation",
+    "summary": "Civil War",
+    "eventtime": "2000-01-01",
+    "bannerimage": "",
+    "charactertags": [ "leon.k", "ada.w" ],
+    "organizationtags": [ "united.nation", "wesker" ],
+    "virustags": [ "tvirus" ]
+  }
+]
