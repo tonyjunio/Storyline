@@ -1,7 +1,7 @@
 @import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
 
 * {
-    transition: all 0.3s;
+    transition: all 0.5s;
 }
 
 body {
@@ -51,12 +51,14 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0px -10px 15px 3px rgb(60 60 60 / 91%);
+    background: #000000;
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: darkgrey;
-    outline: 1px solid slategrey;
+    background-color: #444444;
+    /* outline: 1px solid #51285f; */
+    border: 1px solid #656565;
 }
 
 
@@ -95,13 +97,14 @@ body::-webkit-scrollbar-thumb {
     }
 
         .story-events .event-backdrop:hover {
-        border-bottom-color: #510d67;
+        border-bottom-color: #d8d8d8;
+        border-bottom-width: 30px;
         }
             .story-events .event-backdrop:hover .event {
             background: #0000008c;
             }
             .story-events .event-backdrop:hover article h2 {
-            color: #f8e2ff;
+            color: #ffffff;
             }
 
     .story-events .event {
@@ -133,7 +136,7 @@ body::-webkit-scrollbar-thumb {
             .story-events .event article h2 {
                 border-bottom: 1px solid #bf2929;
                 padding-bottom: 20px;
-                font-size: 1.7rem;
+                font-size: 2.2rem;
                 padding-right: 30px;
                 color: #bf2929;
             }
