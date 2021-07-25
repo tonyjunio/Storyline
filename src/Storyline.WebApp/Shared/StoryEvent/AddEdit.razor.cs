@@ -96,11 +96,13 @@ namespace Storyline.WebApp.Shared.StoryEvent
                     {
                         // Update story event.
                         Models.StoryEvent entry = storyEvents.FirstOrDefault(x => x.EventId == this.FormData.EventId);
-                        entry = this.FormData;
+                        storyEvents.Remove(entry);
+
+                        storyEvents.Add(this.FormData);
                     }
 
                     string jsonData = JsonSerializer.Serialize(storyEvents);
-                    string path = Path.Combine(HostEnv.WebRootPath, $"jsondata/storyline-residentevil.json");
+                    string path = Path.Combine(HostEnv.WebRootPath, @$"jsondata\storyline-residentevil.json");
 
                     // Force to a fixed local drive path, so published can also reflect its changes to a single point.
                     //  D:\[Development]\Projects\AerionX\Storyline\src\Storyline.WebApp\wwwroot\jsondata
