@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Storyline.Models
+namespace Storyline.WebApp.Models
 {
     public class StoryEvent
     {
@@ -15,6 +15,8 @@ namespace Storyline.Models
         public IEnumerable<string> CharacterTags { get; set; }
         public IEnumerable<string> OrganizationTags { get; set; }
         public IEnumerable<string> VirusTags { get; set; }
+        public IEnumerable<string> GameTags { get; set; }
+        public IEnumerable<string> MovieTags { get; set; }
     }
 
 }

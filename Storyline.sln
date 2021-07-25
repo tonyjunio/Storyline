@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{2969853F-326A-4C6D-B8EE-B66EB41027D4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Storyline.WebApp", "src\Storyline.WebApp\Storyline.WebApp.csproj", "{E7E44DBE-E993-4093-BCE8-499704926228}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Storyline.WebApp", "src\Storyline.WebApp\Storyline.WebApp.csproj", "{E7E44DBE-E993-4093-BCE8-499704926228}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

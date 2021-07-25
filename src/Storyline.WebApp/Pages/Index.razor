@@ -1,10 +1,25 @@
 ﻿@page "/"
 @inherits IndexBase
 
+<CascadingValue Name="RefAddEditForm" Value="this.RefAddEditEventForm">
+    <CascadingValue Name="RefEventsDisplay" Value="this.RefEventsDisplay">
 
-<button class="btn btn-primary" @onclick="@(async() => await this.LoadDataAsync())">Load</button>
-<button class="btn btn-primary" @onclick="@this.GenerateText">Test</button>
+        <div class="m-1 float-end d-flex">
+            <input type="text" class="form-control event-txt-search" value="" placeholder="Search..." />
+            <button class="btn btn-primary" type="button" @onclick="CreateStoryEvent">
+                <i class="fa fa-plus fa-2x"></i>
+            </button>
+        </div>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="mainOffCanvas" aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasExampleLabel">Menu &amp; Settings</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <Storyline.WebApp.Shared.StoryEvent.AddEdit @ref="RefAddEditEventForm" SelectedStoryEvent="@(new ())"></Storyline.WebApp.Shared.StoryEvent.AddEdit>
+            </div>
+        </div>
 
-<b>@this.Data</b>
-
-<Storyline.WebApp.Shared.StoryEvent.Display Title="Resident Evil" StoryEvents="this.StoryEvents"></Storyline.WebApp.Shared.StoryEvent.Display>
+        <Storyline.WebApp.Shared.StoryEvent.Display @ref="RefEventsDisplay" Title="Resident Evil" StoryEvents="this.StoryEvents"></Storyline.WebApp.Shared.StoryEvent.Display>
+    </CascadingValue>
+</CascadingValue>

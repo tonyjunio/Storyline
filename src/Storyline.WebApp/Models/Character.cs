@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Storyline.Models
+namespace Storyline.WebApp.Models
 {
     public class Character
     {

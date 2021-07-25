@@ -1,36 +1,52 @@
-﻿
+﻿@inherits AddEditBase
+
 <div>
     <h3>Add / Edit Event</h3>
 
-    <div>
+    <EditForm Model="@this.AddEditForm" OnValidSubmit="@(async () => await SubmitAddEditFormAsync())">
+        <input type="hidden" @bind-value="@this.AddEditForm.Id" />
         <div class="mb-3">
             <label>Event Title</label>
-            <input type="text" class="form-control" placeholder="Title" />
+            <input type="text" class="form-control" placeholder="Title" @bind-value="@this.AddEditForm.Title" />
         </div>
         <div class="mb-3">
             <label>Event Summary</label>
-            <textarea class="form-control" placeholder="Summary"></textarea>
+            <textarea class="form-control" placeholder="Summary" @bind="@this.AddEditForm.Summary"></textarea>
         </div>
         <div class="mb-3">
             <label>Event Time</label>
-            <input type="datetime" class="form-control" placeholder="Event Time" />
+            <input type="datetime" class="form-control" placeholder="Event Time" @bind="this.AddEditForm.EventTime" @bind:format="yyyy, MMMM dd" />
         </div>
         <div class="mb-3">
             <label>Characters</label>
-
+            <input type="text" class="form-control" placeholder="Characters Tags" @bind="this.AddEditForm.Characters" />
         </div>
         <div class="mb-3">
             <label>Organizations</label>
-
+            <input type="text" class="form-control" placeholder="Organizations Tags" @bind="this.AddEditForm.Organizations" />
         </div>
         <div class="mb-3">
             <label>Viruses</label>
-
+            <input type="text" class="form-control" placeholder="Viruses Tags" @bind="this.AddEditForm.Viruses" />
         </div>
+        <div class="mb-3">
+            <label>Games</label>
+            <input type="text" class="form-control" placeholder="Games Tags" @bind="this.AddEditForm.Games" />
+        </div>
+        <div class="mb-3">
+            <label>Movies</label>
+            <input type="text" class="form-control" placeholder="Movies Tags" @bind="this.AddEditForm.Movies" />
+        </div>
+        <div class="mb-3">
+            <label>Hero Image</label>
+            <input type="text" class="form-control" placeholder="Paste a Hero Image" @bind="this.AddEditForm.BannerImage" />
+        </div>
+        <div class="mt-5">
+            <button class="btn btn-primary"><i class="oi @(VState == ViewState.Create ? "oi-plus": "oi-pencil")"></i> @(VState == ViewState.Create ? "Create" : "Update")</button>
+        </div>
+    </EditForm>
+
+    <div class="text-danger">
+        @SaveError
     </div>
 </div>
-
-
-@code{
-
-}
