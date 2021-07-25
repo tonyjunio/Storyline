@@ -27,9 +27,9 @@ namespace Storyline.WebApp.Pages
         protected IEnumerable<Models.StoryEvent> StoryEvents { get; set; }
         protected string ErrMsg { get; set; }
 
-        public AddEdit RefAddEditEventForm { get; set; }
+        public Shared.StoryEvent.AddEdit RefAddEditEventForm { get; set; }
 
-        public Display RefEventsDisplay { get; set; }
+        public Shared.StoryEvent.Display RefEventsDisplay { get; set; }
 
         protected override async Task OnInitializedAsync()
         {

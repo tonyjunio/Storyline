@@ -36,48 +36,71 @@
         top: 0.5rem;
     }
 
+
+
+body::-webkit-scrollbar {
+    width: 1em;
+}
+
+body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+}
+
+
 /* */
 
+.top-menu {
+    display: flex;
+    position: fixed;
+    right: 10px;
+    top: 10px;
+}
+
 .event-txt-search {
-
-display: inline-block;
-
-margin: 0 10px;
-
-font-size: 1.3rem;
-
-border: 1px solid #390f3e;
-
-min-width: 300px;
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 1.3rem;
+    border: 1px solid #390f3e;
+    min-width: 300px;
 }
 
 .story-events {
     display: flex;
+    bottom: -12vh;
+    height: 80vh;
+    position: relative;
 }
+
     .story-events .event-backdrop {
         background-size: cover;
-        border-radius: 10px;
         display: flex;
-        margin: 10px;
         overflow: hidden;
-        box-shadow: 0px 5px 10px -3px #110117;
+        box-shadow: -82px 49px 46px -32px #0e0b0ea6;
+        border-right: 1px solid #525252;
+        background-blend-mode: soft-light;
+        border-bottom: 15px solid #770c0c;
     }
 
     .story-events .event {
-        width: 400px;
-        background: #10040099;
+        width: 450px;
+        background: #00000094;
         margin: 0;
         padding: 20px 25px 30px;
         position: relative;
     }
 
         .story-events .event > button {
-            background-color: #0c0402;
-            border: 1px solid #231a1e;
+            background-color: #00000066;
+            border: 1px solid #ffffff1a;
             position: absolute;
             right: 10px;
             top: 10px;
-            color: #85654a;
+            color: #6b6b6b;
             padding: 5px 10px;
             border-radius: 4px;
         }
@@ -91,22 +114,67 @@ min-width: 300px;
             .story-events .event article h2 {
                 border-bottom: 1px solid #ffffff1c;
                 padding-bottom: 5px;
+                font-size: 1.7rem;
+                padding-right: 30px;
+                color: #770c0c;
             }
 
             .story-events .event article .event-time {
                 font-size: 1.2rem;
-                color: #947b54;
+                color: #000000;
+                /* text-align: center; */
+                background: #bf2929;
+                display: inline-block;
+                padding: 0px 5px;
+                position: relative;
+                top: -9px;
             }
 
             .story-events .event article p {
-            color: #888888;
+                color: #9c9c9c;
             }
 
-            .story-events .event article .characters {
+            .story-events .event article .characters, .story-events .event article .organizations, .story-events .event article .viruses {
+                align-items: center;
+                display: flex;
+                font-size: 0.5rem;
+                margin-bottom: 5px;
+                padding: 0;
             }
 
-            .story-events .event article .organizations {
+            .story-events .event article .character, .story-events .event article .organization, .story-events .event article .virus {
+                background-color: #3c3c3cba;
+                display: inline-block;
+                height: 45px;
+                margin: 0px 3px 0 0;
+                padding: 2px;
+                text-align: center;
+                width: 50px;
             }
 
-            .story-events .event article .viruses {
+
+.save-event-form {
+}
+
+    .save-event-form .collection-info {
+    }
+        .save-event-form .collection-info span {
+            color: #000000;
+            background: #ffffff;
+            padding: 1px 5px;
+            margin: 2px;
+            display: inline-block;
+            border-radius: 2px;
+            display: inline-flex;
+            align-items: center;
+            font-weight: 600;
+        }
+            .save-event-form .collection-info span .fa {
+                color: #000000;
+                cursor: pointer;
+                font-size: 1.2rem;
+                margin-left: 3px;
             }
+                .save-event-form .collection-info span .fa:hover {
+                    color: #982323;
+                }

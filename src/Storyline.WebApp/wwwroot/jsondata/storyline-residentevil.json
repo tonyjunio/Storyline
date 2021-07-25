@@ -1,1 +1,80 @@
-﻿[{"EventId":"0f97eb20032e45bdb21b8507bf692790","Title":"Mansion Incident","Summary":"Stars Alpha team\u0027s investigation in the Arklay mountains.","EventTime":"1998-07-24T00:00:00","BannerImage":"https://bloody-disgusting.com/wp-content/uploads/2014/08/Mansion_front.jpg","CharacterTags":["chris.r","jill.v","wesker","burry.b"],"OrganizationTags":["umbrella","stars"],"VirusTags":["tvirus","gvirus"],"GameTags":["Resident Evil: The Umbrella Chronicles"," Resident Evil"],"MovieTags":[""]},{"EventId":"b35618afde7445458c22451a0b7bafe4","Title":"Racoon City Destruction Incident","Summary":"The beginning of the horror.","EventTime":"1998-09-25T00:00:00","BannerImage":"https://qph.fs.quoracdn.net/main-qimg-4faad08d4f2e66d149dc133415dbca7f","CharacterTags":["leon.k","claire.r","ada.w"],"OrganizationTags":["umbrella","stars","usa.gov"],"VirusTags":["tvirus","gvirus"],"GameTags":["Resident Evil 2"," Resident Evil 3"],"MovieTags":[""]},{"EventId":"e9387187f0b6488084f6cff1db9073b5","Title":"Damnation (East Slavic Civil War Outbreak)","Summary":"A war in East Slavic Civil War between the military loayal to the Preseident Svetlana Belikova with corporate support, and the pro-independence forces who sought an end to the oligarchical rule of their region. A joint-operation by American and Russian forces is involved to end the conflict.","EventTime":"2010-01-11T00:00:00","BannerImage":"","CharacterTags":["leon.k","ada.w",""],"OrganizationTags":["american.military","russian.military",""],"VirusTags":["tvirus","plagas"],"GameTags":null,"MovieTags":null},{"EventId":"e7b328da073540f7ae1141abe57a2c72","Title":"Ecliptic Express Incident","Summary":"STARS Bravo team investigated the mysterious disappearances of people in the surrounding of the Arklay Mountains.","EventTime":"1998-07-23T00:00:00","BannerImage":"https://steamcdn-a.akamaihd.net/steamcommunity/public/images/items/339340/6edc7daa991c7106bc2602aae35166c9b23ee49f.jpg","CharacterTags":["rebecca.chambers"," billy.coen"," james.marcus"," william.birkin"," albert.wesker"," edward.dewey"],"OrganizationTags":["stars","umbrella"],"VirusTags":["tvirus","g-virus"],"GameTags":["Resident Evil 0"," Resident Evil: The Umbrella Chronicles"],"MovieTags":[""]}]
+﻿[
+  {
+    "EventId": "0f97eb20032e45bdb21b8507bf692790",
+    "Title": "Mansion Incident",
+    "Summary": "Stars Alpha team\u0027s investigation in the Arklay mountains.",
+    "EventTimeStart": "1998-07-24T00:00:00",
+    "EventTimeEnd": null,
+    "BannerImage": "https://bloody-disgusting.com/wp-content/uploads/2014/08/Mansion_front.jpg",
+    "CharacterTags": null,
+    "OrganizationTags": [ "umbrella", "stars" ],
+    "VirusTags": [ "tvirus", "gvirus" ],
+    "GameTags": [ "Resident Evil: The Umbrella Chronicles", " Resident Evil" ],
+    "MovieTags": [ "" ]
+  },
+  {
+    "EventId": "b35618afde7445458c22451a0b7bafe4",
+    "Title": "Racoon City Destruction Incident",
+    "Summary": "The beginning of the horror.",
+    "EventTimeStart": "1998-09-25T00:00:00",
+    "EventTimeEnd": null,
+    "BannerImage": "https://qph.fs.quoracdn.net/main-qimg-4faad08d4f2e66d149dc133415dbca7f",
+    "CharacterTags": null,
+    "OrganizationTags": [ "umbrella", "stars", "usa.gov" ],
+    "VirusTags": [ "tvirus", "gvirus" ],
+    "GameTags": [ "Resident Evil Outbreak series", " Resident Evil 3: Nemesis", " Resident Evil 2", " Resident Evil: The Umbrella Chronicles" ],
+    "MovieTags": [ "" ]
+  },
+  {
+    "EventId": "e9387187f0b6488084f6cff1db9073b5",
+    "Title": "Damnation (East Slavic Civil War Outbreak)",
+    "Summary": "A war in East Slavic Civil War between the military loayal to the Preseident Svetlana Belikova with corporate support, and the pro-independence forces who sought an end to the oligarchical rule of their region. A joint-operation by American and Russian forces is involved to end the conflict.",
+    "EventTimeStart": "2010-01-11T00:00:00",
+    "EventTimeEnd": null,
+    "BannerImage": "https://64.media.tumblr.com/00bf23231840cd668318b3626d796612/88696cee1581bf12-da/s500x750/782cbf79fe327ea71c2ec8c47f0a5c06cd694885.gifv",
+    "CharacterTags": null,
+    "OrganizationTags": [ "american.military", "russian.military", "" ],
+    "VirusTags": [ "tvirus", "plagas" ],
+    "GameTags": [ "" ],
+    "MovieTags": [ "" ]
+  },
+  {
+    "EventId": "e7b328da073540f7ae1141abe57a2c72",
+    "Title": "Ecliptic Express Incident",
+    "Summary": "STARS Bravo team investigated the mysterious disappearances of people in the surrounding of the Arklay Mountains.",
+    "EventTimeStart": "1998-07-23T00:00:00",
+    "EventTimeEnd": null,
+    "BannerImage": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/items/339340/6edc7daa991c7106bc2602aae35166c9b23ee49f.jpg",
+    "CharacterTags": null,
+    "OrganizationTags": [ "stars", "umbrella" ],
+    "VirusTags": [ "tvirus", "g-virus" ],
+    "GameTags": [ "Resident Evil 0", " Resident Evil: The Umbrella Chronicles" ],
+    "MovieTags": [ "" ]
+  },
+  {
+    "EventId": "1b4da48d156d4c49b668ef476172e64a",
+    "Title": "Penamstan Civil War",
+    "Summary": "The Penamstan Civil War (\u30DA\u30CA\u30E0\u30B9\u30BF\u30F3\u5185\u6226\u306A\u3044\u305B\u3093 penamusutan naisen?) was a conflict which took place in Penamstan around the year 2000, and saw one of the first uses of Progenitor-derived bio-weaponry in a warzone.",
+    "EventTimeStart": "2000-10-01T00:00:00",
+    "EventTimeEnd": "2006-01-01T00:00:00",
+    "BannerImage": "https://s.yimg.com/uu/api/res/1.2/bhXAphXKiqaAy6EEqtYXVw--~B/Zmk9ZmlsbDtoPTQyNjt3PTY3NTthcHBpZD15dGFjaHlvbg--/https://s.yimg.com/os/creatr-uploaded-images/2021-06/f47ef3a0-caa4-11eb-b9df-1702d54b1d8d.cf.jpg",
+    "CharacterTags": null,
+    "OrganizationTags": [ "us govt", " tricell", " mad dogs. terrasave" ],
+    "VirusTags": [ "" ],
+    "GameTags": [ "" ],
+    "MovieTags": [ "" ]
+  },
+  {
+    "EventId": "0586a6a3392c40cf881befd442f3915b",
+    "Title": "South American incident",
+    "Summary": "The 2002 South American incident was a viral outbreak which spread in the Amparo region of the Amazon Rainforest. It was an intentional release of the t-Virus on the part of Javier Hidalgo, a local war-lord as an act of vengeance for the disappearance of his daughter and his tense relationship with the collapsing Umbrella Corporation",
+    "EventTimeStart": "2002-01-01T00:00:00",
+    "EventTimeEnd": null,
+    "BannerImage": "https://www.kawaiidream.net/data/media/329/ResidentEvilTheDarksideChronicles_JavierArtwork.jpg",
+    "CharacterTags": null,
+    "OrganizationTags": [ "us govt", " usstratcom", " ussocom", " sacred snakes" ],
+    "VirusTags": [ "t-virus", " t-veronica virus" ],
+    "GameTags": [ "Resident Evil: The Darkside Chronicles" ],
+    "MovieTags": [ "" ]
+  }
+]

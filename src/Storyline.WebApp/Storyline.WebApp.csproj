@@ -5,6 +5,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Update="wwwroot\jsondata\storyline-residentevil-characters.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Update="wwwroot\jsondata\storyline-residentevil.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

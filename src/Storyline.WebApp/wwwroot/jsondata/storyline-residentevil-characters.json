@@ -1,0 +1,37 @@
+﻿[
+  {
+    "code": "rebecca.c",
+    "name": "Rebecca Chambers",
+    "Biography": ""
+  },
+  {
+    "code": "chris.r",
+    "name": "Chris Redfield",
+    "Biography": ""
+  },
+  {
+    "code": "jill.v",
+    "name": "Jill Valentine",
+    "Biography": ""
+  },
+  {
+    "code": "leon.k",
+    "name": "Leon S. Kennedy",
+    "Biography": ""
+  },
+  {
+    "code": "claire.r",
+    "name": "Claire Redfield",
+    "Biography": ""
+  },
+  {
+    "code": "barry.b",
+    "name": "Barry Burton",
+    "Biography": ""
+  },
+  {
+    "code": "albert.w",
+    "name": "Albert Wesker",
+    "Biography": ""
+  }
+]

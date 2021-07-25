@@ -27,9 +27,9 @@ namespace Storyline.WebApp.Shared.StoryEvent
         public Models.StoryEvent SelectedStoryEvent { get; set; }
 
         [CascadingParameter(Name = "RefEventsDisplay")]
-        public StoryEvent.Display RefEventsDisplay { get; set; }
+        public Shared.StoryEvent.Display RefEventsDisplay { get; set; }
 
-        protected AddEditStoryEventForm AddEditForm;
+        protected Models.StoryEvent FormData;
 
         protected string SaveError { get; set; }
 
@@ -38,7 +38,7 @@ namespace Storyline.WebApp.Shared.StoryEvent
         protected override void OnInitialized()
         {
             this.Http.BaseAddress = new Uri(Navigator.BaseUri);
-            this.AddEditForm = new();
+            this.FormData = new();
         }
         protected override void OnAfterRender(bool firstRender)
         {
@@ -52,21 +52,9 @@ namespace Storyline.WebApp.Shared.StoryEvent
         {
             if (this.SelectedStoryEvent != null && this.SelectedStoryEvent.EventId != null)
             {
-                this.AddEditForm = new()
-                {
-                    Id = this.SelectedStoryEvent.EventId,
-                    Title = this.SelectedStoryEvent.Title,
-                    Summary = this.SelectedStoryEvent.Summary,
-                    EventTime = this.SelectedStoryEvent.EventTime,
-                    Characters = string.Join(',', this.SelectedStoryEvent.CharacterTags ?? new[] { "" }),
-                    Organizations = string.Join(',', this.SelectedStoryEvent.OrganizationTags ?? new[] { "" }),
-                    Viruses = string.Join(',', this.SelectedStoryEvent.VirusTags ?? new[] { "" }),
-                    Games = string.Join(',', this.SelectedStoryEvent.GameTags ?? new[] { "" }),
-                    Movies = string.Join(',', this.SelectedStoryEvent.MovieTags ?? new[] { "" }),
-                    BannerImage = this.SelectedStoryEvent.BannerImage
-                };
+                this.FormData = this.SelectedStoryEvent;
 
-                if (!string.IsNullOrWhiteSpace(this.AddEditForm.Id))
+                if (!string.IsNullOrWhiteSpace(this.FormData.EventId))
                 {
                     this.VState = ViewState.Update;
                 }
@@ -75,7 +63,7 @@ namespace Storyline.WebApp.Shared.StoryEvent
             }
             else
             {
-                this.AddEditForm = new();
+                this.FormData = new();
                 this.VState = ViewState.Create;
                 this.StateHasChanged();
             }
@@ -83,7 +71,7 @@ namespace Storyline.WebApp.Shared.StoryEvent
 
         protected async Task SubmitAddEditFormAsync()
         {
-            if (this.AddEditForm != null)
+            if (this.FormData != null)
             {
                 try
                 {
@@ -94,43 +82,41 @@ namespace Storyline.WebApp.Shared.StoryEvent
                         storyEvents = new List<Models.StoryEvent>();
                     }
 
-                    if (string.IsNullOrEmpty(this.AddEditForm.Id))
+                    if (string.IsNullOrEmpty(this.FormData.EventId))
                     {
-                        // Create New
-                        Models.StoryEvent newEntry = new Models.StoryEvent
-                        {
-                            EventId = Guid.NewGuid().ToString().Replace("-", ""),
-                            Title = this.AddEditForm.Title,
-                            Summary = this.AddEditForm.Summary,
-                            EventTime = this.AddEditForm.EventTime,
-                            CharacterTags = this.AddEditForm.Characters.Split(',', ';'),
-                            OrganizationTags = this.AddEditForm.Organizations.Split(',', ';'),
-                            VirusTags = this.AddEditForm.Viruses.Split(',', ';'),
-                            GameTags = this.AddEditForm.Games.Split(',', ';'),
-                            MovieTags = this.AddEditForm.Movies.Split(',', ';'),
-                            BannerImage = this.AddEditForm.BannerImage
-                        };
+                        // Create new story event.
+                        this.FormData.EventId = Guid.NewGuid().ToString().Replace("-", "");
 
-                        storyEvents.Add(newEntry);
+                        // TODO: Iterate form characters.
+                        // this.FormData.CharacterTags = 
+
+                        storyEvents.Add(this.FormData);
                     }
                     else
                     {
-                        Models.StoryEvent entry = storyEvents.FirstOrDefault(x => x.EventId == this.AddEditForm.Id);
-                        entry.EventId = this.AddEditForm.Id;
-                        entry.Title = this.AddEditForm.Title;
-                        entry.Summary = this.AddEditForm.Summary;
-                        entry.EventTime = this.AddEditForm.EventTime;
-                        entry.CharacterTags = this.AddEditForm.Characters.Split(',', ';');
-                        entry.OrganizationTags = this.AddEditForm.Organizations.Split(',', ';');
-                        entry.VirusTags = this.AddEditForm.Viruses.Split(',', ';');
-                        entry.GameTags = this.AddEditForm.Games.Split(',', ';');
-                        entry.MovieTags = this.AddEditForm.Movies.Split(',', ';');
-                        entry.BannerImage = this.AddEditForm.BannerImage;
+                        // Update story event.
+                        Models.StoryEvent entry = storyEvents.FirstOrDefault(x => x.EventId == this.FormData.EventId);
+                        entry = this.FormData;
                     }
 
                     string jsonData = JsonSerializer.Serialize(storyEvents);
                     string path = Path.Combine(HostEnv.WebRootPath, $"jsondata/storyline-residentevil.json");
+
+                    // Force to a fixed local drive path, so published can also reflect its changes to a single point.
+                    //  D:\[Development]\Projects\AerionX\Storyline\src\Storyline.WebApp\wwwroot\jsondata
+                    path = @"D:\[Development]\Projects\AerionX\Storyline\src\Storyline.WebApp\wwwroot\jsondata\storyline-residentevil.json";
                     File.WriteAllText(path, jsonData, Encoding.UTF8);
+
+                    // Try saving to released.
+                    try
+                    {
+                        string publishedPath = @"D:\[Development]\Projects\AerionX\Storyline\src\Storyline.WebApp\bin\Release\net5.0\publish\wwwroot\jsondata\storyline-residentevil.json";
+                        File.WriteAllText(publishedPath, jsonData, Encoding.UTF8);
+                    }
+                    catch (Exception)
+                    {
+                        // Don't sweat the error.
+                    }
 
                     RefEventsDisplay.SetStoryEvents(storyEvents);
                 }
@@ -147,19 +133,20 @@ namespace Storyline.WebApp.Shared.StoryEvent
             MapValuesToForm();
         }
 
-        public class AddEditStoryEventForm
-        {
-            public string Id { get; set; }
-            public string Title { get; set; }
-            public string Summary { get; set; }
-            public DateTime EventTime { get; set; }
-            public string Characters { get; set; }
-            public string Organizations { get; set; }
-            public string Viruses { get; set; }
-            public string Games { get; set; }
-            public string Movies { get; set; }
-            public string BannerImage { get; set; }
-        }
+        //public class AddEditStoryEventForm
+        //{
+        //    public string Id { get; set; }
+        //    public string Title { get; set; }
+        //    public string Summary { get; set; }
+        //    public DateTime EventTimeStart { get; set; }
+        //    public DateTime? EventTimeEnd { get; set; }
+        //    public string Characters { get; set; }
+        //    public string Organizations { get; set; }
+        //    public string Viruses { get; set; }
+        //    public string Games { get; set; }
+        //    public string Movies { get; set; }
+        //    public string BannerImage { get; set; }
+        //}
 
         public enum ViewState
         {

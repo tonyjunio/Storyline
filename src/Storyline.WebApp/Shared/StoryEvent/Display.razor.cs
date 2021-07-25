@@ -17,7 +17,7 @@ namespace Storyline.WebApp.Shared.StoryEvent
         public IEnumerable<Models.StoryEvent> StoryEvents { get; set; }
 
         [CascadingParameter(Name = "RefAddEditForm")]
-        public AddEdit RefAddEditForm { get; set; }
+        public StoryEvent.AddEdit RefAddEditForm { get; set; }
 
         protected override void OnInitialized()
         {
