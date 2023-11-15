@@ -27,7 +27,7 @@ namespace Storyline.WebApp.Shared.StoryEvent
         public Models.StoryEvent SelectedStoryEvent { get; set; }
 
         [CascadingParameter(Name = "RefEventsDisplay")]
-        public Shared.StoryEvent.Display RefEventsDisplay { get; set; }
+        public Shared.StoryEvent.Display2 RefEventsDisplay { get; set; }
 
         protected Models.StoryEvent FormData;
 
@@ -50,11 +50,11 @@ namespace Storyline.WebApp.Shared.StoryEvent
 
         protected void MapValuesToForm()
         {
-            if (this.SelectedStoryEvent != null && this.SelectedStoryEvent.EventId != null)
+            if (this.SelectedStoryEvent != null && this.SelectedStoryEvent.Id != null)
             {
                 this.FormData = this.SelectedStoryEvent;
 
-                if (!string.IsNullOrWhiteSpace(this.FormData.EventId))
+                if (!string.IsNullOrWhiteSpace(this.FormData.Id))
                 {
                     this.VState = ViewState.Update;
                 }
@@ -82,10 +82,10 @@ namespace Storyline.WebApp.Shared.StoryEvent
                         storyEvents = new List<Models.StoryEvent>();
                     }
 
-                    if (string.IsNullOrEmpty(this.FormData.EventId))
+                    if (string.IsNullOrEmpty(this.FormData.Id))
                     {
                         // Create new story event.
-                        this.FormData.EventId = Guid.NewGuid().ToString().Replace("-", "");
+                        this.FormData.Id = Guid.NewGuid().ToString().Replace("-", "");
 
                         // TODO: Iterate form characters.
                         // this.FormData.CharacterTags = 
@@ -95,7 +95,7 @@ namespace Storyline.WebApp.Shared.StoryEvent
                     else
                     {
                         // Update story event.
-                        Models.StoryEvent entry = storyEvents.FirstOrDefault(x => x.EventId == this.FormData.EventId);
+                        Models.StoryEvent entry = storyEvents.FirstOrDefault(x => x.Id == this.FormData.Id);
                         storyEvents.Remove(entry);
 
                         storyEvents.Add(this.FormData);

@@ -14,7 +14,7 @@
 @if (this.StoryEvent is not null)
 {
     var item = this.StoryEvent;
-    <div class="event-details" style="background-image: url('@item.BannerImage');">
+    <div class="event-details" style="background-image: url('@item.Image');">
         <div class="summary">
             <h3>@item.Title</h3>
             <p>@item.Summary</p>
@@ -22,29 +22,29 @@
         <div class="moreinfo">
             <div>
                 <h5>Characters</h5>
-                @if (item.CharacterTags is not null)
+                @if (item.Characters is not null)
                 {
-                    foreach (var character in item.CharacterTags)
+                    foreach (var c in item.Characters)
                     {
-                        <span>@character</span>
+                        <span>@c.Name</span>
                     }
                 }
                 
                 <h5>Games</h5>
-                @if (item.GameTags is not null)
+                @if (item.Games is not null)
                 {
-                    foreach (var gameTag in item.GameTags)
+                    foreach (var g in item.Games)
                     {
-                        <span>@gameTag</span>
+                        <span>@g.Title</span>
                     }
                 }
 
                 <h5>Movies</h5>
-                @if (item.MovieTags is not null)
+                @if (item.Movies is not null)
                 {
-                    foreach (var movieTag in item.MovieTags)
+                    foreach (var m in item.Movies)
                     {
-                        <span>@movieTag</span>
+                        <span>@m.Title</span>
                     }
                 }
             </div>

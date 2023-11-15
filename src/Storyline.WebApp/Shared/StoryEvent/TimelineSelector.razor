@@ -22,7 +22,7 @@
     @foreach(var e in this.StoryEvents)
     {
         <span class="event-item">
-            <i id="@e.EventId" @onclick="() => SelectStoryEvent(e)"></i>
+            <i id="@e.Id" @onclick="() => SelectStoryEvent(e)"></i>
         </span>
     }
 </div>

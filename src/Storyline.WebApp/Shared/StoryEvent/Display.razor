@@ -15,7 +15,7 @@
 <div class="story-events">
     @foreach (var story in this.Story.StoryEvents.OrderBy(x => x.EventTimeStart))
         {
-    <div class="event-backdrop" style="background-image:url(@story.BannerImage)">
+    <div class="event-backdrop" style="background-image:url(@story.Image)">
         <div class="event">
             <button @onclick="@(() => EditStoryEvent(story))">
                 <i class="fa fa-pencil-alt fa-lg"></i>
@@ -25,52 +25,52 @@
                 <div class="event-time">@($"{story.EventTimeStart:MMMM yyyy}")@((story.EventTimeEnd.HasValue ? $" - {story.EventTimeEnd:MMMM yyyy}" : ""))</div>
                 <p class="summary">@story.Summary</p>
 
-                @if (story.CharacterTags != null)
+                @if (story.Characters != null)
                             {
                 <div class="characters">
-                    @foreach (var entry in story.CharacterTags)
+                    @foreach (var entry in story.Characters)
                                     {
-                    <span class="character">@entry</span>
+                    <span class="character">@entry.Name</span>
                                     }
                 </div>
                             }
 
-                @if (story.OrganizationTags != null)
+                @if (story.Organizations != null)
                             {
                 <div class="organizations">
-                    @foreach (var entry in story.OrganizationTags)
+                    @foreach (var entry in story.Organizations)
                                     {
-                    <span class="character">@entry</span>
+                    <span class="character">@entry.Name</span>
                                     }
                 </div>
                             }
 
-                @if (story.VirusTags != null)
+                @if (story.Viruses != null)
                             {
                 <div class="viruses">
-                    @foreach (var entry in story.VirusTags)
+                    @foreach (var entry in story.Viruses)
                                     {
-                    <span class="character">@entry</span>
+                    <span class="character">@entry.Name</span>
                                     }
                 </div>
                             }
 
-                @if (story.GameTags != null)
+                @if (story.Games != null)
                             {
                 <div class="viruses">
-                    @foreach (var entry in story.GameTags)
+                    @foreach (var entry in story.Games)
                                     {
-                    <span class="character">@entry</span>
+                    <span class="character">@entry.Title</span>
                                     }
                 </div>
                             }
 
-                @if (story.MovieTags != null)
+                @if (story.Movies != null)
                             {
                 <div class="viruses">
-                    @foreach (var entry in story.MovieTags)
+                    @foreach (var entry in story.Movies)
                                     {
-                    <span class="character">@entry</span>
+                    <span class="character">@entry.Title</span>
                                     }
                 </div>
                             }

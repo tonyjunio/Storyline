@@ -1,0 +1,72 @@
+﻿[
+  {
+    "Id": "xxxx",
+    "MediaType": "Movie",
+    "Title": "Title1",
+    "Wiki": "",
+    "Image": ""
+  },
+  {
+    "Id": "xxxx",
+    "MediaType": "Movie",
+    "Title": "Title2",
+    "Wiki": "",
+    "Image": ""
+  },
+  {
+    "Id": "xxxx",
+    "MediaType": "Movie",
+    "Title": "Title3",
+    "Wiki": "",
+    "Image": ""
+  },
+  {
+    "Id": "resident-evil-outbreak-series",
+    "MediaType": "Game",
+    "Title": "Resident Evil Outbreak series",
+    "Wiki": "",
+    "Image": ""
+  },
+  {
+    "Id": "re0",
+    "MediaType": "Game",
+    "Title": "Resident Evil 0",
+    "Wiki": "",
+    "Image": ""
+  },
+  {
+    "Id": "re",
+    "MediaType": "Game",
+    "Title": "Resident Evil",
+    "Wiki": "",
+    "Image": ""
+  },
+  {
+    "Id": "re2",
+    "MediaType": "Game",
+    "Title": "Resident Evil 2",
+    "Wiki": "",
+    "Image": ""
+  },
+  {
+    "Id": "re3-nemesis",
+    "MediaType": "Game",
+    "Title": "Resident Evil 3: Nemesis",
+    "Wiki": "",
+    "Image": ""
+  },
+  {
+    "Id": "re-umbrella-chronicles",
+    "MediaType": "Game",
+    "Title": "Resident Evil: The Umbrella Chronicles",
+    "Wiki": "",
+    "Image": ""
+  },
+  {
+    "Id": "re-darkside-chronicles",
+    "MediaType": "Game",
+    "Title": "Resident Evil: The Darkside Chronicles",
+    "Wiki": "",
+    "Image": ""
+  }
+]

@@ -23,7 +23,7 @@
     <div class="save-event-form">
         <EditForm Model="@this.FormData" OnValidSubmit="@(async () => await SubmitAddEditFormAsync())">
             <DataAnnotationsValidator />
-            <input type="hidden" @bind-value="@this.FormData.EventId" />
+            <input type="hidden" @bind-value="@this.FormData.Id" />
             <div class="mb-3">
                 <label>Event Title</label>
                 <input type="text" class="form-control" placeholder="Title" @bind-value="@this.FormData.Title" />
@@ -43,28 +43,28 @@
             <hr />
             <div class="mb-3">
                 <label>Characters <i class="fa fa-plus-square fa-lg"></i></label>
-                @X(this.FormData.CharacterTags)
+                @X(this.FormData.Characters.Select(x => x.Name))
             </div>
             <div class="mb-3">
                 <label>Organizations <i class="fa fa-plus-square fa-lg"></i></label>
-                @X(this.FormData.OrganizationTags)
+                @X(this.FormData.Organizations.Select(x => x.Name))
             </div>
             <div class="mb-3">
                 <label>Viruses <i class="fa fa-plus-square fa-lg"></i></label>
-                @X(this.FormData.VirusTags)
+                @X(this.FormData.Viruses.Select(x => x.Name))
             </div>
             <div class="mb-3">
                 <label>Games <i class="fa fa-plus-square fa-lg"></i></label>
-                @X(this.FormData.GameTags)
+                @X(this.FormData.Games.Select(x => x.Title))
             </div>
             <div class="mb-3">
                 <label>Movies <i class="fa fa-plus-square fa-lg"></i></label>
-                @X(this.FormData.MovieTags)
+                @X(this.FormData.Movies.Select(x => x.Title))
             </div>
             <hr />
             <div class="mb-3">
                 <label>Hero Image</label>
-                <input type="text" class="form-control" placeholder="Paste a Hero Image" @bind="this.FormData.BannerImage" />
+                <input type="text" class="form-control" placeholder="Paste a Hero Image" @bind="this.FormData.Image" />
             </div>
             <div class="mt-5">
                 <button class="btn btn-primary"><i class="oi @(VState == ViewState.Create ? "oi-plus" : "oi-pencil")"></i> @(VState == ViewState.Create ? "Create" : "Update")</button>

@@ -13,17 +13,17 @@
             "Organizations": [
                 "umbrella",
                 "stars",
-                "usa.gov"
+                "usa-gov"
             ],
             "Virus": [
                 "tvirus",
                 "gvirus"
             ],
             "Games": [
-                "Resident Evil Outbreak series",
-                " Resident Evil 3: Nemesis",
-                " Resident Evil 2",
-                " Resident Evil: The Umbrella Chronicles"
+                "re-outbreak-series",
+                "re3-nemesis",
+                "re2",
+                "re-umbrella-chronicles"
             ],
             "Movies": [
                 ""
@@ -44,7 +44,7 @@
             ],
             "Virus": [
                 "tvirus",
-                "plagas"
+                "lasplagas"
             ],
             "Games": [
                 ""
@@ -67,11 +67,11 @@
             ],
             "Virus": [
                 "tvirus",
-                "g-virus"
+                "gvirus"
             ],
             "Games": [
-                "Resident Evil 0",
-                " Resident Evil: The Umbrella Chronicles"
+                "re0",
+                "re-the-umbrella-chronicles"
             ],
             "Movies": [
                 ""
@@ -86,9 +86,10 @@
             "BannerImage": "https://s.yimg.com/uu/api/res/1.2/bhXAphXKiqaAy6EEqtYXVw--~B/Zmk9ZmlsbDtoPTQyNjt3PTY3NTthcHBpZD15dGFjaHlvbg--/https://s.yimg.com/os/creatr-uploaded-images/2021-06/f47ef3a0-caa4-11eb-b9df-1702d54b1d8d.cf.jpg",
             "Characters": null,
             "Organizations": [
-                "us govt",
-                " tricell",
-                " mad dogs. terrasave"
+                "Id",
+                "tricell",
+                "maddogs",
+                "terrasave"
             ],
             "Virus": [
                 ""
@@ -109,17 +110,17 @@
             "BannerImage": "https://www.kawaiidream.net/data/media/329/ResidentEvilTheDarksideChronicles_JavierArtwork.jpg",
             "Characters": null,
             "Organizations": [
-                "us govt",
-                " usstratcom",
-                " ussocom",
-                " sacred snakes"
+                "Id",
+                "usstratcom",
+                "ussocom",
+                "sacredsnakes"
             ],
             "Virus": [
-                "t-virus",
-                " t-veronica virus"
+                "tvirus",
+                "t-veronica virus"
             ],
             "Games": [
-                "Resident Evil: The Darkside Chronicles"
+                "re-darkside-chronicles"
             ],
             "Movies": [
                 ""
@@ -142,8 +143,8 @@
                 "gvirus"
             ],
             "Games": [
-                "Resident Evil: The Umbrella Chronicles",
-                " Resident Evil"
+                "re-umbrella-chronicles",
+                "re"
             ],
             "Movies": [
                 ""

@@ -11,11 +11,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="Shared\StoryEvent\AddEdit.razor" />
-    <None Include="Shared\StoryEvent\AddEdit.razor.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Content Update="wwwroot\jsondata\storyline-residentevil-characters.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
