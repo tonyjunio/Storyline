@@ -1,0 +1,72 @@
+﻿[
+  {
+    "ItemId": "progenitor",
+    "ItemIType": "Virus",
+    "Name": "Progenitor virus",
+    "Descriptions": "",
+    "Wiki": "",
+    "Image": "",
+    "DevelopedBy": "",
+    "DevelopedOn": ""
+  },
+  {
+    "ItemId": "tvirus",
+    "ItemIType": "Virus",
+    "Name": "T-virus",
+    "Descriptions": "",
+    "Wiki": "",
+    "Image": "",
+    "DevelopedBy": "",
+    "DevelopedOn": ""
+  },
+  {
+    "ItemId": "gvirus",
+    "ItemIType": "Virus",
+    "Name": "G-virus",
+    "Descriptions": "",
+    "Wiki": "",
+    "Image": "",
+    "DevelopedBy": "",
+    "DevelopedOn": ""
+  },
+  {
+    "ItemId": "uroboros",
+    "ItemIType": "Virus",
+    "Name": "Uroboros",
+    "Descriptions": "",
+    "Wiki": "",
+    "Image": "",
+    "DevelopedBy": "",
+    "DevelopedOn": ""
+  },
+  {
+    "ItemId": "avirus",
+    "ItemIType": "Virus",
+    "Name": "A-virus",
+    "Descriptions": "",
+    "Wiki": "",
+    "Image": "",
+    "DevelopedBy": "",
+    "DevelopedOn": ""
+  },
+  {
+    "ItemId": "cvirus",
+    "ItemIType": "Virus",
+    "Name": "C-virus",
+    "Descriptions": "",
+    "Wiki": "",
+    "Image": "",
+    "DevelopedBy": "",
+    "DevelopedOn": ""
+  },
+  {
+    "ItemId": "lasplagas",
+    "ItemIType": "Virus",
+    "Name": "las Plagas Parasite",
+    "Descriptions": "",
+    "Wiki": "",
+    "Image": "",
+    "DevelopedBy": "",
+    "DevelopedOn": ""
+  }
+]

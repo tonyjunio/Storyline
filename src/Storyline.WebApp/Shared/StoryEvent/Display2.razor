@@ -1,0 +1,13 @@
+﻿@inherits DisplayBase
+
+@if (this.Story != null)
+{
+    <h2>@this.Story.Title</h2>
+
+    <TimelineSelector StoryEvents="@this.Story.StoryEvents" OnStoryEventSelect="@(x => this.SelectedStoryEvent = x)"></TimelineSelector>
+
+    if (this.SelectedStoryEvent is not null)
+    {
+        <TimelineDetails StoryEvent="@this.SelectedStoryEvent"></TimelineDetails>
+    }
+}

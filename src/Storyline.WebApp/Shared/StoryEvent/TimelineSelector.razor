@@ -1,0 +1,62 @@
+
+@code {
+
+    [Parameter]
+    public IEnumerable<Models.StoryEvent> StoryEvents {get; set;}
+
+    [Parameter]
+    public EventCallback<Models.StoryEvent> OnStoryEventSelect { get; set; }
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+    }
+
+    protected void SelectStoryEvent(Models.StoryEvent item)
+    {
+        this.OnStoryEventSelect.InvokeAsync(item);
+    }
+}
+
+<div class="event-timeline-selector">
+    @foreach(var e in this.StoryEvents)
+    {
+        <span class="event-item">
+            <i id="@e.EventId" @onclick="() => SelectStoryEvent(e)"></i>
+        </span>
+    }
+</div>
+
+
+<style>
+.event-timeline-selector {
+    margin: 10px 0;
+}
+
+.event-timeline-selector .event-item {
+    background: #fff;
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    text-align: center;
+    top: 15px;
+    width: 50px;
+}
+
+.event-timeline-selector .event-item > i {
+    background-color: #e4e4e4;
+    border: 2px solid #000;
+    border-radius: 20px;
+    cursor: pointer;
+    display: inline-block;
+    height: 25px;
+    position: relative;
+    top: -12px;
+    width: 25px;
+}
+
+.event-timeline-selector .event-item > i:hover {
+    background-color: #bf2929;
+    border-color: #ffffff;
+}
+</style>

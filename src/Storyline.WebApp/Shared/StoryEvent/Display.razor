@@ -10,10 +10,10 @@
     z-index: 0;
     background-position: center;"></div>
 
-@if (this.StoryEvents != null)
+@if (this.Story != null)
 {
 <div class="story-events">
-    @foreach (var story in this.StoryEvents.OrderBy(x => x.EventTimeStart))
+    @foreach (var story in this.Story.StoryEvents.OrderBy(x => x.EventTimeStart))
         {
     <div class="event-backdrop" style="background-image:url(@story.BannerImage)">
         <div class="event">

@@ -1,37 +1,51 @@
 ﻿[
   {
-    "code": "rebecca.c",
-    "name": "Rebecca Chambers",
-    "Biography": ""
+    "Id": "rebecca.c",
+    "Name": "Rebecca Chambers",
+    "Profile": "",
+    "Image": "",
+    "Wiki": ""
   },
   {
-    "code": "chris.r",
-    "name": "Chris Redfield",
-    "Biography": ""
+    "Id": "chris.r",
+    "Name": "Chris Redfield",
+    "Profile": "",
+    "Image": "",
+    "Wiki": ""
   },
   {
-    "code": "jill.v",
-    "name": "Jill Valentine",
-    "Biography": ""
+    "Id": "jill.v",
+    "Name": "Jill Valentine",
+    "Profile": "",
+    "Image": "",
+    "Wiki": ""
   },
   {
-    "code": "leon.k",
-    "name": "Leon S. Kennedy",
-    "Biography": ""
+    "Id": "leon.k",
+    "Name": "Leon S. Kennedy",
+    "Profile": "",
+    "Image": "",
+    "Wiki": ""
   },
   {
-    "code": "claire.r",
-    "name": "Claire Redfield",
-    "Biography": ""
+    "Id": "claire.r",
+    "Name": "Claire Redfield",
+    "Profile": "",
+    "Image": "",
+    "Wiki": ""
   },
   {
-    "code": "barry.b",
-    "name": "Barry Burton",
-    "Biography": ""
+    "Id": "barry.b",
+    "Name": "Barry Burton",
+    "Profile": "",
+    "Image": "",
+    "Wiki": ""
   },
   {
-    "code": "albert.w",
-    "name": "Albert Wesker",
-    "Biography": ""
+    "Id": "albert.w",
+    "Name": "Albert Wesker",
+    "Profile": "",
+    "Image": "",
+    "Wiki": ""
   }
 ]

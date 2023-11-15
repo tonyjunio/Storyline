@@ -1,0 +1,82 @@
+
+@code {
+
+    [Parameter]
+    public Models.StoryEvent StoryEvent {get; set;}
+
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+    }
+}
+
+@if (this.StoryEvent is not null)
+{
+    var item = this.StoryEvent;
+    <div class="event-details" style="background-image: url('@item.BannerImage');">
+        <div class="summary">
+            <h3>@item.Title</h3>
+            <p>@item.Summary</p>
+        </div>
+        <div class="moreinfo">
+            <div>
+                <h5>Characters</h5>
+                @if (item.CharacterTags is not null)
+                {
+                    foreach (var character in item.CharacterTags)
+                    {
+                        <span>@character</span>
+                    }
+                }
+                
+                <h5>Games</h5>
+                @if (item.GameTags is not null)
+                {
+                    foreach (var gameTag in item.GameTags)
+                    {
+                        <span>@gameTag</span>
+                    }
+                }
+
+                <h5>Movies</h5>
+                @if (item.MovieTags is not null)
+                {
+                    foreach (var movieTag in item.MovieTags)
+                    {
+                        <span>@movieTag</span>
+                    }
+                }
+            </div>
+        </div>
+    </div>
+}
+else
+{
+    <div>?</div>
+}
+
+
+<style>
+.event-details {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 50%;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: stretch;
+}
+.event-details .summary {
+    background-color: rgba(0,0,0,0.8);
+    padding: 10px; 
+    width: 40%;
+}
+.event-details .moreinfo {
+    background-color: rgba(0,0,0,0.5);
+    padding: 10px; 
+    width: 60%;
+}
+</style>

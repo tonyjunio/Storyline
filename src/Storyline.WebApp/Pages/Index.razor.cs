@@ -24,12 +24,12 @@ namespace Storyline.WebApp.Pages
         [Inject]
         protected NavigationManager Navigator { get; set; }
 
-        protected IEnumerable<Models.StoryEvent> StoryEvents { get; set; }
+        protected Models.Story Story { get; set; }
         protected string ErrMsg { get; set; }
 
         public Shared.StoryEvent.AddEdit RefAddEditEventForm { get; set; }
 
-        public Shared.StoryEvent.Display RefEventsDisplay { get; set; }
+        public Shared.StoryEvent.Display2 RefEventsDisplay { get; set; }
 
         protected override async Task OnInitializedAsync()
         {
@@ -41,7 +41,7 @@ namespace Storyline.WebApp.Pages
         {
             try
             {
-                this.StoryEvents = await Http.GetFromJsonAsync<IEnumerable<Models.StoryEvent>>("jsondata/storyline-residentevil.json");
+                this.Story = await Http.GetFromJsonAsync<Models.Story>("jsondata/storyline-residentevil.json");
             }
             catch (Exception ex)
             {

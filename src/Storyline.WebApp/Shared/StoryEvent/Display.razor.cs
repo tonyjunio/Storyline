@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace Storyline.WebApp.Shared.StoryEvent
@@ -14,14 +13,17 @@ namespace Storyline.WebApp.Shared.StoryEvent
         public string Title { get; set; }
 
         [Parameter]
-        public IEnumerable<Models.StoryEvent> StoryEvents { get; set; }
+        public Models.Story Story { get; set; }
+
+        protected Models.StoryEvent SelectedStoryEvent { get; set; } = null;
+
 
         [CascadingParameter(Name = "RefAddEditForm")]
         public StoryEvent.AddEdit RefAddEditForm { get; set; }
 
         protected override void OnInitialized()
         {
-            var data = this.StoryEvents;
+            var data = this.Story;
         }
 
         protected void EditStoryEvent(Models.StoryEvent storyEvent)
@@ -32,7 +34,7 @@ namespace Storyline.WebApp.Shared.StoryEvent
         }
         public void SetStoryEvents(IEnumerable<Models.StoryEvent> storyEvents)
         {
-            this.StoryEvents = storyEvents;
+            this.Story.StoryEvents = storyEvents;
             this.StateHasChanged();
         }
     }

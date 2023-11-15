@@ -5,10 +5,8 @@
     <CascadingValue Name="RefEventsDisplay" Value="this.RefEventsDisplay">
 
         <div class="top-menu">
-            <input type="text" class="form-control event-txt-search" value="" placeholder="Search..." />
-            <button class="btn btn-primary" type="button" @onclick="CreateStoryEvent">
-                <i class="fa fa-plus fa-2x"></i>
-            </button>
+            <i class="fa fa-search fa-2x m-2"></i>
+            <i class="fa fa-plus fa-2x m-2" @onclick="CreateStoryEvent"></i>
         </div>
 
         @*Off Canvas: Add/Edit Event *@
@@ -22,6 +20,6 @@
             </div>
         </div>
 
-        <Storyline.WebApp.Shared.StoryEvent.Display @ref="RefEventsDisplay" Title="Resident Evil" StoryEvents="this.StoryEvents"></Storyline.WebApp.Shared.StoryEvent.Display>
+        <Storyline.WebApp.Shared.StoryEvent.Display2 @ref="RefEventsDisplay" Story="this.Story"></Storyline.WebApp.Shared.StoryEvent.Display2>
     </CascadingValue>
 </CascadingValue>
