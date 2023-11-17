@@ -60,18 +60,22 @@
         ""
       ],
       "Movies": [
-        ""
+        "damnation"
       ]
     },
     {
       "Id": "e7b328da073540f7ae1141abe57a2c72",
       "Title": "Ecliptic Express Incident",
-      "Summary": "STARS Bravo team investigated the mysterious disappearances of people in the surrounding of the Arklay Mountains.",
+      "Summary": "The Ecliptic Express Incident was an event in mid-1998 marked by the deliberate spread of the t-Virus amongst a train carrying Umbrella personnel. It was one of several such incidents as part of a campaign of attacks perpetrated by the \"Queen Leech\" on behalf of the deceased Dr. James Marcus.",
       "EventTimeStart": "1998-07-23T00:00:00",
       "Image": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/items/339340/6edc7daa991c7106bc2602aae35166c9b23ee49f.jpg",
-      "Wiki": "",
+      "Wiki": "https://residentevil.fandom.com/wiki/Ecliptic_Express_Incident",
       "EventTimeEnd": null,
-      "Characters": null,
+      "Characters": [
+        "rebecca.c",
+        "albert.w",
+        "william.b"
+      ],
       "Organizations": [
         "stars",
         "umbrella"
@@ -142,12 +146,22 @@
     {
       "Id": "0f97eb20032e45bdb21b8507bf692790",
       "Title": "Mansion Incident",
-      "Summary": "Stars Alpha team\u0027s investigation in the Arklay mountains.",
+      "Summary": "The Mansion Incident refers to two things. Chiefly, it refers to a botched police special forces operation that took place in July 1998 to investigate a series of murders in Arklay County, but otherwise can refer to the preceding events leading up to this investigation. The Mansion Incident was the site of a biological, ecological, and environmental disaster which took place in the Arklay Mountains. Estimations as to the death toll are imprecise, but scattered material indicates over 200 deaths occurring as a result of the Queen Leech's attacks. Some 127 deaths were the result of the attack on the Arklay Laboratory itself, including seventy-eight Umbrella employees, twenty-three test subjects, twenty civilians and seven Raccoon City police officers.",
       "EventTimeStart": "1998-07-24T00:00:00",
       "Image": "https://cdna.artstation.com/p/assets/images/images/001/759/518/large/b-o-w-qin-mansion-hall-render-01j.jpg?1452313546",
-      "Wiki": "",
+      "Wiki": "https://residentevil.fandom.com/wiki/Mansion_Incident",
       "EventTimeEnd": null,
-      "Characters": null,
+      "Characters": [
+        "chris.r",
+        "jill.v",
+        "barry.b",
+        "brad.v",
+        "albert.w",
+        "rebecca.c",
+        "lisa.t",
+        "kevin.d",
+        "joseph.f"
+      ],
       "Organizations": [
         "umbrella",
         "stars"
@@ -172,25 +186,50 @@
       "Image": "https://i.pinimg.com/564x/6b/ec/cf/6beccf713809a1d30b13a8c6bc176262.jpg",
       "Wiki": "",
       "EventTimeEnd": null,
-      "Characters": null,
-      "Organizations": null,
-      "Viruses": null,
-      "Games": null,
+      "Characters": [
+        "chris.r",
+        "jill.v",
+        "albert.w",
+        "oswell.s"
+      ],
+      "Organizations": [
+        "umbrella",
+        "bsaa"
+      ],
+      "Viruses": [
+        "tvirus"
+      ],
+      "Games": [
+        "re5-nightmare"
+      ],
       "Movies": null
     },
     {
       "Id": "6b963cc554d74089b94c2809b8c6bf9c",
-      "Title": "The White House attack Submarine Attack Andrews Air Force Facility Incident",
-      "Summary": "Resident Evil: Infinite Darkness",
+      "Title": "Infinite Darkness",
+      "Summary": "RESIDENT EVIL: Infinite Darkness, known as BIOHAZARD：Infinite Darkness (バイオハザード：インフィニット ダークネス Baiohazādo infinitto dākunesu?) in Japan, is an animated series that is part of the series' 25th Anniversary and created by TMS Entertainment and Quebico under supervision of Capcom producer Hiroyuki Kobayashi. The series premiered on the Netflix streaming service on July 8, 2021.[1] The series was released on DVD and Blu-ray with bonus features and other packed in merchandise on December 22 in Japan. It consists of four roughly 24-28 minute episodes and features the return of Resident Evil 2 protagonists, Leon Scott Kennedy and Claire Redfield, voiced by the returning Nick Apostolides and Stephanie Panisello. The events of the series take place in 2006, 2 years after Resident Evil 4, roughly one year after Revelations and Leon/Claire's previous reunion in Resident Evil: Degeneration, and just shortly before the Raid on the Spencer Estate in the Lost in Nightmares campaign of Resident Evil 5.",
       "EventTimeStart": "2006-01-01T00:00:00",
       "Image": "https://64.media.tumblr.com/750a0b710f3be79089d6dfdacfb072e9/1e674b09c55f7a98-36/s640x960/768d3df4192097c80e3e45a2e6e23021fa99f434.gifv",
-      "Wiki": "",
+      "Wiki": "https://residentevil.fandom.com/wiki/RESIDENT_EVIL:_Infinite_Darkness",
       "EventTimeEnd": null,
-      "Characters": null,
-      "Organizations": null,
-      "Viruses": null,
+      "Characters": [
+        "leon.k",
+        "claire.r",
+        "shen.m",
+        "agent.jason",
+        "secdef.wilson"
+      ],
+      "Organizations": [
+        "usgovt",
+        "maddogs"
+      ],
+      "Viruses": [
+        "unspecified"
+      ],
       "Games": null,
-      "Movies": null
+      "Movies": [
+        "infinite-darkness"
+      ]
     },
     {
       "Id": "8619edb221614c11b03bfe9f7be75dda",

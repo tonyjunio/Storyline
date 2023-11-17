@@ -3,15 +3,15 @@
     "Id": "rebecca.c",
     "Name": "Rebecca Chambers",
     "Profile": "",
-    "Image": "https://localhost:51452/img/resident-evil/char-holder-200.jpg",
-    "Wiki": ""
+    "Image": "https://localhost:51452/img/resident-evil/char-rebeccachambers-200.png",
+    "Wiki": "https://residentevil.fandom.com/wiki/Rebecca_Chambers"
   },
   {
     "Id": "chris.r",
     "Name": "Chris Redfield",
     "Profile": "",
-    "Image": "https://localhost:51452/img/resident-evil/char-holder-200.jpg",
-    "Wiki": ""
+    "Image": "https://localhost:51452/img/resident-evil/char-chrisredfield-200.png",
+    "Wiki": "https://residentevil.fandom.com/wiki/Chris_Redfield"
   },
   {
     "Id": "jill.v",
@@ -45,14 +45,63 @@
     "Id": "barry.b",
     "Name": "Barry Burton",
     "Profile": "",
-    "Image": "https://localhost:51452/img/resident-evil/char-holder-200.jpg",
-    "Wiki": ""
+    "Image": "https://localhost:51452/img/resident-evil/char-barryburton-200.png",
+    "Wiki": "https://residentevil.fandom.com/wiki/Barry_Burton"
   },
   {
     "Id": "albert.w",
     "Name": "Albert Wesker",
     "Profile": "",
+    "Image": "https://localhost:51452/img/resident-evil/char-albertwesker-200.png",
+    "Wiki": "https://residentevil.fandom.com/wiki/Albert_Wesker"
+  },
+  {
+    "Id": "william.b",
+    "Name": "William Berkin",
+    "Profile": "",
+    "Image": "https://localhost:51452/img/resident-evil/char-williamberkin-200.png",
+    "Wiki": "https://residentevil.fandom.com/wiki/William_Birkin"
+  },
+  {
+    "Id": "lisa.t",
+    "Name": "Lisa Trevor",
+    "Profile": "",
     "Image": "https://localhost:51452/img/resident-evil/char-holder-200.jpg",
-    "Wiki": ""
+    "Wiki": "https://residentevil.fandom.com/wiki/Lisa_Trevor"
+  },
+  {
+    "Id": "kevin.d",
+    "Name": "Kevin Dooley",
+    "Profile": "",
+    "Image": "https://localhost:51452/img/resident-evil/char-holder-200.jpg",
+    "Wiki": "https://residentevil.fandom.com/wiki/Kevin_Dooley"
+  },
+  {
+    "Id": "joseph.f",
+    "Name": "Joseph Frost",
+    "Profile": "",
+    "Image": "https://localhost:51452/img/resident-evil/char-holder-200.jpg",
+    "Wiki": "https://residentevil.fandom.com/wiki/Joseph_Frost"
+  },
+  {
+    "Id": "shen.m",
+    "Name": "Shen Mei",
+    "Profile": "",
+    "Image": "https://localhost:51452/img/resident-evil/char-shenmei-200.png",
+    "Wiki": "https://residentevil.fandom.com/wiki/Shenmei"
+  },
+  {
+    "Id": "agent.jason",
+    "Name": "Wilson",
+    "Profile": "",
+    "Image": "https://localhost:51452/img/resident-evil/char-agentjason-200.png",
+    "Wiki": "https://residentevil.fandom.com/wiki/Wilson"
+  },
+  {
+    "Id": "secdef.wilson",
+    "Name": "Jason",
+    "Profile": "",
+    "Image": "https://localhost:51452/img/resident-evil/char-secdefwilson-220.png",
+    "Wiki": "https://residentevil.fandom.com/wiki/Jason"
   }
 ]

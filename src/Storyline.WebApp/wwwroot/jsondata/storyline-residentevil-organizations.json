@@ -40,6 +40,14 @@
     "Image": "https://localhost:51452/img/resident-evil/org-stars01-200.jpg"
   },
   {
+    "Id": "stars-bravo",
+    "EntityType": "Organization",
+    "Name": "S.T.A.R.S Bravo",
+    "Profile": "",
+    "Wiki": "https://residentevil.fandom.com/wiki/Special_Tactics_and_Rescue_Service",
+    "Image": "https://localhost:51452/img/resident-evil/org-stars01-200.jpg"
+  },
+  {
     "Id": "bsaa",
     "EntityType": "Organization",
     "Name": "BSAA",
@@ -69,7 +77,7 @@
     "Name": "The Sacred Snakes",
     "Profile": "",
     "Wiki": "https://residentevil.fandom.com/wiki/Sacred_Snakes",
-    "Image": "https://localhost:51452/img/resident-evil/org-the-sacred-serpent.webp"
+    "Image": "https://localhost:51452/img/resident-evil/org-sacredserpent-200.jpg"
   },
   {
     "Id": "usgovt",
@@ -86,5 +94,13 @@
     "Profile": "",
     "Wiki": "https://residentevil.fandom.com/wiki/United_States_Strategic_Command",
     "Image": "https://localhost:51452/img/resident-evil/org-usstratcom-200.jpg"
+  },
+  {
+    "Id": "maddogs",
+    "EntityType": "Organization",
+    "Name": "Mad Dogs",
+    "Profile": "",
+    "Wiki": "https://residentevil.fandom.com/wiki/Mad_Dogs",
+    "Image": "https://localhost:51452/img/resident-evil/org-maddogs.webp"
   }
 ]

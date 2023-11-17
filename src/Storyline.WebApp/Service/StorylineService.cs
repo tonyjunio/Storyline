@@ -1,9 +1,4 @@
 ﻿using Storyline.WebApp.Models.Storyline;
-using Newtonsoft;
-using System.Text.Json.Nodes;
-using Newtonsoft.Json.Linq;
-using Newtonsoft.Json;
-using System.Dynamic;
 
 namespace Storyline.WebApp.Service;
 
@@ -51,7 +46,7 @@ public class StorylineService : IStorylineService
                         Viruses = viruses?.Where(v => (e.Viruses)?.Contains(v.Id) ?? false),
                         Games = media?.Where(g => g.MediaType == StoryMediaType.Game && ((e.Games)?.Contains(g.Id) ?? false)),
                         Movies = media?.Where(m => m.MediaType == StoryMediaType.Movie && ((e.Movies)?.Contains(m.Id) ?? false))
-                    })
+                    })?.OrderBy(o => o.EventTimeStart)?.OrderBy(o => (o?.EventTimeEnd ?? DateTime.MinValue))
                 };
             }
         }

@@ -1,22 +1,29 @@
 ﻿[
   {
-    "Id": "xxxx",
+    "Id": "denegeration",
     "MediaType": "Movie",
-    "Title": "Title1",
+    "Title": "Denegeration",
     "Wiki": "",
     "Image": "https://localhost:51452/img/resident-evil/re-biohazard-200.png"
   },
   {
-    "Id": "xxxx",
+    "Id": "damnation",
     "MediaType": "Movie",
-    "Title": "Title2",
+    "Title": "Damnation",
     "Wiki": "",
     "Image": "https://localhost:51452/img/resident-evil/re-biohazard-200.png"
   },
   {
-    "Id": "xxxx",
+    "Id": "biohazard-vendetta",
     "MediaType": "Movie",
-    "Title": "Title3",
+    "Title": "Biohazard Vendetta",
+    "Wiki": "",
+    "Image": "https://localhost:51452/img/resident-evil/re-biohazard-200.png"
+  },
+  {
+    "Id": "infinite-darkness",
+    "MediaType": "Movie",
+    "Title": "Infinite Darkness",
     "Wiki": "",
     "Image": "https://localhost:51452/img/resident-evil/re-biohazard-200.png"
   },
@@ -45,6 +52,20 @@
     "Id": "re2",
     "MediaType": "Game",
     "Title": "Resident Evil 2",
+    "Wiki": "",
+    "Image": "https://localhost:51452/img/resident-evil/re-biohazard-200.png"
+  },
+  {
+    "Id": "re5",
+    "MediaType": "Game",
+    "Title": "Resident Evil 5",
+    "Wiki": "",
+    "Image": "https://localhost:51452/img/resident-evil/re-biohazard-200.png"
+  },
+  {
+    "Id": "re5-nightmare",
+    "MediaType": "Game",
+    "Title": "Resident Evil 5: Lost in Nightmares",
     "Wiki": "",
     "Image": "https://localhost:51452/img/resident-evil/re-biohazard-200.png"
   },

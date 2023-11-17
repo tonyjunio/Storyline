@@ -1,3 +1,4 @@
+@using Storyline.WebApp.Common;
 @code {
 
     [Parameter]
@@ -13,10 +14,14 @@
 @if (this.StoryEvent is not null)
 {
     var item = this.StoryEvent;
-    <div class="event-details rad-mask">
-        <div class="summary event-bg" style="background-image: var(--summary-radial-gradient), var(--summary-linear-gradient), url('@item.Image');">
-            <h3>@item.Title</h3>
+    <div class="event-details">
+        <div class="summary rad-mask event-bg" style="background-image: var(--summary-radial-gradient), var(--summary-linear-gradient), url('@item.Image');">
+            <h3>
+                @item.Title
+                <span class="event-date">@Helper.DateHelper.TimeLineInfo(this.StoryEvent.EventTimeStart, this.StoryEvent.EventTimeEnd)</span>
+            </h3>
             <p>@item.Summary</p>
+            <a class="wiki-link" href="@this.StoryEvent.Wiki" target="_blank">Read More</a>
         </div>
         <div class="moreinfo">
             <div>
@@ -134,15 +139,38 @@ else
             width: 40%;
         }
 
+            .event-details .summary .event-date {
+                color: #ffffff;
+                display: block;
+                font-size: 1rem;
+                font-weight: 500;
+                font-variant: small-caps;
+                margin: 10px 0;
+            }
+
+            .event-details .summary .wiki-link {
+                background: #ffffff;
+                border-radius: 2px;
+                color: black;
+                font-size: 0.8rem;
+                font-weight: 500;
+                padding: 3px 6px;
+                text-decoration: none;
+            }
+
+                .event-details .summary .wiki-link:hover {
+                    background: #8b7e50;
+                }
+
             .event-details .summary h3 {
-                margin-bottom: 20px;
+                border-bottom: 1px solid #393939;
                 color: #9b8c58;
+                margin-bottom: 20px;
+                padding-bottom: 10px;
             }
 
             .event-details .summary p {
                 background: #00000036;
-                border-top: 1px solid #393939;
-                padding: 10px;
             }
 
         .event-details .moreinfo {
@@ -184,7 +212,6 @@ else
         }
 
             .ref-list > li > a {
-                xbackground: #00000091;
                 color: white;
                 display: block;
                 font-weight: 500;
@@ -204,6 +231,6 @@ else
         color: #20acb4;
     }
 
-        .ref-list > li:hover > a {
-        }
+    .ref-list > li:hover > a {
+    }
 </style>

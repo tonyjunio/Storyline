@@ -5,7 +5,7 @@
     "Name": "Progenitor virus",
     "Summary": "",
     "Wiki": "https://residentevil.fandom.com/wiki/Progenitor_Virus",
-    "Image": "https://localhost:51452/img/resident-evil/virus-holder-200.jpg",
+    "Image": "https://localhost:51452/img/resident-evil/virus-progenitor-200.jpg",
     "DevelopedBy": "umbrella",
     "DevelopedOn": null
   },
@@ -15,17 +15,17 @@
     "Name": "Tyrant virus",
     "Summary": "",
     "Wiki": "https://residentevil.fandom.com/wiki/Tyrant_Virus",
-    "Image": "https://localhost:51452/img/resident-evil/virus-holder-200.jpg",
+    "Image": "https://localhost:51452/img/resident-evil/virus-tvirus-200.jpg",
     "DevelopedBy": "umbrella",
     "DevelopedOn": null
   },
   {
     "Id": "gvirus",
     "ItemIType": "Virus",
-    "Name": "G-virus",
+    "Name": "Golgotha virus",
     "Summary": "",
-    "Wiki": "",
-    "Image": "https://localhost:51452/img/resident-evil/virus-holder-200.jpg",
+    "Wiki": "https://residentevil.fandom.com/wiki/Golgotha_Virus",
+    "Image": "https://localhost:51452/img/resident-evil/virus-gvirus-200.jpg",
     "DevelopedBy": "umbrella",
     "DevelopedOn": null
   },
@@ -34,8 +34,8 @@
     "ItemIType": "Virus",
     "Name": "Uroboros",
     "Summary": "",
-    "Wiki": "",
-    "Image": "https://localhost:51452/img/resident-evil/virus-holder-200.jpg",
+    "Wiki": "https://residentevil.fandom.com/wiki/UROBOROS",
+    "Image": "https://localhost:51452/img/resident-evil/virus-uroboros-200.jpg",
     "DevelopedBy": "umbrella",
     "DevelopedOn": null
   },
@@ -64,9 +64,19 @@
     "ItemIType": "Virus",
     "Name": "las Plagas Parasite",
     "Summary": "",
-    "Wiki": "",
+    "Wiki": "https://residentevil.fandom.com/wiki/Plaga",
+    "Image": "https://localhost:51452/img/resident-evil/virus-lasplagas-200.jpg",
+    "DevelopedBy": null,
+    "DevelopedOn": null
+  },
+  {
+    "Id": "unspecified",
+    "ItemIType": "Virus",
+    "Name": "Not Specified",
+    "Summary": "",
+    "Wiki": "https://residentevil.fandom.com/wiki/Plaga",
     "Image": "https://localhost:51452/img/resident-evil/virus-holder-200.jpg",
-    "DevelopedBy": "umbrella",
+    "DevelopedBy": null,
     "DevelopedOn": null
   }
 ]
