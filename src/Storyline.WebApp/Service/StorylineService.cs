@@ -42,6 +42,7 @@ public class StorylineService : IStorylineService
                         Id = e.Id,
                         Title = e.Title,
                         Summary = e.Summary,
+                        Wiki = e.Wiki,
                         Image = e.Image,
                         EventTimeStart = e.EventTimeStart,
                         EventTimeEnd = e.EventTimeEnd,

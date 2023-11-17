@@ -3,49 +3,56 @@
     "Id": "rebecca.c",
     "Name": "Rebecca Chambers",
     "Profile": "",
-    "Image": "",
+    "Image": "https://localhost:51452/img/resident-evil/char-holder-200.jpg",
     "Wiki": ""
   },
   {
     "Id": "chris.r",
     "Name": "Chris Redfield",
     "Profile": "",
-    "Image": "",
+    "Image": "https://localhost:51452/img/resident-evil/char-holder-200.jpg",
     "Wiki": ""
   },
   {
     "Id": "jill.v",
     "Name": "Jill Valentine",
     "Profile": "",
-    "Image": "",
-    "Wiki": ""
+    "Image": "https://localhost:51452/img/resident-evil/char-jillvalentine-200.png",
+    "Wiki": "https://residentevil.fandom.com/wiki/Jill_Valentine"
   },
   {
     "Id": "leon.k",
-    "Name": "Leon S. Kennedy",
+    "Name": "Leon Kennedy",
     "Profile": "",
-    "Image": "",
-    "Wiki": ""
+    "Image": "https://localhost:51452/img/resident-evil/char-leonkennedy-200.png",
+    "Wiki": "https://residentevil.fandom.com/wiki/Leon_Scott_Kennedy"
+  },
+  {
+    "Id": "ada.w",
+    "Name": "Ada Wong",
+    "Profile": "",
+    "Image": "https://localhost:51452/img/resident-evil/char-adawong-220.png",
+    "Wiki": "https://residentevil.fandom.com/wiki/Ada_Wong"
   },
   {
     "Id": "claire.r",
     "Name": "Claire Redfield",
     "Profile": "",
-    "Image": "",
-    "Wiki": ""
+    "Image": "https://localhost:51452/img/resident-evil/char-claireredfield-200.png",
+    "Wiki": "https://residentevil.fandom.com/wiki/Claire_Redfield"
   },
   {
     "Id": "barry.b",
     "Name": "Barry Burton",
     "Profile": "",
-    "Image": "",
+    "Image": "https://localhost:51452/img/resident-evil/char-holder-200.jpg",
     "Wiki": ""
   },
   {
     "Id": "albert.w",
     "Name": "Albert Wesker",
     "Profile": "",
-    "Image": "",
+    "Image": "https://localhost:51452/img/resident-evil/char-holder-200.jpg",
     "Wiki": ""
   }
 ]

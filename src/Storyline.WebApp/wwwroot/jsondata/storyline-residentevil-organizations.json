@@ -4,87 +4,87 @@
     "EntityType": "Organization",
     "Name": "Umbrella Corp.",
     "Profile": "",
-    "Wiki": "",
-    "Image": ""
+    "Wiki": "https://residentevil.fandom.com/wiki/Umbrella_Corporation",
+    "Image": "https://localhost:51452/img/resident-evil/org-umbrella-corp-200.jpg"
   },
   {
     "Id": "tricell",
     "EntityType": "Organization",
     "Name": "Tricell",
     "Profile": "",
-    "Wiki": "",
-    "Image": ""
+    "Wiki": "https://residentevil.fandom.com/wiki/TRICELL",
+    "Image": "https://localhost:51452/img/resident-evil/org-tricell-200.jpg"
   },
   {
     "Id": "whilpharma",
     "EntityType": "Organization",
     "Name": "WhilPharma",
     "Profile": "",
-    "Wiki": "",
-    "Image": ""
+    "Wiki": "https://residentevil.fandom.com/wiki/WP_Corporation",
+    "Image": "https://localhost:51452/img/resident-evil/org-wilpharma-200.jpg"
   },
   {
     "Id": "terrasave",
     "EntityType": "Organization",
     "Name": "Terrasave",
     "Profile": "",
-    "Wiki": "",
-    "Image": ""
+    "Wiki": "https://residentevil.fandom.com/wiki/TerraSave",
+    "Image": "https://localhost:51452/img/resident-evil/org-terrasave-200.jpg"
   },
   {
     "Id": "stars",
     "EntityType": "Organization",
     "Name": "S.T.A.R.S",
     "Profile": "",
-    "Wiki": "",
-    "Image": ""
+    "Wiki": "https://residentevil.fandom.com/wiki/Special_Tactics_and_Rescue_Service",
+    "Image": "https://localhost:51452/img/resident-evil/org-stars01-200.jpg"
   },
   {
     "Id": "bsaa",
     "EntityType": "Organization",
     "Name": "BSAA",
     "Profile": "",
-    "Wiki": "",
-    "Image": ""
+    "Wiki": "https://residentevil.fandom.com/wiki/Bioterrorism_Security_Assessment_Alliance",
+    "Image": "https://localhost:51452/img/resident-evil/org-bsaa-200.jpg"
   },
   {
     "Id": "neoumbrella",
     "EntityType": "Organization",
     "Name": "Neo-Umbrella",
     "Profile": "",
-    "Wiki": "",
-    "Image": ""
+    "Wiki": "https://residentevil.fandom.com/wiki/Neo_Umbrella",
+    "Image": "https://localhost:51452/img/resident-evil/org-neoumbrella-200.jpg"
   },
   {
     "Id": "losilluminados",
     "EntityType": "Organization",
     "Name": "Los Illuminados",
     "Profile": "",
-    "Wiki": "",
-    "Image": ""
+    "Wiki": "https://residentevil.fandom.com/wiki/Los_Iluminados",
+    "Image": "https://localhost:51452/img/resident-evil/org-losilluminados-200.png"
   },
   {
     "Id": "sacredsnakes",
     "EntityType": "Organization",
     "Name": "The Sacred Snakes",
     "Profile": "",
-    "Wiki": "",
-    "Image": ""
+    "Wiki": "https://residentevil.fandom.com/wiki/Sacred_Snakes",
+    "Image": "https://localhost:51452/img/resident-evil/org-the-sacred-serpent.webp"
   },
   {
     "Id": "usgovt",
     "EntityType": "Organization",
     "Name": "US Government",
     "Profile": "",
-    "Wiki": "",
-    "Image": ""
+    "Wiki": "https://residentevil.fandom.com/wiki/United_States_Army",
+    "Image": "https://localhost:51452/img/resident-evil/org-usgovt-200.jpg"
   },
   {
     "Id": "usstratcom",
     "EntityType": "Organization",
     "Name": "US Stratcom/AUPIT",
     "Profile": "",
-    "Wiki": "",
-    "Image": ""
+    "Wiki": "https://residentevil.fandom.com/wiki/United_States_Strategic_Command",
+    "Image": "https://localhost:51452/img/resident-evil/org-usstratcom-200.jpg"
   }
 ]

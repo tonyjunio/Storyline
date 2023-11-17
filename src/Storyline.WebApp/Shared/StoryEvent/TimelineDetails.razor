@@ -14,7 +14,7 @@
 {
     var item = this.StoryEvent;
     <div class="event-details rad-mask">
-        <div class="summary event-bg" style="background-image: radial-gradient(circle, transparent 40%, var(--color-v) 75%), linear-gradient(to right, var(--color), var(--color)), url('@item.Image');">
+        <div class="summary event-bg" style="background-image: var(--summary-radial-gradient), var(--summary-linear-gradient), url('@item.Image');">
             <h3>@item.Title</h3>
             <p>@item.Summary</p>
         </div>
@@ -23,45 +23,65 @@
                 <h5>Characters</h5>
                 @if (item.Characters is not null)
                 {
-                    foreach (var c in item.Characters)
-                    {
-                        <span>@c.Name</span>
-                    }
+                    <ul class="ref-list">
+                        @foreach (var i in item.Characters)
+                        {
+                            <li class="ref-bg" style="background-image: var(--moreinfo-gradient), url('@i.Image');">
+                                <a href="@i.Wiki" target="_blank">@i.Name</a>
+                            </li>
+                        }
+                    </ul>
                 }
                 <h5>Organizations</h5>
                 @if (item.Organizations is not null)
                 {
-                    foreach (var o in item.Organizations)
-                    {
-                        <span>@o.Name</span>
-                    }
+                    <ul class="ref-list">
+                        @foreach (var i in item.Organizations)
+                        {
+                            <li class="ref-bg" style="background-image: var(--moreinfo-gradient), url('@i.Image');">
+                                <a href="@i.Wiki" target="_blank">@i.Name</a>
+                            </li>
+                        }
+                    </ul>
                 }
 
                 <h5>Viruses</h5>
                 @if (item.Viruses is not null)
                 {
-                    foreach (var v in item.Viruses)
-                    {
-                        <span>@v.Name</span>
-                    }
+                    <ul class="ref-list">
+                        @foreach (var i in item.Viruses)
+                        {
+                            <li class="ref-bg" style="background-image: var(--moreinfo-gradient), url('@i.Image');">
+                                <a href="@i.Wiki" target="_blank">@i.Name</a>
+                            </li>
+                        }
+                    </ul>
                 }
 
                 <h5>Games</h5>
                 @if (item.Games is not null)
                 {
-                    foreach (var g in item.Games)
-                    {
-                        <span>@g.Title</span>
-                    }
+                    <ul class="ref-list">
+                        @foreach (var i in item.Games)
+                        {
+                            <li class="ref-bg" style="background-image: var(--moreinfo-gradient), url('@i.Image');">
+                                <a href="@i.Wiki" target="_blank">@i.Title</a>
+                            </li>
+                        }
+                    </ul>
                 }
 
                 <h5>Movies</h5>
                 @if (item.Movies is not null)
                 {
-                    foreach (var m in item.Movies)
-                    {
-                        <span>@m.Title</span>
-                    }
+                    <ul class="ref-list">
+                        @foreach (var i in item.Movies)
+                        {
+                            <li class="ref-bg" style="background-image: var(--moreinfo-gradient), url('@i.Image');">
+                                <a href="@i.Wiki" target="_blank">@i.Title</a>
+                            </li>
+                        }
+                    </ul>
                 }
             </div>
         </div>
@@ -74,6 +94,11 @@ else
 
 
 <style>
+    :root {
+        --moreinfo-gradient: linear-gradient(to bottom, #00000030, #031c1ced);
+        --summary-radial-gradient: radial-gradient(circle, transparent 40%, #000000 75%);
+        --summary-linear-gradient: linear-gradient(to right, #000000, grey);
+    }
 
     .event-bg {
         background-blend-mode: var(--blend-top, normal), var(--blend-bottom, saturation), normal;
@@ -100,7 +125,8 @@ else
 
         .event-details .summary {
             background-color: #00000036;
-            border: 1px solid #3b3b3b;
+            border-left: 1px solid #3b3b3b;
+            border-right: 1px solid #3b3b3b;
             border-radius: 2px;
             box-shadow: 4px 0px 16px -8px #000;
             padding: 20px;
@@ -120,13 +146,64 @@ else
             }
 
         .event-details .moreinfo {
-            padding: 10px;
+            padding: 20px 10px 10px 20px;
             position: relative;
             width: 60%;
         }
 
-            .event-details .moreinfo h5 {
-                font-weight: 300;
-                color: #646464;
+            .event-details .moreinfo > div {
             }
+
+            .event-details .moreinfo h5 {
+                border-bottom: 1px solid #06383b;
+                color: #24c4cd;
+                font-weight: 400;
+                padding: 50px 0 10px;
+            }
+
+    .ref-list {
+        align-items: center;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: left;
+        list-style: none;
+        padding: 0;
+    }
+
+        .ref-list > li {
+            align-items: end;
+            border: 1px solid #20acb4;
+            border-left-width: 10px;
+            border-radius: 2px;
+            display: flex;
+            font-weight: 500;
+            justify-content: center;
+            margin: 0 5px;
+            min-height: 200px;
+            width: 150px;
+        }
+
+            .ref-list > li > a {
+                xbackground: #00000091;
+                color: white;
+                display: block;
+                font-weight: 500;
+                padding: 5px 2px;
+                text-align: center;
+                text-decoration: none;
+                width: 100%;
+            }
+
+    .ref-bg {
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .ref-list > li > a:hover {
+        color: #20acb4;
+    }
+
+        .ref-list > li:hover > a {
+        }
 </style>

@@ -6,6 +6,8 @@
     [Parameter]
     public EventCallback<Models.Storyline.StoryEvent> OnStoryEventSelect { get; set; }
 
+    private Models.Storyline.StoryEvent _selectedStoryEvent = null;
+
     protected override void OnInitialized()
     {
         base.OnInitialized();
@@ -13,6 +15,7 @@
 
     protected void SelectStoryEvent(Models.Storyline.StoryEvent item)
     {
+        _selectedStoryEvent = item;
         this.OnStoryEventSelect.InvokeAsync(item);
     }
 }
@@ -20,7 +23,9 @@
 <div class="event-timeline-selector">
     @foreach (var e in this.StoryEvents)
     {
-        <span class="event-item">
+        string selectedItemClass = _selectedStoryEvent?.Id == e.Id ? "selected" : "";
+
+        <span class="event-item @selectedItemClass">
             <i id="@e.Id" @onclick="() => SelectStoryEvent(e)"></i>
         </span>
     }
@@ -46,16 +51,24 @@
             .event-timeline-selector .event-item > i {
                 background-color: #e4e4e4;
                 border: 2px solid #000;
-                border-radius: 20px;
+                border-radius: 5px;
                 cursor: pointer;
                 display: inline-block;
-                height: 25px;
+                height: 20px;
                 position: relative;
-                width: 25px;
+                width: 20px;
             }
 
-                .event-timeline-selector .event-item > i:hover {
-                    background-color: #bf2929;
-                    border-color: #ffffff;
+                .event-timeline-selector .event-item > i:hover, .event-timeline-selector .event-item.selected > i {
+                    background-color: #137c87;
+                    border-color: #02161a;
+                    height: 25px;
+                    transform: rotate(45deg);
+                    width: 25px;
                 }
+
+            .event-timeline-selector .event-item.selected > i {
+                background-color: #8b7e50;
+                border-color: #8b7e50;
+            }
 </style>

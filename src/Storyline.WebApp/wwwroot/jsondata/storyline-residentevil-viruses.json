@@ -4,18 +4,18 @@
     "ItemIType": "Virus",
     "Name": "Progenitor virus",
     "Summary": "",
-    "Wiki": "",
-    "Image": "",
+    "Wiki": "https://residentevil.fandom.com/wiki/Progenitor_Virus",
+    "Image": "https://localhost:51452/img/resident-evil/virus-holder-200.jpg",
     "DevelopedBy": "umbrella",
     "DevelopedOn": null
   },
   {
     "Id": "tvirus",
     "ItemIType": "Virus",
-    "Name": "T-virus",
+    "Name": "Tyrant virus",
     "Summary": "",
-    "Wiki": "",
-    "Image": "",
+    "Wiki": "https://residentevil.fandom.com/wiki/Tyrant_Virus",
+    "Image": "https://localhost:51452/img/resident-evil/virus-holder-200.jpg",
     "DevelopedBy": "umbrella",
     "DevelopedOn": null
   },
@@ -25,7 +25,7 @@
     "Name": "G-virus",
     "Summary": "",
     "Wiki": "",
-    "Image": "",
+    "Image": "https://localhost:51452/img/resident-evil/virus-holder-200.jpg",
     "DevelopedBy": "umbrella",
     "DevelopedOn": null
   },
@@ -35,7 +35,7 @@
     "Name": "Uroboros",
     "Summary": "",
     "Wiki": "",
-    "Image": "",
+    "Image": "https://localhost:51452/img/resident-evil/virus-holder-200.jpg",
     "DevelopedBy": "umbrella",
     "DevelopedOn": null
   },
@@ -45,7 +45,7 @@
     "Name": "A-virus",
     "Summary": "",
     "Wiki": "",
-    "Image": "",
+    "Image": "https://localhost:51452/img/resident-evil/virus-holder-200.jpg",
     "DevelopedBy": "umbrella",
     "DevelopedOn": null
   },
@@ -55,7 +55,7 @@
     "Name": "C-virus",
     "Summary": "",
     "Wiki": "",
-    "Image": "",
+    "Image": "https://localhost:51452/img/resident-evil/virus-holder-200.jpg",
     "DevelopedBy": "umbrella",
     "DevelopedOn": null
   },
@@ -65,7 +65,7 @@
     "Name": "las Plagas Parasite",
     "Summary": "",
     "Wiki": "",
-    "Image": "",
+    "Image": "https://localhost:51452/img/resident-evil/virus-holder-200.jpg",
     "DevelopedBy": "umbrella",
     "DevelopedOn": null
   }
