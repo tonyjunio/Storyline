@@ -1,72 +1,72 @@
 ﻿[
   {
-    "ItemId": "progenitor",
+    "Id": "progenitor",
     "ItemIType": "Virus",
     "Name": "Progenitor virus",
-    "Descriptions": "",
+    "Summary": "",
     "Wiki": "",
     "Image": "",
-    "DevelopedBy": "",
-    "DevelopedOn": ""
+    "DevelopedBy": "umbrella",
+    "DevelopedOn": null
   },
   {
-    "ItemId": "tvirus",
+    "Id": "tvirus",
     "ItemIType": "Virus",
     "Name": "T-virus",
-    "Descriptions": "",
+    "Summary": "",
     "Wiki": "",
     "Image": "",
-    "DevelopedBy": "",
-    "DevelopedOn": ""
+    "DevelopedBy": "umbrella",
+    "DevelopedOn": null
   },
   {
-    "ItemId": "gvirus",
+    "Id": "gvirus",
     "ItemIType": "Virus",
     "Name": "G-virus",
-    "Descriptions": "",
+    "Summary": "",
     "Wiki": "",
     "Image": "",
-    "DevelopedBy": "",
-    "DevelopedOn": ""
+    "DevelopedBy": "umbrella",
+    "DevelopedOn": null
   },
   {
-    "ItemId": "uroboros",
+    "Id": "uroboros",
     "ItemIType": "Virus",
     "Name": "Uroboros",
-    "Descriptions": "",
+    "Summary": "",
     "Wiki": "",
     "Image": "",
-    "DevelopedBy": "",
-    "DevelopedOn": ""
+    "DevelopedBy": "umbrella",
+    "DevelopedOn": null
   },
   {
-    "ItemId": "avirus",
+    "Id": "avirus",
     "ItemIType": "Virus",
     "Name": "A-virus",
-    "Descriptions": "",
+    "Summary": "",
     "Wiki": "",
     "Image": "",
-    "DevelopedBy": "",
-    "DevelopedOn": ""
+    "DevelopedBy": "umbrella",
+    "DevelopedOn": null
   },
   {
-    "ItemId": "cvirus",
+    "Id": "cvirus",
     "ItemIType": "Virus",
     "Name": "C-virus",
-    "Descriptions": "",
+    "Summary": "",
     "Wiki": "",
     "Image": "",
-    "DevelopedBy": "",
-    "DevelopedOn": ""
+    "DevelopedBy": "umbrella",
+    "DevelopedOn": null
   },
   {
-    "ItemId": "lasplagas",
+    "Id": "lasplagas",
     "ItemIType": "Virus",
     "Name": "las Plagas Parasite",
-    "Descriptions": "",
+    "Summary": "",
     "Wiki": "",
     "Image": "",
-    "DevelopedBy": "",
-    "DevelopedOn": ""
+    "DevelopedBy": "umbrella",
+    "DevelopedOn": null
   }
 ]

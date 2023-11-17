@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Hosting;
+using Storyline.WebApp.Models.Storyline;
+using Storyline.WebApp.Service;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -23,13 +25,16 @@ namespace Storyline.WebApp.Shared.StoryEvent
         [Inject]
         protected NavigationManager Navigator { get; set; }
 
+        [Inject]
+        protected IStorylineService StorylineService { get; set; }
+
         [Parameter]
-        public Models.StoryEvent SelectedStoryEvent { get; set; }
+        public Models.Storyline.StoryEvent SelectedStoryEvent { get; set; }
 
         [CascadingParameter(Name = "RefEventsDisplay")]
-        public Shared.StoryEvent.Display2 RefEventsDisplay { get; set; }
+        public Shared.StoryEvent.Display RefEventsDisplay { get; set; }
 
-        protected Models.StoryEvent FormData;
+        protected Models.Storyline.StoryEvent FormData;
 
         protected string SaveError { get; set; }
 
@@ -75,33 +80,32 @@ namespace Storyline.WebApp.Shared.StoryEvent
             {
                 try
                 {
-                    var storyEvents = await this.Http.GetFromJsonAsync<List<Models.StoryEvent>>("jsondata/storyline-residentevil.json");
-                    if (storyEvents == null)
+                    var story = await this.StorylineService.LoadStoryAsync();
+                    List<Models.Storyline.StoryEvent> storyEvents = story?.StoryEvents?.ToList() ?? null;
+                    if (story is null)
                     {
                         // Create a new list if the data is empty.
-                        storyEvents = new List<Models.StoryEvent>();
+                        story = new Story();
+                        storyEvents = new List<Models.Storyline.StoryEvent>();
                     }
 
-                    if (string.IsNullOrEmpty(this.FormData.Id))
+                    if (string.IsNullOrWhiteSpace(this.FormData.Id))
                     {
                         // Create new story event.
                         this.FormData.Id = Guid.NewGuid().ToString().Replace("-", "");
-
-                        // TODO: Iterate form characters.
-                        // this.FormData.CharacterTags = 
 
                         storyEvents.Add(this.FormData);
                     }
                     else
                     {
                         // Update story event.
-                        Models.StoryEvent entry = storyEvents.FirstOrDefault(x => x.Id == this.FormData.Id);
+                        Models.Storyline.StoryEvent entry = storyEvents.FirstOrDefault(x => x.Id == this.FormData.Id);
                         storyEvents.Remove(entry);
 
                         storyEvents.Add(this.FormData);
                     }
 
-                    string jsonData = JsonSerializer.Serialize(storyEvents);
+                    string jsonData = JsonSerializer.Serialize(story);
                     string path = Path.Combine(HostEnv.WebRootPath, @$"jsondata\storyline-residentevil.json");
 
                     // Force to a fixed local drive path, so published can also reflect its changes to a single point.
@@ -129,26 +133,11 @@ namespace Storyline.WebApp.Shared.StoryEvent
             }
         }
 
-        public void SetSelected(Models.StoryEvent storyEvent)
+        public void SetSelected(Models.Storyline.StoryEvent storyEvent)
         {
             this.SelectedStoryEvent = storyEvent;
             MapValuesToForm();
         }
-
-        //public class AddEditStoryEventForm
-        //{
-        //    public string Id { get; set; }
-        //    public string Title { get; set; }
-        //    public string Summary { get; set; }
-        //    public DateTime EventTimeStart { get; set; }
-        //    public DateTime? EventTimeEnd { get; set; }
-        //    public string Characters { get; set; }
-        //    public string Organizations { get; set; }
-        //    public string Viruses { get; set; }
-        //    public string Games { get; set; }
-        //    public string Movies { get; set; }
-        //    public string BannerImage { get; set; }
-        //}
 
         public enum ViewState
         {

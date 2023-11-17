@@ -2,11 +2,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.JSInterop;
 using Storyline.WebApp.Shared.StoryEvent;
-using System;
-using System.Collections.Generic;
-using System.Net.Http;
-using System.Net.Http.Json;
-using System.Threading.Tasks;
+using Storyline.WebApp.Service;
 
 namespace Storyline.WebApp.Pages
 {
@@ -16,24 +12,21 @@ namespace Storyline.WebApp.Pages
         protected IJSRuntime JS { get; set; }
 
         [Inject]
-        protected HttpClient Http { get; set; }
-
-        [Inject]
         protected IWebHostEnvironment HostEnv { get; set; }
 
         [Inject]
-        protected NavigationManager Navigator { get; set; }
+        protected IStorylineService StorylineService { get; set;}
 
-        protected Models.Story Story { get; set; }
+        protected Models.Storyline.Story Story { get; set; }
+
         protected string ErrMsg { get; set; }
 
-        public Shared.StoryEvent.AddEdit RefAddEditEventForm { get; set; }
+        public AddEdit RefAddEditEventForm { get; set; }
 
-        public Shared.StoryEvent.Display2 RefEventsDisplay { get; set; }
+        public Display RefEventsDisplay { get; set; }
 
         protected override async Task OnInitializedAsync()
         {
-            this.Http.BaseAddress = new Uri(Navigator.BaseUri);
             await this.LoadDataAsync();
         }
 
@@ -41,7 +34,7 @@ namespace Storyline.WebApp.Pages
         {
             try
             {
-                this.Story = await Http.GetFromJsonAsync<Models.Story>("jsondata/storyline-residentevil.json");
+                this.Story = await this.StorylineService.LoadStoryAsync();
             }
             catch (Exception ex)
             {

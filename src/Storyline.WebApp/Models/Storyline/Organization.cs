@@ -1,4 +1,4 @@
-﻿namespace Storyline.WebApp.Models;
+﻿namespace Storyline.WebApp.Models.Storyline;
 
 public class Organization : Entity
 {

@@ -1,82 +1,51 @@
 ﻿@inherits DisplayBase
 
-<div style="
-    background-image: url(https://www.teamhitless.com/wp-content/uploads/2021/06/1718854918_preview_resident-evil-2-remake-ps4-eu-22jun18.png);
-    display: inline-block;
-    width: 420px;
-    height: 200px;
-    position: fixed;
-    top: -47px;
-    z-index: 0;
-    background-position: center;"></div>
-
 @if (this.Story != null)
 {
-<div class="story-events">
-    @foreach (var story in this.Story.StoryEvents.OrderBy(x => x.EventTimeStart))
-        {
-    <div class="event-backdrop" style="background-image:url(@story.Image)">
-        <div class="event">
-            <button @onclick="@(() => EditStoryEvent(story))">
-                <i class="fa fa-pencil-alt fa-lg"></i>
-            </button>
-            <article>
-                <h2>@story.Title</h2>
-                <div class="event-time">@($"{story.EventTimeStart:MMMM yyyy}")@((story.EventTimeEnd.HasValue ? $" - {story.EventTimeEnd:MMMM yyyy}" : ""))</div>
-                <p class="summary">@story.Summary</p>
+    <div class="story-header">
+        <img src="@this.Story.LogoImage" alt="@this.Story.Title" />
+        <h2>@this.Story.Title</h2>
+    </div>
 
-                @if (story.Characters != null)
-                            {
-                <div class="characters">
-                    @foreach (var entry in story.Characters)
-                                    {
-                    <span class="character">@entry.Name</span>
-                                    }
-                </div>
-                            }
+    <div class="story-body">
+        <div class="content-one">
+            <TimelineSelector StoryEvents="@this.Story.StoryEvents" OnStoryEventSelect="@(x => this.SelectedStoryEvent = x)"></TimelineSelector>
+        </div>
+        <div class="content-two">
+            @if (this.SelectedStoryEvent is not null)
+            {
+                <TimelineDetails StoryEvent="@this.SelectedStoryEvent"></TimelineDetails>
+            }
 
-                @if (story.Organizations != null)
-                            {
-                <div class="organizations">
-                    @foreach (var entry in story.Organizations)
-                                    {
-                    <span class="character">@entry.Name</span>
-                                    }
-                </div>
-                            }
-
-                @if (story.Viruses != null)
-                            {
-                <div class="viruses">
-                    @foreach (var entry in story.Viruses)
-                                    {
-                    <span class="character">@entry.Name</span>
-                                    }
-                </div>
-                            }
-
-                @if (story.Games != null)
-                            {
-                <div class="viruses">
-                    @foreach (var entry in story.Games)
-                                    {
-                    <span class="character">@entry.Title</span>
-                                    }
-                </div>
-                            }
-
-                @if (story.Movies != null)
-                            {
-                <div class="viruses">
-                    @foreach (var entry in story.Movies)
-                                    {
-                    <span class="character">@entry.Title</span>
-                                    }
-                </div>
-                            }
-            </article>
         </div>
     </div>
-        }
-</div>
 }
+
+<style>
+    .story-header {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+    }
+
+    .story-header img {
+        margin: 0 25px;
+        width: 50px;
+    }
+
+    .story-body {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: stretch;
+        justify-content: flex-start;
+        margin-top: 50px;
+    }
+
+        .story-body .content-one {
+            padding: 0 20px;
+        }
+
+        .story-body .content-two {
+            flex-grow: 1;
+        }
+</style>

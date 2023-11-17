@@ -43,23 +43,23 @@
             <hr />
             <div class="mb-3">
                 <label>Characters <i class="fa fa-plus-square fa-lg"></i></label>
-                @X(this.FormData.Characters.Select(x => x.Name))
+                @X(this.FormData?.Characters?.Select(x => x.Name))
             </div>
             <div class="mb-3">
                 <label>Organizations <i class="fa fa-plus-square fa-lg"></i></label>
-                @X(this.FormData.Organizations.Select(x => x.Name))
+                @X(this.FormData?.Organizations?.Select(x => x.Name))
             </div>
             <div class="mb-3">
                 <label>Viruses <i class="fa fa-plus-square fa-lg"></i></label>
-                @X(this.FormData.Viruses.Select(x => x.Name))
+                @X(this.FormData?.Viruses?.Select(x => x.Name))
             </div>
             <div class="mb-3">
                 <label>Games <i class="fa fa-plus-square fa-lg"></i></label>
-                @X(this.FormData.Games.Select(x => x.Title))
+                @X(this.FormData?.Games?.Select(x => x.Title))
             </div>
             <div class="mb-3">
                 <label>Movies <i class="fa fa-plus-square fa-lg"></i></label>
-                @X(this.FormData.Movies.Select(x => x.Title))
+                @X(this.FormData?.Movies?.Select(x => x.Title))
             </div>
             <hr />
             <div class="mb-3">
