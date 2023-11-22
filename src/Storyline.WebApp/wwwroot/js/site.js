@@ -1,4 +1,5 @@
 ﻿var bsMainOffCanvas = null;
+let disableConsoleLog = true;
 
 function ToggleMainOffCanvas() {
 
@@ -37,12 +38,12 @@ function RenderTimelineSummary() {
 
         distance += elemWidth;
     });
-    console.log(timelinePoints);
+    ConsoleLog(timelinePoints);
 
     let eventPoints = [];
     let periodXyMap = [];
     events.forEach((elem) => {
-        let eventId = elem.dataset.eventId;
+        let eventTitle = elem.dataset.eventTitle;
         let startYear = elem.dataset.startYear;
         let endYear = elem.dataset.endYear;
         let startPoint = timelinePoints.find(point => point.year === startYear);
@@ -50,41 +51,56 @@ function RenderTimelineSummary() {
         let eventWidth = endPoint.endX - startPoint.startX;
 
         let yIndex = 0;
-        let yPosition1 = 0;
-        let yPosition2 = 0;
-
-        console.log("--------------------------------------------------");
-        console.log(`seventId: ${eventId}`);
-        console.log(`startPoint.xIndex: ${startPoint.xIndex}`);
-        console.log(`endPoint.xIndex: ${endPoint.xIndex}`);
-        console.log(`yIndex: ${yIndex}`);
+        let yPosition = 0;
 
         if (periodXyMap.length > 0) {
+            // If there is a (x, y) map information available, find the next available Y position that the event can be placed at.
             let isOccupied = true;
+            let occupiedYPosition = 0;
+            ConsoleLog("+++");
             while (isOccupied) {
-                for (let x = startPoint.xIndex; x <= endPoint.xIndex; x++) {
+                for (let x = startPoint.xIndex; x <= startPoint.xIndex; x++) {
                     let mapItem = periodXyMap.find(item => {
                         return item.xIndex === x && item.yIndex === yIndex;
                     });
 
-                    console.log(mapItem);
-
+                    ConsoleLog(mapItem);
                     if (mapItem != undefined) {
-                        yIndex = mapItem.yIndex + 1;
+                        ConsoleLog(mapItem.yIndex);
+                        occupiedYPosition = mapItem.yPosition + mapItem.height + eventVerticalGap;
+
+                        // if  (x, y) map is found, increase yIndex and try again.
+                        yIndex = Math.max(yIndex, mapItem.yIndex) + 1;
                         continue;
                     }
+
+                    // Find the Y position where to place the next evet item.
+                    yPosition = occupiedYPosition;
 
                     isOccupied = false;
                     break;
                 }
             }
+            ConsoleLog("+++");
         }
 
-        console.log("+++");
-        console.log(periodXyMap);
-        console.log("+++");
+        ConsoleLog("--------------------------------------------------");
+        ConsoleLog(`eventTitle: ${eventTitle}`);
+        ConsoleLog(`startPoint.xIndex: ${startPoint.xIndex}`);
+        ConsoleLog(`endPoint.xIndex: ${endPoint.xIndex}`);
+        ConsoleLog(`yIndex: ${yIndex}`);
+        ConsoleLog(`yPosition: ${yPosition}`);
+
+        // Set the event styles to show on the timeline summary.
+        elem.style.top = yPosition + 'px';
+        elem.style.width = (eventWidth - 10) + 'px'; // minus 10 is to adjust for the 5px left position.
+        elem.style.left = '5px';
+        // elem.style.backgroundColor = RndRGBColorValue(colorElementMin = 95);
+
+        let eventHeight = elem.clientHeight;
 
         eventPoints.push({
+            eventTitle: eventTitle,
             startYear: startYear,
             endYear: endYear,
             startPointXIndex: startPoint.xIndex,
@@ -92,43 +108,51 @@ function RenderTimelineSummary() {
             startX: startPoint.startX,
             endX: endPoint.endX,
             width: eventWidth,
-            yIndex: yIndex
+            height: elem.clientHeight,
+            yIndex: yIndex,
+            top: yPosition
         });
-
-        // Set the event styles to show on the timeline summary.
-        elem.style.width = eventWidth + 'px';
-        elem.style.top = (yIndex * eventHeight) + (yIndex * eventVerticalGap) + 'px';
-        elem.style.backgroundColor = rndRGBColorValue(colorElementMin = 95);
 
         // Add event (x,y) position.
         for (let x = startPoint.xIndex; x <= endPoint.xIndex; x++) {
             periodXyMap.push({
                 xIndex: x,
                 yIndex: yIndex,
-                yPosition1: yPosition1,
-                yPosition2: yPosition2,
-                eventId: eventId
+                height: eventHeight,
+                yPosition: yPosition,
+                eventTitle: eventTitle
             });
         }
     });
 
     // Get all y values, then sort descendingly and finally get only the first value at first index.
-    let highestY = periodXyMap.map((item) => item.yIndex).sort((a, b) => b - a)[0];
+    let positionHeights = periodXyMap.map((item) => item.yPosition + item.height).sort((a, b) => b - a)[0];
 
-    // Set the timelineSummary height.
-    timelineSummary.style.height = (highestY * eventHeight) + 70 + 'px';
+    // Set the timelineSummary height based on the event that occupied the highest Y position (+55px for the year header offset)
+    timelineSummary.style.height = positionHeights + 55 + 'px';
 
     // Set debug variables.
     _TimelinePoints = timelinePoints;
     _PeriodXyMap = periodXyMap;
 
-    console.log(eventPoints);
+    ConsoleLog(eventPoints);
+
+    console.log("RenderTimelineSummary() completed");
 }
 
-function rndRGBColorValue(colorElementMin = 0, colorElementMax = 255) {
+function RndRGBColorValue(colorElementMin = 0, colorElementMax = 255) {
     let min = colorElementMin;
     let max = colorElementMax;
     let fn = () => Math.floor(Math.random(0) * (max - min + 1)) + min;
     let r = fn(); g = fn(); b = fn();
     return `rgba(${r}, ${g}, ${b}, 1)`
 }
+
+function ConsoleLog(msg) {
+    if (!disableConsoleLog) {
+        console.log(msg);
+    }
+}
+
+
+window.onresize = () => RenderTimelineSummary();

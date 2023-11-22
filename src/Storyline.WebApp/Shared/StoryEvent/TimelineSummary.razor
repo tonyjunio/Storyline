@@ -7,6 +7,9 @@
     [Parameter]
     public IEnumerable<Models.Storyline.StoryEvent> StoryEvents { get; set; }
 
+    [Parameter]
+    public EventCallback<Models.Storyline.StoryEvent> OnStoryEventSelect { get; set; }
+
     private Models.Storyline.StoryEvent _selectedStoryEvent = null;
 
     protected override void OnInitialized()
@@ -16,7 +19,10 @@
 
     protected override Task OnAfterRenderAsync(bool firstRender)
     {
-        JS.InvokeVoidAsync("RenderTimelineSummary");
+        if (firstRender)
+        {
+            JS.InvokeVoidAsync("RenderTimelineSummary");
+        }
 
         return base.OnAfterRenderAsync(firstRender);
     }
@@ -28,6 +34,12 @@
 
         return startYears.Concat(endYears).Distinct().OrderBy(x => x).ToArray();
     }
+
+    protected void SelectStoryEvent(Models.Storyline.StoryEvent item)
+    {
+        _selectedStoryEvent = item;
+        this.OnStoryEventSelect.InvokeAsync(item);
+    }
 }
 
 @if (this.StoryEvents is not null)
@@ -37,16 +49,16 @@
         @foreach (int year in years)
         {
             Models.Storyline.StoryEvent[] events = this.StoryEvents.Where(x => x.EventTimeStart.Year == year).ToArray();
-            int idxr = 0;
             <div class="timeline-period" data-year="@year">
                 <div class="year">@year</div>
                 <div class="events">
-                    @foreach (var evt in events)
+                    @foreach (var e in events)
                     {
-                        int startYear = evt.EventTimeStart.Year;
-                        int endYear = evt.EventTimeEnd?.Year ?? startYear;
-                        <span class="event-item @idxr" data-start-year="@startYear" data-end-year="@endYear" data-event-id="@evt.Id" title="@evt.Title">@evt.Title</span>
-                        idxr++;
+                        int startYear = e.EventTimeStart.Year;
+                        int endYear = e.EventTimeEnd?.Year ?? startYear;
+                        string selectedItemClass = _selectedStoryEvent?.Id == e.Id ? "selected" : "";
+
+                        <span class="event-item @selectedItemClass" data-start-year="@startYear" data-end-year="@endYear" data-event-id="@e.Id" data-event-title="@e.Title" title="@e.Title" @onclick="() => SelectStoryEvent(e)">@e.Title</span>
                     }
                 </div>
             </div>
@@ -57,7 +69,6 @@
 <style>
     .timeline-summary {
         align-content: start;
-        background-color: #202020;
         display: flex;
         flex-flow: row nowrap;
         position: relative;
@@ -68,11 +79,11 @@
         }
 
             .timeline-summary .timeline-period:nth-child(2n+1) {
-                background-color: #3b3b3b;
+                background-color: #2d2d2d87;
             }
 
             .timeline-summary .timeline-period:nth-child(2n+2) {
-                background-color: #272727;
+                background-color: #2d2d2d5c;
             }
 
             .timeline-summary .timeline-period .year {
@@ -86,14 +97,26 @@
             }
 
                 .timeline-summary .timeline-period .events .event-item {
-                    border-radius: 5px;
+                    background-color: #e4e4e4;
+                    border-radius: 2px;
                     color: #000000;
+                    cursor: pointer;
                     display: inline-block;
+                    font-size: 0.8rem;
                     overflow: hidden;
-                    padding: 0 5px;
+                    line-height: 1.2rem;
+                    padding: 2px 5px;
                     position: absolute;
                     text-align: center;
                     text-overflow: ellipsis;
                     /*white-space: nowrap;*/
                 }
+
+                    .timeline-summary .timeline-period .events .event-item:hover {
+                        background-color: #20acb4;
+                    }
+
+                    .timeline-summary .timeline-period .events .event-item.selected {
+                        background-color: #9b8c58;
+                    }
 </style>
