@@ -37,16 +37,17 @@ public class StorylineService : IStorylineService
                         Id = e.Id,
                         Title = e.Title,
                         Summary = e.Summary,
-                        Wiki = e.Wiki,
-                        Image = e.Image,
+                        Location = e.Location,
                         EventTimeStart = e.EventTimeStart,
                         EventTimeEnd = e.EventTimeEnd,
+                        Wiki = e.Wiki,
+                        Image = e.Image,
                         Characters = characters?.Where(c => (e.Characters)?.Contains(c.Id) ?? false),
                         Organizations = organizations?.Where(o => (e.Organizations)?.Contains(o.Id) ?? false),
                         Viruses = viruses?.Where(v => (e.Viruses)?.Contains(v.Id) ?? false),
                         Games = media?.Where(g => g.MediaType == StoryMediaType.Game && ((e.Games)?.Contains(g.Id) ?? false)),
                         Movies = media?.Where(m => m.MediaType == StoryMediaType.Movie && ((e.Movies)?.Contains(m.Id) ?? false))
-                    })?.OrderBy(o => o.EventTimeStart)?.OrderBy(o => (o?.EventTimeEnd ?? DateTime.MinValue))
+                    })?.OrderBy(o => o.EventTimeStart)
                 };
             }
         }

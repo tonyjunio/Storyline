@@ -4,12 +4,14 @@ public class Helper
 {
     public struct DateHelper
     {
-        public static string TimeLineInfo(DateTime startDateTime, DateTime? endDateTime)
+        public static string TimeLineInfo(DateTime startDateTime, DateTime? endDateTime, bool isShort = false)
         {
-            string result = startDateTime.ToString("MMMM yyyy");
+            string format = isShort ? "MMM yyyy" : "MMMM yyyy";
+
+            string result = startDateTime.ToString(format);
             if (endDateTime.HasValue)
             {
-                result += $" - {endDateTime.Value:MMMM yyyy}";
+                result += $" - {endDateTime.Value.ToString(format)}";
             }
 
             return result;

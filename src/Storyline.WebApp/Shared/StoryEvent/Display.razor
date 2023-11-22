@@ -7,6 +7,10 @@
         <h2>@this.Story.Title</h2>
     </div>
 
+    <div class="storyline-summary">
+        <TimelineSummary StoryEvents="@this.Story.StoryEvents"></TimelineSummary>
+    </div>
+
     <div class="story-body">
         <div class="content-one">
             <TimelineSelector StoryEvents="@this.Story.StoryEvents" OnStoryEventSelect="@(x => this.SelectedStoryEvent = x)"></TimelineSelector>
@@ -16,7 +20,6 @@
             {
                 <TimelineDetails StoryEvent="@this.SelectedStoryEvent"></TimelineDetails>
             }
-
         </div>
     </div>
 }
@@ -29,17 +32,22 @@
         margin: 10px 0;
     }
 
-    .story-header img {
-        margin: 0 22px;
-        width: 50px;
-    }
+        .story-header img {
+            margin: 0 15px;
+            width: 40px;
+        }
+
+        .story-header h2 {
+            font-size: 1.5rem;
+            margin: 0;
+        }
 
     .story-body {
         display: flex;
         flex-flow: row nowrap;
         align-items: stretch;
         justify-content: flex-start;
-        margin-top: 50px
+        margin-top: 30px
     }
 
         .story-body .content-one {

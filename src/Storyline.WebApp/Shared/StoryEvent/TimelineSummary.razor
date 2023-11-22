@@ -1,0 +1,99 @@
+@using Storyline.WebApp.Common;
+
+@code {
+    [Inject]
+    protected IJSRuntime JS { get; set; }
+
+    [Parameter]
+    public IEnumerable<Models.Storyline.StoryEvent> StoryEvents { get; set; }
+
+    private Models.Storyline.StoryEvent _selectedStoryEvent = null;
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+    }
+
+    protected override Task OnAfterRenderAsync(bool firstRender)
+    {
+        JS.InvokeVoidAsync("RenderTimelineSummary");
+
+        return base.OnAfterRenderAsync(firstRender);
+    }
+
+    protected int[] GetYears()
+    {
+        IEnumerable<int> startYears = this.StoryEvents.Select(x => x.EventTimeStart.Year);
+        IEnumerable<int> endYears = this.StoryEvents.Where(x => x.EventTimeEnd.HasValue).Select(x => x.EventTimeEnd.Value.Year);
+
+        return startYears.Concat(endYears).Distinct().OrderBy(x => x).ToArray();
+    }
+}
+
+@if (this.StoryEvents is not null)
+{
+    int[] years = this.GetYears();
+    <div class="timeline-summary">
+        @foreach (int year in years)
+        {
+            Models.Storyline.StoryEvent[] events = this.StoryEvents.Where(x => x.EventTimeStart.Year == year).ToArray();
+            int idxr = 0;
+            <div class="timeline-period" data-year="@year">
+                <div class="year">@year</div>
+                <div class="events">
+                    @foreach (var evt in events)
+                    {
+                        int startYear = evt.EventTimeStart.Year;
+                        int endYear = evt.EventTimeEnd?.Year ?? startYear;
+                        <span class="event-item @idxr" data-start-year="@startYear" data-end-year="@endYear" data-event-id="@evt.Id" title="@evt.Title">@evt.Title</span>
+                        idxr++;
+                    }
+                </div>
+            </div>
+        }
+    </div>
+}
+
+<style>
+    .timeline-summary {
+        align-content: start;
+        background-color: #202020;
+        display: flex;
+        flex-flow: row nowrap;
+        position: relative;
+    }
+
+        .timeline-summary .timeline-period {
+            flex-grow: 1;
+        }
+
+            .timeline-summary .timeline-period:nth-child(2n+1) {
+                background-color: #3b3b3b;
+            }
+
+            .timeline-summary .timeline-period:nth-child(2n+2) {
+                background-color: #272727;
+            }
+
+            .timeline-summary .timeline-period .year {
+                font-size: 1.2rem;
+                padding: 10px;
+                text-align: center;
+            }
+
+            .timeline-summary .timeline-period .events {
+                position: relative;
+            }
+
+                .timeline-summary .timeline-period .events .event-item {
+                    border-radius: 5px;
+                    color: #000000;
+                    display: inline-block;
+                    overflow: hidden;
+                    padding: 0 5px;
+                    position: absolute;
+                    text-align: center;
+                    text-overflow: ellipsis;
+                    /*white-space: nowrap;*/
+                }
+</style>

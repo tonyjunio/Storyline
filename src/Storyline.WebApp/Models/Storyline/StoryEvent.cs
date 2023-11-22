@@ -2,6 +2,7 @@
 
 public class StoryEvent : BaseInfo
 {
+    public string Location { get; set; }
     public DateTime EventTimeStart { get; set; }
     public DateTime? EventTimeEnd { get; set; }
     public IEnumerable<Character> Characters { get; set; }

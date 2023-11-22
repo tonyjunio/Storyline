@@ -5,7 +5,8 @@
     "Name": "Umbrella Corp.",
     "Profile": "",
     "Wiki": "https://residentevil.fandom.com/wiki/Umbrella_Corporation",
-    "Image": "https://localhost:51452/img/resident-evil/org-umbrella-corp-200.jpg"
+    "Image": "https://localhost:51452/img/resident-evil/org-umbrella-corp-200.jpg",
+    "Founded": null
   },
   {
     "Id": "tricell",
@@ -13,7 +14,8 @@
     "Name": "Tricell",
     "Profile": "",
     "Wiki": "https://residentevil.fandom.com/wiki/TRICELL",
-    "Image": "https://localhost:51452/img/resident-evil/org-tricell-200.jpg"
+    "Image": "https://localhost:51452/img/resident-evil/org-tricell-200.jpg",
+    "Founded": null
   },
   {
     "Id": "whilpharma",
@@ -21,7 +23,8 @@
     "Name": "WhilPharma",
     "Profile": "",
     "Wiki": "https://residentevil.fandom.com/wiki/WP_Corporation",
-    "Image": "https://localhost:51452/img/resident-evil/org-wilpharma-200.jpg"
+    "Image": "https://localhost:51452/img/resident-evil/org-wilpharma-200.jpg",
+    "Founded": null
   },
   {
     "Id": "terrasave",
@@ -29,7 +32,8 @@
     "Name": "Terrasave",
     "Profile": "",
     "Wiki": "https://residentevil.fandom.com/wiki/TerraSave",
-    "Image": "https://localhost:51452/img/resident-evil/org-terrasave-200.jpg"
+    "Image": "https://localhost:51452/img/resident-evil/org-terrasave-200.jpg",
+    "Founded": null
   },
   {
     "Id": "stars",
@@ -37,7 +41,8 @@
     "Name": "S.T.A.R.S",
     "Profile": "",
     "Wiki": "https://residentevil.fandom.com/wiki/Special_Tactics_and_Rescue_Service",
-    "Image": "https://localhost:51452/img/resident-evil/org-stars01-200.jpg"
+    "Image": "https://localhost:51452/img/resident-evil/org-stars01-200.jpg",
+    "Founded": null
   },
   {
     "Id": "stars-bravo",
@@ -45,7 +50,8 @@
     "Name": "S.T.A.R.S Bravo",
     "Profile": "",
     "Wiki": "https://residentevil.fandom.com/wiki/Special_Tactics_and_Rescue_Service",
-    "Image": "https://localhost:51452/img/resident-evil/org-stars01-200.jpg"
+    "Image": "https://localhost:51452/img/resident-evil/org-stars01-200.jpg",
+    "Founded": null
   },
   {
     "Id": "bsaa",
@@ -53,7 +59,8 @@
     "Name": "BSAA",
     "Profile": "",
     "Wiki": "https://residentevil.fandom.com/wiki/Bioterrorism_Security_Assessment_Alliance",
-    "Image": "https://localhost:51452/img/resident-evil/org-bsaa-200.jpg"
+    "Image": "https://localhost:51452/img/resident-evil/org-bsaa-200.jpg",
+    "Founded": null
   },
   {
     "Id": "neoumbrella",
@@ -61,7 +68,17 @@
     "Name": "Neo-Umbrella",
     "Profile": "",
     "Wiki": "https://residentevil.fandom.com/wiki/Neo_Umbrella",
-    "Image": "https://localhost:51452/img/resident-evil/org-neoumbrella-200.jpg"
+    "Image": "https://localhost:51452/img/resident-evil/org-neoumbrella-200.jpg",
+    "Founded": null
+  },
+  {
+    "Id": "blueumbrella",
+    "EntityType": "Organization",
+    "Name": "Blue Umbrella",
+    "Profile": "",
+    "Wiki": "https://residentevil.fandom.com/wiki/Blue_Umbrella",
+    "Image": "https://localhost:51452/img/resident-evil/org-blueumbrella-200.png",
+    "Founded": "2007"
   },
   {
     "Id": "losilluminados",
@@ -69,7 +86,8 @@
     "Name": "Los Illuminados",
     "Profile": "",
     "Wiki": "https://residentevil.fandom.com/wiki/Los_Iluminados",
-    "Image": "https://localhost:51452/img/resident-evil/org-losilluminados-200.png"
+    "Image": "https://localhost:51452/img/resident-evil/org-losilluminados-200.png",
+    "Founded": null
   },
   {
     "Id": "sacredsnakes",
@@ -77,7 +95,8 @@
     "Name": "The Sacred Snakes",
     "Profile": "",
     "Wiki": "https://residentevil.fandom.com/wiki/Sacred_Snakes",
-    "Image": "https://localhost:51452/img/resident-evil/org-sacredserpent-200.jpg"
+    "Image": "https://localhost:51452/img/resident-evil/org-sacredserpent-200.jpg",
+    "Founded": null
   },
   {
     "Id": "usgovt",
@@ -85,7 +104,8 @@
     "Name": "US Government",
     "Profile": "",
     "Wiki": "https://residentevil.fandom.com/wiki/United_States_Army",
-    "Image": "https://localhost:51452/img/resident-evil/org-usgovt-200.jpg"
+    "Image": "https://localhost:51452/img/resident-evil/org-usgovt-200.jpg",
+    "Founded": null
   },
   {
     "Id": "usstratcom",
@@ -93,7 +113,8 @@
     "Name": "US Stratcom/AUPIT",
     "Profile": "",
     "Wiki": "https://residentevil.fandom.com/wiki/United_States_Strategic_Command",
-    "Image": "https://localhost:51452/img/resident-evil/org-usstratcom-200.jpg"
+    "Image": "https://localhost:51452/img/resident-evil/org-usstratcom-200.jpg",
+    "Founded": null
   },
   {
     "Id": "maddogs",
@@ -101,6 +122,7 @@
     "Name": "Mad Dogs",
     "Profile": "",
     "Wiki": "https://residentevil.fandom.com/wiki/Mad_Dogs",
-    "Image": "https://localhost:51452/img/resident-evil/org-maddogs.webp"
+    "Image": "https://localhost:51452/img/resident-evil/org-maddogs-200.jpg",
+    "Founded": null
   }
 ]

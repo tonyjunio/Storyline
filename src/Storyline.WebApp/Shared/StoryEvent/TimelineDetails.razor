@@ -18,7 +18,7 @@
         <div class="summary rad-mask event-bg" style="background-image: var(--summary-radial-gradient), var(--summary-linear-gradient), url('@item.Image');">
             <h3>
                 @item.Title
-                <span class="event-date">@Helper.DateHelper.TimeLineInfo(this.StoryEvent.EventTimeStart, this.StoryEvent.EventTimeEnd)</span>
+                <span class="event-date">@Helper.DateHelper.TimeLineInfo(this.StoryEvent.EventTimeStart, this.StoryEvent.EventTimeEnd) / @this.StoryEvent.Location</span>
             </h3>
             <p>@item.Summary</p>
             <a class="wiki-link" href="@this.StoryEvent.Wiki" target="_blank">Read More</a>
@@ -100,9 +100,10 @@ else
 
 <style>
     :root {
-        --moreinfo-gradient: linear-gradient(to bottom, #00000030, #031c1ced);
-        --summary-radial-gradient: radial-gradient(circle, transparent 40%, #000000 75%);
+        --moreinfo-gradient: linear-gradient(to bottom, #00000045, #413b2796);
+        --summary-radial-gradient: radial-gradient(circle, transparent 40%, #000000 70%);
         --summary-linear-gradient: linear-gradient(to right, #000000, grey);
+        --summary-linear-gradient2: linear-gradient(to bottom, #000000c7, #00000036);
     }
 
     .event-bg {
@@ -134,7 +135,7 @@ else
             border-right: 1px solid #3b3b3b;
             border-radius: 2px;
             box-shadow: 4px 0px 16px -8px #000;
-            padding: 20px;
+            font-size: 1.1rem;
             position: relative;
             width: 40%;
         }
@@ -154,23 +155,25 @@ else
                 color: black;
                 font-size: 0.8rem;
                 font-weight: 500;
+                margin: 10px;
                 padding: 3px 6px;
                 text-decoration: none;
             }
 
                 .event-details .summary .wiki-link:hover {
-                    background: #8b7e50;
+                    background: #20acb4;
                 }
 
             .event-details .summary h3 {
                 border-bottom: 1px solid #393939;
                 color: #9b8c58;
-                margin-bottom: 20px;
-                padding-bottom: 10px;
+                margin: 0;
+                padding: 10px;
             }
 
             .event-details .summary p {
-                background: #00000036;
+                background: var(--summary-linear-gradient2);
+                padding: 10px;
             }
 
         .event-details .moreinfo {
@@ -183,8 +186,7 @@ else
             }
 
             .event-details .moreinfo h5 {
-                border-bottom: 1px solid #06383b;
-                color: #24c4cd;
+                color: #8b7e50;
                 font-weight: 400;
                 padding: 50px 0 10px;
             }
@@ -200,13 +202,13 @@ else
 
         .ref-list > li {
             align-items: end;
-            border: 1px solid #20acb4;
-            border-left-width: 10px;
-            border-radius: 2px;
+            border: 1px solid #453f29;
+            border-left-width: 8px;
+            border-radius: 5px 2px 5px 2px;
             display: flex;
             font-weight: 500;
             justify-content: center;
-            margin: 0 5px;
+            margin: 5px;
             min-height: 200px;
             width: 150px;
         }
