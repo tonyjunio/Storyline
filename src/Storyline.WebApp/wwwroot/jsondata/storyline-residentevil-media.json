@@ -70,6 +70,13 @@
     "Image": "https://localhost:51452/img/resident-evil/re-biohazard-200.png"
   },
   {
+    "Id": "re4",
+    "MediaType": "Game",
+    "Title": "Resident Evil 4",
+    "Wiki": "",
+    "Image": "https://localhost:51452/img/resident-evil/re-biohazard-200.png"
+  },
+  {
     "Id": "re5",
     "MediaType": "Game",
     "Title": "Resident Evil 5",

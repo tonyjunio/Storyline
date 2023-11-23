@@ -194,6 +194,37 @@
       ]
     },
     {
+      "Id": "7ae33b2192374fdc9394b5a40fe891db",
+      "Title": "Abduction of the President's Daughter Incident",
+      "Summary": "The Abduction of the President's Daughter Incident[2][note 1] was an international incident in which the American First Daughter Ashley Graham was abducted from Massachusetts and trafficked to Spain on the behalf of Los Iluminados, a pagan movement which worshipped Las Plagas. American and Spanish authorities collaborated and were successful in rescuing Graham in a mission which exposed Los Iluminados' ties to illegal bioweapons development. Though the cult's leadership and R&D capabilities were decapitated, the animals they worshipped found their way onto the black market as bioweaponry. As of 2012, the cult's former mountain hideout in Valdelobos and the surrounding mountain range lie within an exclusion zone imposed by the Spanish government.[3]",
+      "Location": "Valdelobos (Village, Castle, Island)",
+      "EventTimeStart": "2004-09-01T00:00:00",
+      "EventTimeEnd": "2004-11-30T00:00:00",
+      "Image": "https://localhost:51452/img/resident-evil/event-re4.jpg",
+      "Wiki": "https://residentevil.fandom.com/wiki/Abduction_of_the_President%27s_Daughter_Incident",
+      "Characters": [
+        "leon.k",
+        "ashley.g",
+        "ada.w",
+        "ingrid.h",
+        "osmund.s",
+        "ramon.s",
+        "jack.k"
+      ],
+      "Organizations": [
+        "losilluminados"
+      ],
+      "Viruses": [
+        "lasplagas"
+      ],
+      "Games": [
+        "re4"
+      ],
+      "Movies": [
+        ""
+      ]
+    },
+    {
       "Id": "fb84e0ce015b49eba508d88a26d55182",
       "Title": "Raid on the Spencer Estate",
       "Summary": "After the Queen Zenobia Incident, the BSAA received a tip on the location of Oswell E. Spencer\u0027s Estate. Jill Valentine and Chris Redfield are assigned on this mission in the hopes of finding information that might lead them to their former Captain and nemesis, Albert Wesker who they are searching for since their last encounter with him during the Caucasus Incident. Upon entrance, it appeared that Albert already killed all of the guards and Spencer himself. The result of their fight with him caused the loss of Jill and her supposed death as both of their bodies are never found.",
@@ -379,11 +410,14 @@
       "Location": "Querétaro, México",
       "EventTimeStart": "2014-01-01T00:00:00",
       "EventTimeEnd": null,
-      "Image": null,
+      "Image": "https://localhost:51452/img/resident-evil/event-vendetta-querétaro-mansion-incident.jpg",
       "Wiki": "https://residentevil.fandom.com/wiki/Quer%C3%A9taro_mansion_incident",
       "Characters": [
         "chris.r",
-        "glen.a"
+        "glen.a",
+        "maria.g",
+        "diego.g",
+        "cathy.w"
       ],
       "Organizations": [
         "bsaa",
@@ -404,7 +438,7 @@
       "Location": "Around the Great Lakes (North America)",
       "EventTimeStart": "2014-01-01T00:00:00",
       "EventTimeEnd": null,
-      "Image": null,
+      "Image": "https://localhost:51452/img/resident-evil/event-vendetta-great-lake-murders.jpg",
       "Wiki": "https://residentevil.fandom.com/wiki/Great_Lakes_murders",
       "Characters": [
         "glen.a"
@@ -425,7 +459,7 @@
       "Location": "Chicago",
       "EventTimeStart": "2014-01-01T00:00:00",
       "EventTimeEnd": null,
-      "Image": null,
+      "Image": "https://localhost:51452/img/resident-evil/event-vendetta-attach-on-alexander-institute.jpg",
       "Wiki": "https://residentevil.fandom.com/wiki/Attack_on_Alexander_Institute_of_Biotechnology",
       "Characters": [
         "rebecca.c",
@@ -450,7 +484,7 @@
       "Location": "New York City",
       "EventTimeStart": "2014-01-01T00:00:00",
       "EventTimeEnd": null,
-      "Image": null,
+      "Image": "https://localhost:51452/img/resident-evil/event-vendetta-newyork-bioterrorist-attack.jpg",
       "Wiki": "https://residentevil.fandom.com/wiki/New_York_bioterrorist_attack",
       "Characters": [
         "leon.k",
