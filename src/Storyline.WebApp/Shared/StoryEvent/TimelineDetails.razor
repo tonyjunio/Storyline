@@ -16,18 +16,20 @@
     var item = this.StoryEvent;
     <div class="event-details">
         <div class="summary rad-mask event-bg" style="background-image: var(--summary-radial-gradient), var(--summary-linear-gradient), url('@item.Image');">
-            <h3>
-                @item.Title
-                <span class="event-date">@Helper.DateHelper.TimeLineInfo(this.StoryEvent.EventTimeStart, this.StoryEvent.EventTimeEnd) / @this.StoryEvent.Location</span>
-            </h3>
-            <p>@item.Summary</p>
-            <a class="wiki-link" href="@this.StoryEvent.Wiki" target="_blank">Read More</a>
+            <div>
+                <h3>
+                    @item.Title
+                    <span class="event-date">@Helper.DateHelper.TimeLineInfo(this.StoryEvent.EventTimeStart, this.StoryEvent.EventTimeEnd) / @this.StoryEvent.Location</span>
+                </h3>
+                <p>@item.Summary</p>
+                <a class="wiki-link" href="@this.StoryEvent.Wiki" target="_blank">Read More</a>
+            </div>
         </div>
         <div class="moreinfo">
             <div>
-                <h5>Characters</h5>
-                @if (item.Characters is not null)
+                @if (item.Characters?.Any() ?? false)
                 {
+                    <h5>Characters</h5>
                     <ul class="ref-list">
                         @foreach (var i in item.Characters)
                         {
@@ -37,9 +39,10 @@
                         }
                     </ul>
                 }
-                <h5>Organizations</h5>
-                @if (item.Organizations is not null)
+
+                @if (item.Organizations?.Any() ?? false)
                 {
+                    <h5>Organizations</h5>
                     <ul class="ref-list">
                         @foreach (var i in item.Organizations)
                         {
@@ -50,9 +53,9 @@
                     </ul>
                 }
 
-                <h5>Viruses</h5>
-                @if (item.Viruses is not null)
+                @if (item.Viruses?.Any() ?? false)
                 {
+                    <h5>Viruses</h5>
                     <ul class="ref-list">
                         @foreach (var i in item.Viruses)
                         {
@@ -63,9 +66,9 @@
                     </ul>
                 }
 
-                <h5>Games</h5>
-                @if (item.Games is not null)
+                @if (item.Games?.Any() ?? false)
                 {
+                    <h5>Games</h5>
                     <ul class="ref-list">
                         @foreach (var i in item.Games)
                         {
@@ -76,9 +79,9 @@
                     </ul>
                 }
 
-                <h5>Movies</h5>
-                @if (item.Movies is not null)
+                @if (item.Movies?.Any() ?? false)
                 {
+                    <h5>Movies</h5>
                     <ul class="ref-list">
                         @foreach (var i in item.Movies)
                         {
@@ -106,9 +109,28 @@ else
         --summary-linear-gradient2: linear-gradient(to bottom, #000000c7, #00000036);
     }
 
+    @@keyframes topToBottom {
+        from {
+            top: -20%;
+        }
+        to {
+            top: 0%;
+        }
+    }
+
+    @@keyframes leftToRight {
+        from {
+            left: -20%;
+        }
+
+        to {
+            left: 0%;
+        }
+    }
+
     .event-bg {
         background-blend-mode: var(--blend-top, normal), var(--blend-bottom, saturation), normal;
-        background-position: top center;
+        background-position: center 75px;
         background-repeat: no-repeat;
         background-size: cover;
         --color-v: black;
@@ -138,6 +160,11 @@ else
             font-size: 1.1rem;
             position: relative;
             width: 40%;
+        }
+
+        .event-details .summary > div {
+            animation: 0.7s ease-out 1 topToBottom;
+            position: relative;
         }
 
             .event-details .summary .event-date {
@@ -177,18 +204,21 @@ else
             }
 
         .event-details .moreinfo {
-            padding: 20px 10px 10px 20px;
+            overflow: hidden;
+            padding: 0px 10px 10px 10px;
             position: relative;
             width: 60%;
         }
 
             .event-details .moreinfo > div {
+                animation: 0.7s ease-out 1 leftToRight;
+                position: relative;
             }
 
             .event-details .moreinfo h5 {
                 color: #8b7e50;
                 font-weight: 400;
-                padding: 50px 0 10px;
+                padding: 10px 0 10px;
             }
 
     .ref-list {
@@ -209,8 +239,8 @@ else
             font-weight: 500;
             justify-content: center;
             margin: 5px;
-            min-height: 200px;
-            width: 150px;
+            min-height: 150px;
+            width: 120px;
         }
 
             .ref-list > li > a {
@@ -224,7 +254,7 @@ else
             }
 
     .ref-bg {
-        background-position: top center;
+        background-position: center top;
         background-repeat: no-repeat;
         background-size: cover;
     }

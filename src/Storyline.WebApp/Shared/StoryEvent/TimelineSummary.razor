@@ -8,9 +8,10 @@
     public IEnumerable<Models.Storyline.StoryEvent> StoryEvents { get; set; }
 
     [Parameter]
-    public EventCallback<Models.Storyline.StoryEvent> OnStoryEventSelect { get; set; }
+    public Models.Storyline.StoryEvent SelectedStoryEvent { get; set; } = null;
 
-    private Models.Storyline.StoryEvent _selectedStoryEvent = null;
+    [Parameter]
+    public EventCallback<Models.Storyline.StoryEvent> OnStoryEventSelect { get; set; }
 
     protected override void OnInitialized()
     {
@@ -37,7 +38,7 @@
 
     protected void SelectStoryEvent(Models.Storyline.StoryEvent item)
     {
-        _selectedStoryEvent = item;
+        this.SelectedStoryEvent = item;
         this.OnStoryEventSelect.InvokeAsync(item);
     }
 }
@@ -56,7 +57,7 @@
                     {
                         int startYear = e.EventTimeStart.Year;
                         int endYear = e.EventTimeEnd?.Year ?? startYear;
-                        string selectedItemClass = _selectedStoryEvent?.Id == e.Id ? "selected" : "";
+                        string selectedItemClass = this.SelectedStoryEvent?.Id == e.Id ? "selected" : "";
 
                         <span class="event-item @selectedItemClass" data-start-year="@startYear" data-end-year="@endYear" data-event-id="@e.Id" data-event-title="@e.Title" title="@e.Title" @onclick="() => SelectStoryEvent(e)">@e.Title</span>
                     }
@@ -69,9 +70,14 @@
 <style>
     .timeline-summary {
         align-content: start;
+        background: #000000;
+        border-bottom: 1px solid #323232;
+        box-shadow: inset 0px -20px 30px -22px #50482c;
         display: flex;
         flex-flow: row nowrap;
+        overflow: hidden;
         position: relative;
+        z-index: 100;
     }
 
         .timeline-summary .timeline-period {
@@ -87,7 +93,9 @@
             }
 
             .timeline-summary .timeline-period .year {
-                font-size: 1.2rem;
+                color: #9b8c58;
+                font-size: 0.9rem;
+                font-weight: 400;
                 padding: 10px;
                 text-align: center;
             }
@@ -97,9 +105,9 @@
             }
 
                 .timeline-summary .timeline-period .events .event-item {
-                    background-color: #e4e4e4;
+                    background-color: #313131;
                     border-radius: 2px;
-                    color: #000000;
+                    color: #ffffff;
                     cursor: pointer;
                     display: inline-block;
                     font-size: 0.8rem;

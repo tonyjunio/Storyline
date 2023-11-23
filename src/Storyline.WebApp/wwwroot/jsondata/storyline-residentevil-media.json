@@ -28,6 +28,13 @@
     "Image": "https://localhost:51452/img/resident-evil/re-biohazard-200.png"
   },
   {
+    "Id": "re-vendetta",
+    "MediaType": "Movie",
+    "Title": "Resident Evil: Vendetta",
+    "Wiki": "https://residentevil.fandom.com/wiki/Resident_Evil:_Vendetta",
+    "Image": "https://localhost:51452/img/resident-evil/re-biohazard-200.png"
+  },
+  {
     "Id": "resident-evil-outbreak-series",
     "MediaType": "Game",
     "Title": "Resident Evil Outbreak series",
@@ -56,6 +63,13 @@
     "Image": "https://localhost:51452/img/resident-evil/re-biohazard-200.png"
   },
   {
+    "Id": "re3-nemesis",
+    "MediaType": "Game",
+    "Title": "Resident Evil 3: Nemesis",
+    "Wiki": "",
+    "Image": "https://localhost:51452/img/resident-evil/re-biohazard-200.png"
+  },
+  {
     "Id": "re5",
     "MediaType": "Game",
     "Title": "Resident Evil 5",
@@ -70,9 +84,16 @@
     "Image": "https://localhost:51452/img/resident-evil/re-biohazard-200.png"
   },
   {
-    "Id": "re3-nemesis",
+    "Id": "re6",
     "MediaType": "Game",
-    "Title": "Resident Evil 3: Nemesis",
+    "Title": "Resident Evil 6",
+    "Wiki": "",
+    "Image": "https://localhost:51452/img/resident-evil/re-biohazard-200.png"
+  },
+  {
+    "Id": "re7-biohazard",
+    "MediaType": "Game",
+    "Title": "Resident Evil 7: Biohazard",
     "Wiki": "",
     "Image": "https://localhost:51452/img/resident-evil/re-biohazard-200.png"
   },
@@ -86,6 +107,13 @@
   {
     "Id": "re-darkside-chronicles",
     "MediaType": "Game",
+    "Title": "Resident Evil: The Darkside Chronicles",
+    "Wiki": "",
+    "Image": "https://localhost:51452/img/resident-evil/re-biohazard-200.png"
+  },
+  {
+    "Id": "re-darkside-chronicles",
+    "MediaType": "GraphicNovel",
     "Title": "Resident Evil: The Darkside Chronicles",
     "Wiki": "",
     "Image": "https://localhost:51452/img/resident-evil/re-biohazard-200.png"

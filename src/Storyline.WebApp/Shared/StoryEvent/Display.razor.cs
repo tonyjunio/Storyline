@@ -20,7 +20,15 @@ namespace Storyline.WebApp.Shared.StoryEvent
 
         protected override void OnInitialized()
         {
-            var data = this.Story;
+            this.SelectedStoryEvent ??= this.Story?.StoryEvents.FirstOrDefault();
+        }
+
+        protected override Task OnAfterRenderAsync(bool firstRender)
+        {
+            this.SelectedStoryEvent ??= this.Story?.StoryEvents.FirstOrDefault();
+            this.StateHasChanged();
+
+            return base.OnAfterRenderAsync(firstRender);
         }
 
         protected void EditStoryEvent(Models.Storyline.StoryEvent storyEvent)

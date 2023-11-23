@@ -7,5 +7,6 @@ namespace Storyline.WebApp;
 public enum StoryMediaType
 {
     Movie,
-    Game
+    Game,
+    GraphicNovel
 }

@@ -99,6 +99,24 @@
     "Founded": null
   },
   {
+    "Id": "thefamily",
+    "EntityType": "Organization",
+    "Name": "The Family",
+    "Profile": "",
+    "Wiki": "https://residentevil.fandom.com/wiki/The_Family",
+    "Image": "https://localhost:51452/img/resident-evil/org-sacredserpent-200.jpg",
+    "Founded": null
+  },
+  {
+    "Id": "theconnections",
+    "EntityType": "Organization",
+    "Name": "The Connections",
+    "Profile": "",
+    "Wiki": "https://residentevil.fandom.com/wiki/The_Connections",
+    "Image": "https://localhost:51452/img/resident-evil/org-sacredserpent-200.jpg",
+    "Founded": null
+  },
+  {
     "Id": "usgovt",
     "EntityType": "Organization",
     "Name": "US Government",
@@ -123,6 +141,15 @@
     "Profile": "",
     "Wiki": "https://residentevil.fandom.com/wiki/Mad_Dogs",
     "Image": "https://localhost:51452/img/resident-evil/org-maddogs-200.jpg",
+    "Founded": null
+  },
+  {
+    "Id": "nypd",
+    "EntityType": "Organization",
+    "Name": "NYPD",
+    "Profile": "",
+    "Wiki": "https://residentevil.fandom.com/wiki/Mad_Dogs",
+    "Image": "https://localhost:51452/img/resident-evil/char-holder-200.jpg",
     "Founded": null
   }
 ]

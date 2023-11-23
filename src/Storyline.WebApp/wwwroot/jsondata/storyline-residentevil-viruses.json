@@ -20,6 +20,16 @@
     "DevelopedOn": null
   },
   {
+    "Id": "tveronicavirus",
+    "ItemIType": "Virus",
+    "Name": "T-Veronica virus",
+    "Summary": "",
+    "Wiki": "https://residentevil.fandom.com/wiki/Tyrant_Virus",
+    "Image": "https://localhost:51452/img/resident-evil/virus-holder-200.jpg",
+    "DevelopedBy": "umbrella",
+    "DevelopedOn": null
+  },
+  {
     "Id": "gvirus",
     "ItemIType": "Virus",
     "Name": "Golgotha virus",
@@ -42,9 +52,9 @@
   {
     "Id": "avirus",
     "ItemIType": "Virus",
-    "Name": "A-virus",
+    "Name": "Animality Virus",
     "Summary": "",
-    "Wiki": "",
+    "Wiki": "https://residentevil.fandom.com/wiki/Animality_Virus",
     "Image": "https://localhost:51452/img/resident-evil/virus-holder-200.jpg",
     "DevelopedBy": "umbrella",
     "DevelopedOn": null
@@ -52,9 +62,9 @@
   {
     "Id": "cvirus",
     "ItemIType": "Virus",
-    "Name": "C-virus",
+    "Name": "Chrysalid Virus",
     "Summary": "",
-    "Wiki": "",
+    "Wiki": "https://residentevil.fandom.com/wiki/Chrysalid_Virus",
     "Image": "https://localhost:51452/img/resident-evil/virus-holder-200.jpg",
     "DevelopedBy": "umbrella",
     "DevelopedOn": null

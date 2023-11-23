@@ -11,8 +11,6 @@ function ToggleMainOffCanvas() {
     bsMainOffCanvas.toggle();
 }
 
-let _TimelinePoints = [];
-let _PeriodXyMap = [];
 function RenderTimelineSummary() {
     let timelineSummary = document.getElementsByClassName("timeline-summary")[0];
     let periods = timelineSummary.querySelectorAll(".timeline-period");
@@ -131,12 +129,7 @@ function RenderTimelineSummary() {
     // Set the timelineSummary height based on the event that occupied the highest Y position (+55px for the year header offset)
     timelineSummary.style.height = positionHeights + 55 + 'px';
 
-    // Set debug variables.
-    _TimelinePoints = timelinePoints;
-    _PeriodXyMap = periodXyMap;
-
     ConsoleLog(eventPoints);
-
     console.log("RenderTimelineSummary() completed");
 }
 

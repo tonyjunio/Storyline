@@ -5,9 +5,10 @@
     public IEnumerable<Models.Storyline.StoryEvent> StoryEvents { get; set; }
 
     [Parameter]
-    public EventCallback<Models.Storyline.StoryEvent> OnStoryEventSelect { get; set; }
+    public Models.Storyline.StoryEvent SelectedStoryEvent { get; set; } = null;
 
-    private Models.Storyline.StoryEvent _selectedStoryEvent = null;
+    [Parameter]
+    public EventCallback<Models.Storyline.StoryEvent> OnStoryEventSelect { get; set; }
 
     protected override void OnInitialized()
     {
@@ -16,17 +17,17 @@
 
     protected void SelectStoryEvent(Models.Storyline.StoryEvent item)
     {
-        _selectedStoryEvent = item;
+        this.SelectedStoryEvent = item;
         this.OnStoryEventSelect.InvokeAsync(item);
     }
 }
 
-<div class="event-timeline-selector">
+<div class="event-timeline-selector hide-date">
     @foreach (var e in this.StoryEvents)
     {
-        string selectedItemClass = _selectedStoryEvent?.Id == e.Id ? "selected" : "";
+        string selectedItemClass = this.SelectedStoryEvent?.Id == e.Id ? "selected" : "";
 
-        <div class="event-item @selectedItemClass" @onclick="() => SelectStoryEvent(e)">
+        <div class="event-item @selectedItemClass" @onclick="() => SelectStoryEvent(e)" title="@e.Title">
             <i id="@e.Id"></i>
             <div>@Helper.DateHelper.TimeLineInfo(e.EventTimeStart, null, isShort: false)</div>
         </div>
@@ -65,16 +66,32 @@
                 flex-grow: 1;
             }
 
-                .event-timeline-selector .event-item:hover i, .event-timeline-selector .event-item.selected > i {
-                    background-color: #20acb4;
-                    border-color: #02161a;
-                    height: 25px;
-                    transform: rotate(45deg);
-                    width: 25px;
-                }
+            .event-timeline-selector .event-item:hover i, .event-timeline-selector .event-item.selected > i {
+                background-color: #20acb4;
+                border-color: #02161a;
+                height: 25px;
+                transform: rotate(45deg);
+                width: 25px;
+            }
 
             .event-timeline-selector .event-item.selected > i {
                 background-color: #8b7e50;
                 border-color: #8b7e50;
+            }
+
+        .event-timeline-selector.hide-date {
+            width: auto !important;
+        }
+
+            .event-timeline-selector.hide-date .event-item  {
+                justify-content: center;
+            }
+
+            .event-timeline-selector.hide-date .event-item > i {
+                margin: 0;
+            }
+
+            .event-timeline-selector.hide-date .event-item > div {
+                display: none;
             }
 </style>

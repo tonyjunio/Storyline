@@ -2,26 +2,26 @@
 
 @if (this.Story != null)
 {
-    <div class="story-header">
-        <img src="@this.Story.LogoImage" alt="@this.Story.Title" />
-        <h2>@this.Story.Title</h2>
-    </div>
-
-    <div class="storyline-summary">
-        <TimelineSummary StoryEvents="@this.Story.StoryEvents" OnStoryEventSelect="@(x => this.SelectedStoryEvent = x)"></TimelineSummary>
-    </div>
-
-    <div class="story-body">
-        <div class="content-one">
-            <TimelineSelector StoryEvents="@this.Story.StoryEvents" OnStoryEventSelect="@(x => this.SelectedStoryEvent = x)"></TimelineSelector>
+    <CascadingValue Value="SelectedStoryEvent">
+        <div class="story-header">
+            <img src="@this.Story.LogoImage" alt="@this.Story.Title" />
+            <h2>@this.Story.Title</h2>
         </div>
-        <div class="content-two">
-            @if (this.SelectedStoryEvent is not null)
-            {
-                <TimelineDetails StoryEvent="@this.SelectedStoryEvent"></TimelineDetails>
-            }
+
+        <TimelineSummary StoryEvents="@this.Story.StoryEvents" SelectedStoryEvent="this.SelectedStoryEvent" OnStoryEventSelect="@(x => this.SelectedStoryEvent = x)"></TimelineSummary>
+
+        <div class="story-body">
+            <div class="content-one">
+                <TimelineSelector StoryEvents="@this.Story.StoryEvents" SelectedStoryEvent="this.SelectedStoryEvent" OnStoryEventSelect="@(x => this.SelectedStoryEvent = x)"></TimelineSelector>
+            </div>
+            <div class="content-two">
+                @if (this.SelectedStoryEvent is not null)
+                {
+                    <TimelineDetails StoryEvent="@this.SelectedStoryEvent"></TimelineDetails>
+                }
+            </div>
         </div>
-    </div>
+    </CascadingValue>
 }
 
 <style>
@@ -47,7 +47,6 @@
         flex-flow: row nowrap;
         align-items: stretch;
         justify-content: flex-start;
-        margin-top: 30px
     }
 
         .story-body .content-one {
