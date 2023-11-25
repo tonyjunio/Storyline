@@ -31,6 +31,7 @@ public class StorylineService : IStorylineService
                 {
                     Id = data.Id,
                     Title = data.Title,
+                    ShortCode = data.ShortCode,
                     LogoImage = data.LogoImage,
                     StoryEvents = dataStoryEvents?.Select(e => new StoryEvent()
                     {

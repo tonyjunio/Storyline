@@ -11,11 +11,21 @@ function ToggleMainOffCanvas() {
     bsMainOffCanvas.toggle();
 }
 
+function ToggleTimelineSummaryView() {
+    var isHidden = document.getElementsByClassName("timeline-summary")[0].classList.contains("hide");
+    if (isHidden) {
+        RenderTimelineSummary();
+        document.getElementsByClassName("timeline-summary")[0].classList.remove("hide");
+    }
+    else {
+        document.getElementsByClassName("timeline-summary")[0].classList.add("hide");
+    }
+}
+
 function RenderTimelineSummary() {
     let timelineSummary = document.getElementsByClassName("timeline-summary")[0];
     let periods = timelineSummary.querySelectorAll(".timeline-period");
     let events = timelineSummary.querySelectorAll(".event-item");
-    let eventHeight = 24;
     let eventVerticalGap = 5;
 
     let tsWidth = timelineSummary.clientWidth;

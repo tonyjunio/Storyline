@@ -22,7 +22,7 @@
     {
         if (firstRender)
         {
-            JS.InvokeVoidAsync("RenderTimelineSummary");
+            // JS.InvokeVoidAsync("RenderTimelineSummary");
         }
 
         return base.OnAfterRenderAsync(firstRender);
@@ -46,7 +46,7 @@
 @if (this.StoryEvents is not null)
 {
     int[] years = this.GetYears();
-    <div class="timeline-summary">
+    <div class="timeline-summary hide">
         @foreach (int year in years)
         {
             Models.Storyline.StoryEvent[] events = this.StoryEvents.Where(x => x.EventTimeStart.Year == year).ToArray();
@@ -68,6 +68,7 @@
 }
 
 <style>
+
     .timeline-summary {
         align-content: start;
         background: #000000;
@@ -76,8 +77,12 @@
         display: flex;
         flex-flow: row nowrap;
         overflow: hidden;
-        position: relative;
+        width: 100%;
         z-index: 100;
+    }
+
+    .timeline-summary.hide {
+        height: 0px !important;
     }
 
         .timeline-summary .timeline-period {

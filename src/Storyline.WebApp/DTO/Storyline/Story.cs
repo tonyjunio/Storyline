@@ -4,6 +4,7 @@ public class Story
 {
     public string Id { get; set; }
     public string Title { get; set; }
+    public string ShortCode { get; set; }
     public string LogoImage { get; set; }
     public IEnumerable<StoryEvent> StoryEvents { get; set; }
 }
