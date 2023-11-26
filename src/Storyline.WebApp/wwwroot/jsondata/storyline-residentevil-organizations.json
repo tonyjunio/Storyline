@@ -151,5 +151,14 @@
     "Wiki": "https://residentevil.fandom.com/wiki/Mad_Dogs",
     "Image": "https://localhost:51452/img/resident-evil/char-holder-200.jpg",
     "Founded": null
+  },
+  {
+    "Id": "fourhouses",
+    "EntityType": "Organization",
+    "Name": "Four Houses",
+    "Profile": "",
+    "Wiki": "https://residentevil.fandom.com/wiki/Four_Houses",
+    "Image": "https://localhost:51452/img/resident-evil/org-fourhouses-200.jpg",
+    "Founded": null
   }
 ]

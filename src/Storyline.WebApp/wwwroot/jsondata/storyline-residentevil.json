@@ -532,6 +532,49 @@
         "re7-biohazard"
       ],
       "Movies": null
+    },
+    {
+      "Id": "6a542641f9b640abb1a38f27baaaee08",
+      "Title": "The Village",
+      "Summary": "The Village Incident (tentative name) was a series of violent homicides, and which took place in a village situated in an Eastern European Mountain range from 9–10 February 2021. The exact numbers of casualties are still not known, although it appears to have resulted in the total extermination of the local population by their own friends and family who had been subjects to experimentation. The attacks were orchestrated by Mother Miranda, supreme ruler of the region's religious community, as a means of eliminating all threats to her ceremony. Over the course of the night, Miranda and her four lieutenants - the Four Lords - were each killed by Ethan Winters, an American mutant who was searching for his daughter, Rose. The Bioterrorism Security Assessment Alliance (BSAA) was involved in the clean-up attempts, although the North American Branch's efforts were limited with most work being accomplished by the Hound Wolf Squad under Cpt. Chris Redfield. The incident exposed massive corruption within the organization, both with the use of BSAA-approved B.O.W.s, and evidence indicating a mole in the BSAA leaked the Winters' location to Miranda.",
+      "Location": "Village (Eastern Europe)",
+      "EventTimeStart": "2021-02-09T00:00:00",
+      "EventTimeEnd": "2021-02-10T00:00:00",
+      "Image": "https://sm.ign.com/t/ign_br/news/r/resident-e/resident-evil-7-reveals-first-look-at-returning-green-herbs_udtz.h720.jpg",
+      "Wiki": "https://residentevil.fandom.com/wiki/The_Village_Incident",
+      "Characters": [
+        "mothermiranda",
+        "ethan.w"
+      ],
+      "Organizations": [
+        "bsaa",
+        "fourhouses"
+      ],
+      "Viruses": null,
+      "Games": [
+        "re-village"
+      ],
+      "Movies": null
+    },
+    {
+      "Id": "e1260634e1544f9fba811e32c87e8338",
+      "Title": "Shadows of Rose",
+      "Summary": "Shadows of Rose (シャドウズ オブ ローズ Shadōzu obu rōzu?) is a DLC story mode exclusive to Resident Evil Village: Gold Edition. It was announced at Capcom's E3 presentation in June 2021, and was made available with the rest of Winters Expansion and in Gold Edition on 28 October 2022. The game mode is inspired by a cut addendum to the Village story mode in which the player was to briefly take the role of Rose. Like with the main game, Shadows of Rose's script was created in collaboration between Japanese and English-speaking writers; Capcom developed the story outline, with writer Haris Orkin providing native English dialogue. This mode is produced by Masachika Kawata and directed by Kento Kinoshita and serves as the conclusion to the Winters storyline. Capcom has estimated a four hour completion time for this story mode.",
+      "Location": "Dulvey, Louisiana",
+      "EventTimeStart": "2037-01-01T00:00:00",
+      "EventTimeEnd": "2037-01-01T00:00:00",
+      "Image": "https://sm.ign.com/t/ign_br/news/r/resident-e/resident-evil-7-reveals-first-look-at-returning-green-herbs_udtz.h720.jpg",
+      "Wiki": "https://residentevil.fandom.com/wiki/Shadows_of_Rose",
+      "Characters": [
+        "rosemary.w",
+        "mothermiranda"
+      ],
+      "Organizations": null,
+      "Viruses": null,
+      "Games": [
+        "re-village"
+      ],
+      "Movies": null
     }
   ]
 }

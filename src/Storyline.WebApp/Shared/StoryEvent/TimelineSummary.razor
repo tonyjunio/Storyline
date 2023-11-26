@@ -20,11 +20,6 @@
 
     protected override Task OnAfterRenderAsync(bool firstRender)
     {
-        if (firstRender)
-        {
-            // JS.InvokeVoidAsync("RenderTimelineSummary");
-        }
-
         return base.OnAfterRenderAsync(firstRender);
     }
 
@@ -47,6 +42,10 @@
 {
     int[] years = this.GetYears();
     <div class="timeline-summary hide">
+        <div class="ts-options">
+            <i class="fa fa-x fa-lg" title="Close Timeline Section" onclick="ToggleTimelineSummaryView();"></i>
+            <i class="fa fa-arrows-rotate fa-lg" title="Refresh Timeline" onclick="RenderTimelineSummary();"></i>
+        </div>
         @foreach (int year in years)
         {
             Models.Storyline.StoryEvent[] events = this.StoryEvents.Where(x => x.EventTimeStart.Year == year).ToArray();
@@ -76,6 +75,7 @@
         box-shadow: inset 0px -20px 50px -30px #545454;
         display: flex;
         flex-flow: row nowrap;
+        height: 0px;
         overflow: hidden;
         width: 100%;
         z-index: 100;
@@ -84,6 +84,27 @@
     .timeline-summary.hide {
         height: 0px !important;
     }
+
+        .timeline-summary .ts-options {
+            background-color: #181818;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: start;
+            padding-top: 10px;
+        }
+
+        .timeline-summary .ts-options .fa {
+            color: #9b8c58;
+            cursor: pointer;
+            line-height: 1.5rem;
+            margin-bottom: 5px;
+            padding: 3px 5px;
+            text-align: center;
+        }
+
+        .timeline-summary .ts-options .fa:hover {
+            color: #1c979e;
+        }
 
         .timeline-summary .timeline-period {
             flex-grow: 1;

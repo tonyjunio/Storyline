@@ -1,6 +1,12 @@
 ﻿var bsMainOffCanvas = null;
 let disableConsoleLog = true;
 
+function ConsoleLog(msg) {
+    if (!disableConsoleLog) {
+        console.log(msg);
+    }
+}
+
 function ToggleMainOffCanvas() {
 
     if (bsMainOffCanvas == null) {
@@ -14,8 +20,8 @@ function ToggleMainOffCanvas() {
 function ToggleTimelineSummaryView() {
     var isHidden = document.getElementsByClassName("timeline-summary")[0].classList.contains("hide");
     if (isHidden) {
-        RenderTimelineSummary();
         document.getElementsByClassName("timeline-summary")[0].classList.remove("hide");
+        RenderTimelineSummary();
     }
     else {
         document.getElementsByClassName("timeline-summary")[0].classList.add("hide");
@@ -151,11 +157,40 @@ function RndRGBColorValue(colorElementMin = 0, colorElementMax = 255) {
     return `rgba(${r}, ${g}, ${b}, 1)`
 }
 
-function ConsoleLog(msg) {
-    if (!disableConsoleLog) {
-        console.log(msg);
-    }
+function SetTimeSelectorHeight()
+{
+    let header = document.getElementsByClassName("story-header");
+    let timelineSummary = document.getElementsByClassName("timeline-summary");
+    let timelineOptions = document.getElementsByClassName("timeline-options");
+    let contentDetails = document.getElementsByClassName("content-two");
+
+    let headerFullHeight = getElementFullHeight(header[0]);
+    let timelineSummaryFullHeight = getElementFullHeight(timelineSummary[0]);
+    let timelineOptionsHeight = getElementFullHeight(timelineOptions[0]);
+    let contentDetailsHeight = getElementFullHeight(contentDetails[0]);
+    let windowInnerHeight = window.innerHeight;
+    
+    let timeSelector = document.getElementsByClassName("event-timeline-selector");
+    let timeSelectorHeight1 = windowInnerHeight - (headerFullHeight+timelineSummaryFullHeight+timelineOptionsHeight) - 5;
+    let timeSelectorHeight2 = contentDetailsHeight - timelineOptionsHeight - 5;
+    timeSelector[0].style.height = Math.max(timeSelectorHeight1, timeSelectorHeight2) + 'px';
+    //timeSelector[0].style.height = Math.min(timeSelectorHeight1, timeSelectorHeight2) + 'px';
+    //timeSelector[0].style.height = timeSelectorHeight2 + 'px';
+
+    console.log(`timeSelectorHeight1: ${timeSelectorHeight1}`);
+    console.log(`timeSelectorHeight2: ${timeSelectorHeight2}`);
 }
 
+window.onresize = function()
+{
+    RenderTimelineSummary();
+    SetTimeSelectorHeight();
+}
 
-window.onresize = () => RenderTimelineSummary();
+window.getElementFullHeight = function(elem){
+    let computedStyle = window.getComputedStyle(elem);
+    let outerHeight = elem.offsetHeight;
+    let topMargin = parseInt(computedStyle.marginTop);
+    let bottomMargin = parseInt(computedStyle.marginBottom);
+    return outerHeight + topMargin + bottomMargin;
+};

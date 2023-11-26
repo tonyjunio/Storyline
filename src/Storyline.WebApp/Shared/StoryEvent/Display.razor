@@ -16,7 +16,7 @@
             <div class="content-one">
 
                 <div class="timeline-options">
-                    <i class="fa fa-timeline fa-lg" title="Toggle Timeline Window" onclick="ToggleTimelineSummaryView();"></i>
+                    <i class="fa fa-timeline fa-lg" title="Toggle Timeline Section" onclick="ToggleTimelineSummaryView();"></i>
                     <i class="fa fa-search fa-lg" title="Search Information"></i>
                     <i class="fa fa-plus fa-lg" title="Add Story Event"></i>
                 </div>
@@ -54,12 +54,11 @@
     .story-body {
         display: flex;
         flex-flow: row nowrap;
-        align-items: stretch;
+        align-items: start;
         justify-content: flex-start;
     }
 
         .story-body .content-one {
-            padding: 0 20px;
         }
 
         .story-body .content-two {
@@ -67,7 +66,7 @@
         }
 
         .story-body .timeline-options {
-            padding: 10px 0 0;
+            margin: 10px;
             text-align: center;
         }
 
@@ -81,9 +80,6 @@
             }
 
                 .story-body .timeline-options > .fa:hover {
-                    background-color: #70653f;
-                    border-radius: 2px;
-                    color: #000;
-                    cursor: pointer;
+                    color: #20acb4;
             }
 </style>

@@ -31,7 +31,7 @@
             <i id="@e.Id"></i>
             <div>
                 @e.Title<br/>
-                <div class="event-date">@Helper.DateHelper.TimeLineInfo(e.EventTimeStart, e.EventTimeEnd, isShort: true)</div>
+                <div class="event-date">@Helper.DateHelper.TimeLineInfo(e.EventTimeStart, e.EventTimeEnd, isShort: false, showYearOnly: true)</div>
             </div>
         </div>
     }
@@ -40,9 +40,10 @@
 
 <style>
     .event-timeline-selector {
-        margin: 10px 0;
         display: flex;
-        flex-flow: column wrap;
+        flex-flow: column nowrap;
+        overflow-y: scroll;
+        overflow-x: hidden;
         width: 300px;
     }
 
@@ -52,7 +53,11 @@
             cursor: pointer;
             display: flex;
             justify-content: left;
-            padding: 5px 0;
+            padding: 5px;
+        }
+
+        .event-timeline-selector .event-item.selected {
+            background-color: #181818;
         }
 
             .event-timeline-selector .event-item > i {
@@ -73,7 +78,7 @@
 
                 .event-timeline-selector .event-item > div .event-date {
                     background-color: #373737;
-                    border-radius: 7px;
+                    border-radius: 2px;
                     color: #b5b5b5;
                     display: inline-block;
                     font-size: 0.8rem;
@@ -86,7 +91,11 @@
                 transform: rotate(45deg);
             }
 
-            .event-timeline-selector .event-item:hover > div, .event-timeline-selector .event-item.selected > div {
+            .event-timeline-selector .event-item:hover > div {
+                color: #9b8c58;
+            }
+
+            .event-timeline-selector .event-item.selected > div {
                 color: #20acb4;
             }
 

@@ -26,12 +26,19 @@ public class DisplayBase : ComponentBase
         this.SelectedStoryEvent ??= this.Story?.StoryEvents.FirstOrDefault();
     }
 
-    protected override Task OnAfterRenderAsync(bool firstRender)
+    protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        this.SelectedStoryEvent ??= this.Story?.StoryEvents.FirstOrDefault();
-        this.StateHasChanged();
+        if (firstRender)
+        {
+            this.SelectedStoryEvent ??= this.Story?.StoryEvents.FirstOrDefault();
+            this.StateHasChanged();
 
-        return base.OnAfterRenderAsync(firstRender);
+            // Build the timeline summary.
+            // JS.InvokeVoidAsync("RenderTimelineSummary");
+        }
+
+        // Dynamically set the height of the time selector section.
+        await JS.InvokeVoidAsync("SetTimeSelectorHeight");
     }
 
     protected void EditStoryEvent(Models.Storyline.StoryEvent storyEvent)
