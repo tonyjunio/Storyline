@@ -194,5 +194,47 @@
     "Profile": "",
     "Image": "https://localhost:51452/img/resident-evil/char-e001-200.jpg",
     "Wiki": "https://residentevil.fandom.com/wiki/Eveline"
+  },
+  {
+    "Id": "morganlandsdale",
+    "Name": "Morgan Lansdale",
+    "Profile": "",
+    "Image": "https://localhost:51452/img/resident-evil/char-morganlansdale-200.png",
+    "Wiki": "https://residentevil.fandom.com/wiki/Morgan_Lansdale"
+  },
+  {
+    "Id": "mothermiranda",
+    "Name": "Mother Miranda",
+    "Profile": "",
+    "Image": "https://localhost:51452/img/resident-evil/char-mothermiranda-200.png",
+    "Wiki": "https://residentevil.fandom.com/wiki/Miranda"
+  },
+  {
+    "Id": "ethan.w",
+    "Name": "Ethan Winters",
+    "Profile": "",
+    "Image": "https://localhost:51452/img/resident-evil/char-ethanwinters-200.png",
+    "Wiki": "https://residentevil.fandom.com/wiki/Ethan_Winters"
+  },
+  {
+    "Id": "rosemary.w",
+    "Name": "Rosemary Winters",
+    "Profile": "",
+    "Image": "https://localhost:51452/img/resident-evil/char-rosemarywinters-200.png",
+    "Wiki": "https://residentevil.fandom.com/wiki/Rosemary_Winters"
+  },
+  {
+    "Id": "dylan.b",
+    "Name": "Dylan Blake",
+    "Profile": "",
+    "Image": "https://localhost:51452/img/resident-evil/char-holder-200.jpg",
+    "Wiki": "https://residentevil.fandom.com/wiki/Dylan_Blake"
+  },
+  {
+    "Id": "antonio.t",
+    "Name": "Antonio Taylor",
+    "Profile": "",
+    "Image": "https://localhost:51452/img/resident-evil/char-holder-200.jpg",
+    "Wiki": "https://residentevil.fandom.com/wiki/Antonio_Taylor"
   }
 ]

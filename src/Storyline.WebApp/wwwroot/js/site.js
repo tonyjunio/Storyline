@@ -26,6 +26,8 @@ function ToggleTimelineSummaryView() {
     else {
         document.getElementsByClassName("timeline-summary")[0].classList.add("hide");
     }
+
+    SetTimeSelectorHeight();
 }
 
 function RenderTimelineSummary() {
@@ -173,12 +175,9 @@ function SetTimeSelectorHeight()
     let timeSelector = document.getElementsByClassName("event-timeline-selector");
     let timeSelectorHeight1 = windowInnerHeight - (headerFullHeight+timelineSummaryFullHeight+timelineOptionsHeight) - 5;
     let timeSelectorHeight2 = contentDetailsHeight - timelineOptionsHeight - 5;
-    timeSelector[0].style.height = Math.max(timeSelectorHeight1, timeSelectorHeight2) + 'px';
-    //timeSelector[0].style.height = Math.min(timeSelectorHeight1, timeSelectorHeight2) + 'px';
-    //timeSelector[0].style.height = timeSelectorHeight2 + 'px';
 
-    console.log(`timeSelectorHeight1: ${timeSelectorHeight1}`);
-    console.log(`timeSelectorHeight2: ${timeSelectorHeight2}`);
+    timeSelector[0].style.height = Math.max(timeSelectorHeight1, timeSelectorHeight2) + 'px';
+    console.log("RenderTimelineSummary() completed");
 }
 
 window.onresize = function()

@@ -38,7 +38,7 @@
     {
       "Id": "0f97eb20032e45bdb21b8507bf692790",
       "Title": "Mansion Incident",
-      "Summary": "The Mansion Incident refers to two things. Chiefly, it refers to a botched police special forces operation that took place in July 1998 to investigate a series of murders in Arklay County, but otherwise can refer to the preceding events leading up to this investigation. The Mansion Incident was the site of a biological, ecological, and environmental disaster which took place in the Arklay Mountains. Estimations as to the death toll are imprecise, but scattered material indicates over 200 deaths occurring as a result of the Queen Leech's attacks. Some 127 deaths were the result of the attack on the Arklay Laboratory itself, including seventy-eight Umbrella employees, twenty-three test subjects, twenty civilians and seven Raccoon City police officers.",
+      "Summary": "<p>The Mansion Incident refers to two things. Chiefly, it refers to a botched police special forces operation that took place in July 1998 to investigate a series of murders in Arklay County, but otherwise can refer to the preceding events leading up to this investigation. The Mansion Incident was the site of a biological, ecological, and environmental disaster which took place in the Arklay Mountains. Estimations as to the death toll are imprecise, but scattered material indicates over 200 deaths occurring as a result of the Queen Leech's attacks. Some 127 deaths were the result of the attack on the Arklay Laboratory itself, including seventy-eight Umbrella employees, twenty-three test subjects, twenty civilians and seven Raccoon City police officers.</p><p>The incident ultimately resulted in the total destruction of the entire underground laboratory, as well as its sheltering mansion complex after RPD rookie officer/field medic Rebecca Chambers activated the facility's self-destruct system to eradicate the infected infestation, and she, along with 5 other fellow RPD personnel Chris Redfield, Jill Valentine, Barry Burton, Brad Vickers, and Albert Wesker all survived the events and escaped the premises.</p>",
       "Location": "Spencer Mansion, Arklay Mountains",
       "EventTimeStart": "1998-07-24T00:00:00",
       "EventTimeEnd": null,
@@ -60,8 +60,7 @@
         "stars"
       ],
       "Viruses": [
-        "tvirus",
-        "gvirus"
+        "tvirus"
       ],
       "Games": [
         "re-umbrella-chronicles",
@@ -126,6 +125,34 @@
       ],
       "Viruses": [
         "tvirus"
+      ],
+      "Games": [
+        "unspecified"
+      ],
+      "Movies": [
+        "unspecified"
+      ]
+    },
+    {
+      "Id": "2dea15ebbc3f4263b61576e58cfa2044",
+      "Title": "Sein Island incident",
+      "Summary": "The Penamstan Civil War (\u30DA\u30CA\u30E0\u30B9\u30BF\u30F3\u5185\u6226\u306A\u3044\u305B\u3093 penamusutan naisen?) was a conflict which took place in Penamstan around the year 2000, and saw one of the first uses of Progenitor-derived bio-weaponry in a warzone.",
+      "Location": "Sein Island (Baltic Sea)",
+      "EventTimeStart": "2008-01-01T00:00:00",
+      "EventTimeEnd": "2011-06-01T00:00:00",
+      "Image": "https://localhost:51452/img/resident-evil/event-sein-island-incident.jpg",
+      "Wiki": "https://residentevil.fandom.com/wiki/Sein_Island_incident",
+      "Characters": [
+        "agent.jason",
+        "shen.m",
+        "secdef.wilson"
+      ],
+      "Organizations": [
+        "bsaa",
+        "terrasave"
+      ],
+      "Viruses": [
+        "tphobos"
       ],
       "Games": [
         "unspecified"
@@ -221,6 +248,33 @@
       ],
       "Games": [
         "re4"
+      ],
+      "Movies": [
+        ""
+      ]
+    },
+    {
+      "Id": "668372cb7ac24283acb733d821b24043",
+      "Title": "Terragrigia Panic",
+      "Summary": "<p>The Terragrigia Panic was the name that was given by the media with regards to a bioterrorist attack caused by Il Veltro, which was responsible for releasing the T-Abyss virus on the floating city of Terragrigia in 2004.</p><p>Sometime in 2004, Il Veltro launched their UAVs from one of their bases, the repurposed cruise liner Queen Zenobia (and possibly its sister ship, the Queen Semiramis). Armed with the virus and large numbers of Hunter B.O.W.s (Whether they developed them on their own or were acquired from a third party is unknown), the attack was launched on Terragrigia. The devastating panic led to the FBC being called in.</p><p>Five days into the mission, it became evident to Veltro that they had been set up by Lansdale. However, it was too late; the virus was released on both the Zenobia and Semiramis, infecting and transforming much of the crew into monsters, the rest of whom were eaten. The communications officer lasted another four days before turning into a Scagdead, transforming long after his comrades. Veltro was now gone.</p>",
+      "Location": "Terragrigia, Mediterranean",
+      "EventTimeStart": "2004-06-01T00:00:00",
+      "EventTimeEnd": "2004-06-30T00:00:00",
+      "Image": "https://localhost:51452/img/resident-evil/event-terragrigia-b.webp",
+      "Wiki": "https://residentevil.fandom.com/wiki/Terragrigia_Panic",
+      "Characters": [
+        "morganlandsdale"
+      ],
+      "Organizations": [
+        "bsaa",
+        "ilveltro",
+        "fbc"
+      ],
+      "Viruses": [
+        "tabyss"
+      ],
+      "Games": [
+        "re-revelations"
       ],
       "Movies": [
         ""
@@ -511,9 +565,56 @@
       ]
     },
     {
+      "Id": "e0853557b86f4fb2a2cf3b90eec2595d",
+      "Title": "San Francisco Serial Murders",
+      "Summary": "The San Francisco Serial Murders was the epicenter of a string of homicides linked to a t-Virus outbreak where 12 victims were found infected with modified strain, seemingly with no means of infection. These killings, which were concentrated around San Francisco, got the attention of the San Francisco Police Department and BSAA shortly before the virus was deliberately activated in Alcatraz Island.",
+      "Location": "San Francisco, California",
+      "EventTimeStart": "2015-01-01T00:00:00",
+      "EventTimeEnd": null,
+      "Image": "https://localhost:51452/img/resident-evil/event-sanfrancisco-serial-murders-02.jpg",
+      "Wiki": "https://residentevil.fandom.com/wiki/San_Francisco_Serial_Murders",
+      "Characters": [
+        "chris.r",
+        "jill.v",
+        "dylan.b",
+        "maria.g"
+      ],
+      "Organizations": null,
+      "Viruses": [
+        "tvirus"
+      ],
+      "Games": null,
+      "Movies": null
+    },
+    {
+      "Id": "17155917cd314751a6c0225e6fea4cf2",
+      "Title": "Alcatraz Island Outbreak",
+      "Summary": "Alcatraz Island Outbreak was a viral outbreak which took place in across the island of Alcatraz in San Francisco, California. Perpetrated intentionally by former mercenary Dylan Blake and María Gómez, who had took over the A-GUA Industries, Ltd. and uses the resources to engineer a non-transmissible t-Virus strain and utilize experimental mosquito drones as a vector to infect tourists. The outbreak was successfully contained with the culprits are killed and the survivors are extracted from the site.",
+      "Location": "Alcatraz Island, San Francisco, California",
+      "EventTimeStart": "2015-01-01T00:00:00",
+      "EventTimeEnd": null,
+      "Image": "https://localhost:51452/img/resident-evil/event-alcatraz-outbreak.jpg",
+      "Wiki": "https://residentevil.fandom.com/wiki/Alcatraz_Island_Outbreak",
+      "Characters": [
+        "chris.r",
+        "jill.v",
+        "leon.k",
+        "rebecca.c",
+        "antonio.t",
+        "dylan.b",
+        "maria.g"
+      ],
+      "Organizations": null,
+      "Viruses": [
+        "tvirus"
+      ],
+      "Games": null,
+      "Movies": null
+    },
+    {
       "Id": "b8ffa692cc9c42789d2c761541178f41",
       "Title": "Baker House Incident",
-      "Summary": "The Baker House Incident (\u30D9\u30A4\u30AB\u30FC\u90B8\u4E8B\u4EF6?) was a series of violent homicides which took place in and around the Baker ranch in Dulvey Parish, Louisiana between October 2014 and August 2017. The exact number of deaths is not known, and though law enforcement investigations linked at least 20 people to the incident evidence suggests it was far more than 100. All were committed by Jack and Marguerite Baker, their son Lucas and possibly Mia Winters, all under the ultimate control of Eveline, a human bio-weapon capable of controlling minds through a fungal contaminant called the Mold.",
+      "Summary": "<p>The Baker House Incident (ベイカー邸事件?) was a series of violent homicides which took place in and around the Baker ranch in Dulvey Parish, Louisiana between October 2014 and August 2017. The exact number of deaths is not known, and though law enforcement investigations linked at least 20 people to the incident but evidence suggests it was far more than 100. All were committed by Jack, Marguerite Baker and their son Lucas, all under the ultimate control of Eveline, a human bio-weapon capable of controlling minds through a fungal contaminant called the Mold.</p><p>Throughout 2017, the incident was being monitored by a variety of agencies, including the Dulvey Parish Sheriff's Office, the Louisiana State Police, the Louisiana Army National Guard and the Bioterrorism Security Assessment Alliance. Because of the risk to human health represented by the Mold, a quarantine wall was erected in the swamps around the Baker ranch, and the National Guard maintained an exclusion zone to be maintained until at least 2027. An inquest held by the BSAA determined the outbreak to be purely accidental in nature and not an act of terrorism, though placed blame on the BSAA itself for failing to prevent the incident.</p>",
       "Location": "Dulvey, Louisiana",
       "EventTimeStart": "2014-10-01T00:00:00",
       "EventTimeEnd": "2017-08-01T00:00:00",

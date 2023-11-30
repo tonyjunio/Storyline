@@ -21,7 +21,7 @@
                     @item.Title
                     <span class="event-date">@Helper.DateHelper.TimeLineInfo(this.StoryEvent.EventTimeStart, this.StoryEvent.EventTimeEnd) / @this.StoryEvent.Location</span>
                 </h3>
-                <p>@item.Summary</p>
+                <div>@((MarkupString)item.Summary)</div>
                 <a class="wiki-link" href="@this.StoryEvent.Wiki" target="_blank">Read More</a>
             </div>
         </div>
@@ -199,7 +199,7 @@ else
                 padding: 10px;
             }
 
-            .event-details .summary p {
+            .event-details .summary > div > div {
                 background: var(--summary-linear-gradient2);
                 padding: 10px;
             }

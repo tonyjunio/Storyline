@@ -80,6 +80,26 @@
     "DevelopedOn": null
   },
   {
+    "Id": "tabyss",
+    "ItemIType": "Virus",
+    "Name": "T-Abyss Virus",
+    "Summary": "",
+    "Wiki": "https://residentevil.fandom.com/wiki/T-Abyss_Virus",
+    "Image": "https://localhost:51452/img/resident-evil/virus-tabyss-200.jpg",
+    "DevelopedBy": null,
+    "DevelopedOn": null
+  },
+  {
+    "Id": "tphobos",
+    "ItemIType": "Virus",
+    "Name": "T-Phobos Virus",
+    "Summary": "",
+    "Wiki": "https://residentevil.fandom.com/wiki/T-Phobos_Virus",
+    "Image": "https://localhost:51452/img/resident-evil/virus-holder-200.jpg",
+    "DevelopedBy": null,
+    "DevelopedOn": null
+  },
+  {
     "Id": "unspecified",
     "ItemIType": "Virus",
     "Name": "Not Specified",

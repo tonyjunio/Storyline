@@ -160,5 +160,23 @@
     "Wiki": "https://residentevil.fandom.com/wiki/Four_Houses",
     "Image": "https://localhost:51452/img/resident-evil/org-fourhouses-200.jpg",
     "Founded": null
+  },
+  {
+    "Id": "ilveltro",
+    "EntityType": "Organization",
+    "Name": "Il Veltro",
+    "Profile": "",
+    "Wiki": "https://residentevil.fandom.com/wiki/Il_Veltro",
+    "Image": "https://localhost:51452/img/resident-evil/org-ilveltro-200.jpg",
+    "Founded": null
+  },
+  {
+    "Id": "fbc",
+    "EntityType": "Organization",
+    "Name": "Federal Bioterrorism Commission",
+    "Profile": "",
+    "Wiki": "https://residentevil.fandom.com/wiki/Federal_Bioterrorism_Commission",
+    "Image": "https://localhost:51452/img/resident-evil/org-fbc-200.jpg",
+    "Founded": null
   }
 ]

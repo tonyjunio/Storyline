@@ -56,6 +56,20 @@
     "Image": "https://localhost:51452/img/resident-evil/re-biohazard-200.png"
   },
   {
+    "Id": "re-revelations",
+    "MediaType": "Game",
+    "Title": "Resident Evil: Revelations",
+    "Wiki": "https://residentevil.fandom.com/wiki/Resident_Evil:_Revelations",
+    "Image": "https://localhost:51452/img/resident-evil/re-biohazard-200.png"
+  },
+  {
+    "Id": "re-revelations2",
+    "MediaType": "Game",
+    "Title": "Resident Evil: Revelations 2",
+    "Wiki": "https://residentevil.fandom.com/wiki/Resident_Evil:_Revelations_2",
+    "Image": "https://localhost:51452/img/resident-evil/re-biohazard-200.png"
+  },
+  {
     "Id": "re2",
     "MediaType": "Game",
     "Title": "Resident Evil 2",
