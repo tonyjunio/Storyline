@@ -151,14 +151,6 @@ function RenderTimelineSummary() {
     console.log("RenderTimelineSummary() completed");
 }
 
-function RndRGBColorValue(colorElementMin = 0, colorElementMax = 255) {
-    let min = colorElementMin;
-    let max = colorElementMax;
-    let fn = () => Math.floor(Math.random(0) * (max - min + 1)) + min;
-    let r = fn(); g = fn(); b = fn();
-    return `rgba(${r}, ${g}, ${b}, 1)`
-}
-
 function SetTimeSelectorHeight()
 {
     let header = document.getElementsByClassName("story-header");
@@ -195,3 +187,12 @@ window.getElementFullHeight = function(elem){
     let bottomMargin = parseInt(computedStyle.marginBottom);
     return outerHeight + topMargin + bottomMargin;
 };
+
+
+window.getRndRGBColorValue = function(colorElementMin = 0, colorElementMax = 255) {
+    let min = colorElementMin;
+    let max = colorElementMax;
+    let fn = () => Math.floor(Math.random(0) * (max - min + 1)) + min;
+    let r = fn(); g = fn(); b = fn();
+    return `rgba(${r}, ${g}, ${b}, 1)`
+}

@@ -8,14 +8,17 @@ class ForeJect {
     };
 
     Spawn() {
-        let xyPos = this.#getXyPosition();
-        console.log(xyPos);
+        let dimension = this.#getDimension();
+        let xyPos = this.#getXyPosition(dimension);
+        let animationDuration = this.#getRndNumber(1, 4);
 
         let spwn = document.createElement("div");
         spwn.id = "";
         spwn.className = "foreject-spawn";
         spwn.style.top = xyPos.y + "px";
         spwn.style.left = xyPos.x + "px";
+        spwn.style.height = dimension.h + "px";
+        spwn.style.width = dimension.w + "px";
 
         let spwnpt = document.createElement("div");
         spwnpt.className = "point";
@@ -24,38 +27,58 @@ class ForeJect {
         spwn.appendChild(spwnpt)
         document.body.appendChild(spwn);
 
-        this.#spawns.push(spwn);
-        this.#deSpawn(spwn);
+        // Attach animation and custom styles...
+        spwnpt.className += " x";
+        spwnpt.style.animationDuration = animationDuration + "s";
+        spwnpt.style.backgroundColor = window.getRndRGBColorValue();
+
+        // this.#spawns.push(spwn);
+        this.#deSpawn(spwn, animationDuration * 1000);
     }
 
-    #deSpawn(spwn) {
-
+    #deSpawn(s, timeout) {
+        window.setTimeout(() => {
+            document.body.removeChild(s);
+        }, timeout);
     }
 
-    #getXyPosition() {
-        let fn = (min, max) => Math.floor(Math.random(0) * (max - min + 1)) + min;
-
+    #getDimension() {
+        // Currently just return a square dimension (same length for width and height).
+        let length = this.#getRndNumber(30, 250);
         return {
-            x: fn(10, 900),
-            y: fn(10, 450)
+            w: length,
+            h: length
         };
     }
 
-    async #initAnims()
-    {
-        for (let i = 0; i < this.#spawns.length; i++)
-        {
-            let spawn = this.#spawns[i];
-            await this.#animateSpawns(spawn)
-        }
+    #getXyPosition(spwnDimension) {
+        let winWidth = window.innerWidth - (spwnDimension.w || 0);
+        let winHeight = window.innerHeight - (spwnDimension.h || 0);
+
+        return {
+            x: this.#getRndNumber(0, winWidth),
+            y: this.#getRndNumber(0, winHeight)
+        };
     }
 
-    async #animateSpawns(s) {
-        while (true) {
+    #getRndNumber = (min, max) => Math.floor(Math.random(0) * (max - min + 1)) + min;
 
-        }
+    //async #initAnims()
+    //{
+    //    for (let i = 0; i < this.#spawns.length; i++)
+    //    {
+    //        let spawn = this.#spawns[i];
+    //        await this.#animateSpawns(spawn)
+    //    }
+    //}
+
+    async #animateSpaw(s) {
+
     }
 };
 
 let foreject = new ForeJect();
-foreject.Spawn();
+
+window.setInterval(() => {
+    foreject.Spawn();
+}, 100);

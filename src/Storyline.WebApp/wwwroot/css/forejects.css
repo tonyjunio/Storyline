@@ -6,20 +6,18 @@
         opacity: 0;
         height: 0%;
         width: 0%;
-        /* transition-duration: 1s; */
     }
 
-    30% {
-        /* transition-duration: 1s; */
-        opacity: 0.4;
-        height: 30%;
-        width: 30%;
-    }
-
-    100% {
+    50% {
         opacity: 0.85;
         height: 100%;
         width: 100%;
+    }
+
+    100% {
+        opacity: 0.2;
+        height: 0%;
+        width: 0%;
     }
 }
 
@@ -28,16 +26,15 @@
     align-items: center;
     justify-content: center;
     display: flex;
-    height: 100px;
     position: absolute;
-    width: 100px;
 }
 
     .foreject-spawn .point {
         background-color: rgb(240 240 240 / 50%);
+        border-radius: 50%;
     }
 
         .foreject-spawn .point.x {
             animation-name: animX;
-            transition-duration: 3s;
+            animation-timing-function: ease-in-out;
         }
