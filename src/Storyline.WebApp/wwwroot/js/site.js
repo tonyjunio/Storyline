@@ -182,8 +182,10 @@ function SetTimeSelectorHeight()
 
 window.onresize = function()
 {
-    RenderTimelineSummary();
-    SetTimeSelectorHeight();
+    if (window.location.pathname === "/") {
+        RenderTimelineSummary();
+        SetTimeSelectorHeight();
+    }
 }
 
 window.getElementFullHeight = function(elem){

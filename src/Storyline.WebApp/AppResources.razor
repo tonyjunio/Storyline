@@ -1,0 +1,26 @@
+﻿@inherits ComponentBase
+@inject NavigationManager NavigationManager
+
+@code {
+    [Parameter]
+    public string ResourceType { get; set; }
+}
+
+@if (this.NavigationManager is not null)
+{
+    Uri uri = new Uri(this.NavigationManager.Uri);
+    @switch (uri.LocalPath.ToLower())
+    {
+        case "/" when this.ResourceType.ToLower() == "css":
+            <link href="css/timeline.css" rel="stylesheet" />
+            break;
+
+        case "/xprmnt" when this.ResourceType.ToLower() == "css":
+            <link href="css/forejects.css" rel="stylesheet" />
+            break;
+
+        case "/xprmnt" when this.ResourceType.ToLower() == "js":
+            <script src="js/forejects.js"></script>
+            break;
+    }
+}
