@@ -20,7 +20,8 @@ namespace Storyline.WebApp
             services.AddServerSideBlazor();
 
             services.AddHttpClient<IStorylineService, StorylineService>(client => {
-                client.BaseAddress = new Uri("https://localhost:51452/");
+                string baseAddress = Configuration.GetValue<String>("BaseAddress") ?? "";
+                client.BaseAddress = new Uri(baseAddress);
             });
 
             // services.AddScoped<IStorylineService, StorylineService>();
