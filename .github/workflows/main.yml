@@ -20,4 +20,4 @@ jobs:
       run: dotnet workload install wasm-tools
     # publishes Blazor project to the release-folder
     - name: Publish .NET Core Project
-      run: dotnet publish Storyline.WebApp.csproj -c:Release -p:GHPages=true -o dist/Web --nologo
+      run: dotnet publish ./src/Storyline.WebApp/Storyline.WebApp.csproj -c:Release -p:GHPages=true -o dist/Web --nologo
