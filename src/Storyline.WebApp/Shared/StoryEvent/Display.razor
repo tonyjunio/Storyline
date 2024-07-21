@@ -1,6 +1,6 @@
 ﻿@inherits DisplayBase
 
-@if (this.Story != null)
+@if (this.Story is not null)
 {
     <PageTitle>@(this.SelectedStoryEvent is not null ? this.SelectedStoryEvent.Title : "")</PageTitle>
 

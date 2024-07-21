@@ -2,6 +2,6 @@
 
 public class Virus : Item
 {
-    public Organization DevelopedBy { get; set; }
+    public Organization? DevelopedBy { get; set; } = null;
     public DateTime DevelopedOn { get; set; }
 }

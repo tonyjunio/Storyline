@@ -18,53 +18,66 @@
     }
 }
 
-@if (this.FormData != null)
+@if (this.FormData is not null)
 {
+    var characters = this.FormData?.Characters ?? [];
+    var organizations = this.FormData?.Organizations ?? [];
+    var viruses = this.FormData?.Viruses ?? [];
+    var games = this.FormData?.Games ?? [];
+    var movies = this.FormData?.Movies ?? [];
+
+    string id = this.FormData?.Id ?? "";
+    string title = this.FormData?.Title ?? "";
+    string summary = this.FormData?.Summary ?? "";
+    DateTime eventTimeStart = this.FormData?.EventTimeStart ?? DateTime.MinValue;
+    DateTime? eventTimeEnd = this.FormData?.EventTimeEnd;
+    string image = this.FormData?.Image ?? "";
+
     <div class="save-event-form">
         <EditForm Model="@this.FormData" OnValidSubmit="@(async () => await SubmitAddEditFormAsync())">
             <DataAnnotationsValidator />
-            <input type="hidden" @bind-value="@this.FormData.Id" />
+            <input type="hidden" @bind-value="@id" />
             <div class="mb-3">
                 <label>Event Title</label>
-                <input type="text" class="form-control" placeholder="Title" @bind-value="@this.FormData.Title" />
+                <input type="text" class="form-control" placeholder="Title" @bind-value="@title" />
             </div>
             <div class="mb-3">
                 <label>Event Summary</label>
-                <textarea class="form-control" placeholder="Summary" @bind="@this.FormData.Summary"></textarea>
+                <textarea class="form-control" placeholder="Summary" @bind="@summary"></textarea>
             </div>
             <div class="mb-3">
                 <label>Event Time (Start)</label>
-                <input type="datetime" class="form-control" placeholder="Event Start Time" @bind="this.FormData.EventTimeStart" @bind:format="yyyy, MMMM dd" />
+                <input type="datetime" class="form-control" placeholder="Event Start Time" @bind="eventTimeStart" @bind:format="yyyy, MMMM dd" />
             </div>
             <div class="mb-3">
                 <label>Event Time (End)</label>
-                <input type="datetime" class="form-control" placeholder="Event End Time" @bind="this.FormData.EventTimeEnd" @bind:format="yyyy, MMMM dd" />
+                <input type="datetime" class="form-control" placeholder="Event End Time" @bind="eventTimeEnd" @bind:format="yyyy, MMMM dd" />
             </div>
             <hr />
             <div class="mb-3">
                 <label>Characters <i class="fa fa-plus-square fa-lg"></i></label>
-                @X(this.FormData?.Characters?.Select(x => x.Name))
+                @X(characters.Select(x => x.Name))
             </div>
             <div class="mb-3">
                 <label>Organizations <i class="fa fa-plus-square fa-lg"></i></label>
-                @X(this.FormData?.Organizations?.Select(x => x.Name))
+                @X(organizations.Select(x => x.Name))
             </div>
             <div class="mb-3">
                 <label>Viruses <i class="fa fa-plus-square fa-lg"></i></label>
-                @X(this.FormData?.Viruses?.Select(x => x.Name))
+                @X(viruses.Select(x => x.Name))
             </div>
             <div class="mb-3">
                 <label>Games <i class="fa fa-plus-square fa-lg"></i></label>
-                @X(this.FormData?.Games?.Select(x => x.Title))
+                @X(games.Select(x => x.Title))
             </div>
             <div class="mb-3">
                 <label>Movies <i class="fa fa-plus-square fa-lg"></i></label>
-                @X(this.FormData?.Movies?.Select(x => x.Title))
+                @X(movies.Select(x => x.Title))
             </div>
             <hr />
             <div class="mb-3">
                 <label>Hero Image</label>
-                <input type="text" class="form-control" placeholder="Paste a Hero Image" @bind="this.FormData.Image" />
+                <input type="text" class="form-control" placeholder="Paste a Hero Image" @bind="image" />
             </div>
             <div class="mt-5">
                 <button class="btn btn-primary"><i class="oi @(VState == ViewState.Create ? "oi-plus" : "oi-pencil")"></i> @(VState == ViewState.Create ? "Create" : "Update")</button>

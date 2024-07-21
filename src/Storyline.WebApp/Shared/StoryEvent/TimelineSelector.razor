@@ -1,11 +1,10 @@
 @using Storyline.WebApp.Common;
 @code {
+    [Parameter]
+    public IEnumerable<Models.Storyline.StoryEvent> StoryEvents { get; set; } = [];
 
     [Parameter]
-    public IEnumerable<Models.Storyline.StoryEvent> StoryEvents { get; set; }
-
-    [Parameter]
-    public Models.Storyline.StoryEvent SelectedStoryEvent { get; set; } = null;
+    public Models.Storyline.StoryEvent? SelectedStoryEvent { get; set; } = null;
 
     [Parameter]
     public EventCallback<Models.Storyline.StoryEvent> OnStoryEventSelect { get; set; }

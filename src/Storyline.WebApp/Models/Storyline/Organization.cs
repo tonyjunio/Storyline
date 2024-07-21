@@ -2,5 +2,5 @@
 
 public class Organization : Entity
 {
-    public IEnumerable<Organization> Affiliations { get; set; }
+    public IEnumerable<Organization> Affiliations { get; set; } = [];
 }

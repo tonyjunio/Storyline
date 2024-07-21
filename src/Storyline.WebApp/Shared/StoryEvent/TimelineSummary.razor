@@ -2,13 +2,13 @@
 
 @code {
     [Inject]
-    protected IJSRuntime JS { get; set; }
+    protected IJSRuntime? JS { get; set; }
 
     [Parameter]
-    public IEnumerable<Models.Storyline.StoryEvent> StoryEvents { get; set; }
+    public IEnumerable<Models.Storyline.StoryEvent> StoryEvents { get; set; } = [];
 
     [Parameter]
-    public Models.Storyline.StoryEvent SelectedStoryEvent { get; set; } = null;
+    public Models.Storyline.StoryEvent? SelectedStoryEvent { get; set; }
 
     [Parameter]
     public EventCallback<Models.Storyline.StoryEvent> OnStoryEventSelect { get; set; }
@@ -25,8 +25,8 @@
 
     protected int[] GetYears()
     {
-        IEnumerable<int> startYears = this.StoryEvents.Select(x => x.EventTimeStart.Year);
-        IEnumerable<int> endYears = this.StoryEvents.Where(x => x.EventTimeEnd.HasValue).Select(x => x.EventTimeEnd.Value.Year);
+        IEnumerable<int> startYears = this.StoryEvents.Select(x => x.EventTimeStart.Year) ?? [];
+        IEnumerable<int> endYears = this.StoryEvents.Where(x => x.EventTimeEnd.HasValue).Select(x => x.EventTimeEnd!.Value.Year) ?? [];
 
         return startYears.Concat(endYears).Distinct().OrderBy(x => x).ToArray();
     }

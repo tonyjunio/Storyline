@@ -13,27 +13,24 @@ public class StorylineService : IStorylineService
 
     public async Task<Story> LoadStoryAsync()
     {
-        Story story = null;
+        Story story = new();
 
         try
         {
-            DTO.Storyline.Story data = await _httpClient.GetFromJsonAsync<DTO.Storyline.Story>("jsondata/storyline-residentevil.json");
+            DTO.Storyline.Story? data = await _httpClient.GetFromJsonAsync<DTO.Storyline.Story>("jsondata/storyline-residentevil.json");
             if (data is not null)
             {
-                IEnumerable<DTO.Storyline.StoryEvent> dataStoryEvents = data.StoryEvents;
+                IEnumerable<DTO.Storyline.StoryEvent> dataStoryEvents = data.StoryEvents ?? [];
+                IEnumerable<StoryEvent> storyEvents = [];
 
                 var characters = await LoadCharactersAsync();
                 var organizations = await LoadOrganizationsAsync();
                 var viruses = await LoadVirusesAsync();
                 var media = await LoadMediaAsync();
 
-                story = new Story()
+                if (dataStoryEvents.Any())
                 {
-                    Id = data.Id,
-                    Title = data.Title,
-                    ShortCode = data.ShortCode,
-                    LogoImage = data.LogoImage,
-                    StoryEvents = dataStoryEvents?.Select(e => new StoryEvent()
+                    storyEvents = dataStoryEvents.Select(e => new StoryEvent()
                     {
                         Id = e.Id,
                         Title = e.Title,
@@ -43,12 +40,21 @@ public class StorylineService : IStorylineService
                         EventTimeEnd = e.EventTimeEnd,
                         Wiki = e.Wiki,
                         Image = e.Image,
-                        Characters = characters?.Where(c => (e.Characters)?.Contains(c.Id) ?? false),
-                        Organizations = organizations?.Where(o => (e.Organizations)?.Contains(o.Id) ?? false),
-                        Viruses = viruses?.Where(v => (e.Viruses)?.Contains(v.Id) ?? false),
-                        Games = media?.Where(g => g.MediaType == StoryMediaType.Game && ((e.Games)?.Contains(g.Id) ?? false)),
-                        Movies = media?.Where(m => m.MediaType == StoryMediaType.Movie && ((e.Movies)?.Contains(m.Id) ?? false))
-                    })?.OrderBy(o => o.EventTimeStart)
+                        Characters = characters?.Where(c => (e.Characters)?.Contains(c.Id) ?? false) ?? [],
+                        Organizations = organizations?.Where(o => (e.Organizations)?.Contains(o.Id) ?? false) ?? [],
+                        Viruses = viruses?.Where(v => (e.Viruses)?.Contains(v.Id) ?? false) ?? [],
+                        Games = media?.Where(g => g.MediaType == StoryMediaType.Game && ((e.Games)?.Contains(g.Id) ?? false)) ?? [],
+                        Movies = media?.Where(m => m.MediaType == StoryMediaType.Movie && ((e.Movies)?.Contains(m.Id) ?? false)) ?? []
+                    }).OrderBy(o => o.EventTimeStart);
+                }
+
+                story = new Story()
+                {
+                    Id = data.Id,
+                    Title = data.Title,
+                    ShortCode = data.ShortCode,
+                    LogoImage = data.LogoImage,
+                    StoryEvents = storyEvents
                 };
             }
         }
@@ -62,28 +68,26 @@ public class StorylineService : IStorylineService
 
     public async Task<IEnumerable<Character>> LoadCharactersAsync()
     {
-        var data = await _httpClient.GetFromJsonAsync<IEnumerable<Character>>("jsondata/storyline-residentevil-characters.json");
-        return data;
+        return await _httpClient.GetFromJsonAsync<IEnumerable<Character>>("jsondata/storyline-residentevil-characters.json") ?? [];
     }
 
     public async Task<IEnumerable<Organization>> LoadOrganizationsAsync()
     {
-        var data = await _httpClient.GetFromJsonAsync<IEnumerable<Organization>>("jsondata/storyline-residentevil-organizations.json");
-        return data;
+        return await _httpClient.GetFromJsonAsync<IEnumerable<Organization>>("jsondata/storyline-residentevil-organizations.json") ?? [];        
     }
 
     public async Task<IEnumerable<Virus>> LoadVirusesAsync()
     {
-        IEnumerable<Virus> viruses = null;
+        IEnumerable<Virus> viruses = [];
 
-        IEnumerable<DTO.Storyline.Virus> data = await _httpClient.GetFromJsonAsync<IEnumerable<DTO.Storyline.Virus>>("jsondata/storyline-residentevil-viruses.json");
+        IEnumerable<DTO.Storyline.Virus> data = await _httpClient.GetFromJsonAsync<IEnumerable<DTO.Storyline.Virus>>("jsondata/storyline-residentevil-viruses.json") ?? [];
         if (data is not null)
         {
             var organizations = await LoadOrganizationsAsync();
 
             viruses = data.Select(x =>
             {
-                Organization org = organizations?.FirstOrDefault(o => o.Id == x.DevelopedBy);
+                Organization? org = organizations?.FirstOrDefault(o => o.Id == x.DevelopedBy);
 
                 return new Virus() {
                     Id = x.Id,
@@ -102,7 +106,6 @@ public class StorylineService : IStorylineService
 
     public async Task<IEnumerable<Media>> LoadMediaAsync()
     {
-        var data = await _httpClient.GetFromJsonAsync<IEnumerable<Media>>("jsondata/storyline-residentevil-media.json");
-        return data;
+        return await _httpClient.GetFromJsonAsync<IEnumerable<Media>>("jsondata/storyline-residentevil-media.json") ?? [];
     }
 }

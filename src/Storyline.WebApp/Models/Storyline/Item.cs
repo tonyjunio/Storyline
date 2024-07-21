@@ -2,5 +2,5 @@
 
 public class Item : BaseInfo
 {
-    public string ItemType { get; set; }
+    public string ItemType { get; set; } = string.Empty;
 }

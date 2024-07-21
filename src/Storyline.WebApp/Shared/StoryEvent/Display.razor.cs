@@ -6,19 +6,19 @@ namespace Storyline.WebApp.Shared.StoryEvent;
 public class DisplayBase : ComponentBase
 {
     [Inject]
-    protected IJSRuntime JS { get; set; }
+    protected IJSRuntime? JS { get; set; }
 
     [Parameter]
-    public Models.Storyline.Story Story { get; set; }
+    public Models.Storyline.Story? Story { get; set; }
 
     [Parameter]
     public EventCallback<Models.Storyline.StoryEvent> OnStoryEventChange { get; set; }
 
 
     [CascadingParameter(Name = "RefAddEditForm")]
-    public StoryEvent.AddEdit RefAddEditForm { get; set; }
+    public StoryEvent.AddEdit? RefAddEditForm { get; set; }
 
-    protected Models.Storyline.StoryEvent SelectedStoryEvent { get; set; } = null;
+    protected Models.Storyline.StoryEvent? SelectedStoryEvent { get; set; } = null;
 
     protected override void OnInitialized()
     {
@@ -37,14 +37,20 @@ public class DisplayBase : ComponentBase
         }
 
         // Dynamically set the height of the time selector section.
-        await JS.InvokeVoidAsync("SetTimeSelectorHeight");
+        if (JS is not null)
+        {
+            await JS.InvokeVoidAsync("SetTimeSelectorHeight");
+        }
     }
 
     protected void EditStoryEvent(Models.Storyline.StoryEvent storyEvent)
     {
-        this.RefAddEditForm.SetSelected(storyEvent);
+        this.RefAddEditForm?.SetSelected(storyEvent);
 
-        Task.Run(async () => await this.JS.InvokeVoidAsync("ToggleMainOffCanvas"));
+        if (this.JS is not null)
+        {
+            Task.Run(async () => await this.JS.InvokeVoidAsync("ToggleMainOffCanvas"));
+        }
     }
 
     protected void ChangeStoryEvent(Models.Storyline.StoryEvent storyEvent)
@@ -55,7 +61,11 @@ public class DisplayBase : ComponentBase
 
     public void SetStoryEvents(IEnumerable<Models.Storyline.StoryEvent> storyEvents)
     {
-        this.Story.StoryEvents = storyEvents;
+        if (this.Story is not null)
+        {
+            this.Story.StoryEvents = storyEvents;
+        }
+
         this.StateHasChanged();
     }
 }
