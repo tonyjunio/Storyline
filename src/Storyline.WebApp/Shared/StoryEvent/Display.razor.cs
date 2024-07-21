@@ -1,39 +1,71 @@
 ﻿using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
-namespace Storyline.WebApp.Shared.StoryEvent
+namespace Storyline.WebApp.Shared.StoryEvent;
+
+public class DisplayBase : ComponentBase
 {
-    public class DisplayBase : ComponentBase
+    [Inject]
+    protected IJSRuntime? JS { get; set; }
+
+    [Parameter]
+    public Models.Storyline.Story? Story { get; set; }
+
+    [Parameter]
+    public EventCallback<Models.Storyline.StoryEvent> OnStoryEventChange { get; set; }
+
+
+    [CascadingParameter(Name = "RefAddEditForm")]
+    public StoryEvent.AddEdit? RefAddEditForm { get; set; }
+
+    protected Models.Storyline.StoryEvent? SelectedStoryEvent { get; set; } = null;
+
+    protected override void OnInitialized()
     {
-        [Inject]
-        protected IJSRuntime JS { get; set; }
+        this.SelectedStoryEvent ??= this.Story?.StoryEvents.FirstOrDefault();
+    }
 
-        [Parameter]
-        public string Title { get; set; }
-
-        [Parameter]
-        public IEnumerable<Models.StoryEvent> StoryEvents { get; set; }
-
-        [CascadingParameter(Name = "RefAddEditForm")]
-        public StoryEvent.AddEdit RefAddEditForm { get; set; }
-
-        protected override void OnInitialized()
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
         {
-            var data = this.StoryEvents;
+            this.SelectedStoryEvent ??= this.Story?.StoryEvents.FirstOrDefault();
+            this.StateHasChanged();
+
+            // Build the timeline summary.
+            // JS.InvokeVoidAsync("RenderTimelineSummary");
         }
 
-        protected void EditStoryEvent(Models.StoryEvent storyEvent)
+        // Dynamically set the height of the time selector section.
+        if (JS is not null)
         {
-            this.RefAddEditForm.SetSelected(storyEvent);
+            await JS.InvokeVoidAsync("SetTimeSelectorHeight");
+        }
+    }
 
+    protected void EditStoryEvent(Models.Storyline.StoryEvent storyEvent)
+    {
+        this.RefAddEditForm?.SetSelected(storyEvent);
+
+        if (this.JS is not null)
+        {
             Task.Run(async () => await this.JS.InvokeVoidAsync("ToggleMainOffCanvas"));
         }
-        public void SetStoryEvents(IEnumerable<Models.StoryEvent> storyEvents)
+    }
+
+    protected void ChangeStoryEvent(Models.Storyline.StoryEvent storyEvent)
+    {
+        this.SelectedStoryEvent = storyEvent;
+        this.OnStoryEventChange.InvokeAsync(storyEvent);
+    }
+
+    public void SetStoryEvents(IEnumerable<Models.Storyline.StoryEvent> storyEvents)
+    {
+        if (this.Story is not null)
         {
-            this.StoryEvents = storyEvents;
-            this.StateHasChanged();
+            this.Story.StoryEvents = storyEvents;
         }
+
+        this.StateHasChanged();
     }
 }

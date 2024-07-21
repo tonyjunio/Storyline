@@ -1,0 +1,142 @@
+﻿[
+  {
+    "Id": "denegeration",
+    "MediaType": "Movie",
+    "Title": "Denegeration",
+    "Wiki": "",
+    "Image": "https://localhost:51452/img/resident-evil/re-biohazard-200.png"
+  },
+  {
+    "Id": "damnation",
+    "MediaType": "Movie",
+    "Title": "Damnation",
+    "Wiki": "",
+    "Image": "https://localhost:51452/img/resident-evil/re-biohazard-200.png"
+  },
+  {
+    "Id": "biohazard-vendetta",
+    "MediaType": "Movie",
+    "Title": "Biohazard Vendetta",
+    "Wiki": "",
+    "Image": "https://localhost:51452/img/resident-evil/re-biohazard-200.png"
+  },
+  {
+    "Id": "infinite-darkness",
+    "MediaType": "Movie",
+    "Title": "Infinite Darkness",
+    "Wiki": "",
+    "Image": "https://localhost:51452/img/resident-evil/re-biohazard-200.png"
+  },
+  {
+    "Id": "re-vendetta",
+    "MediaType": "Movie",
+    "Title": "Resident Evil: Vendetta",
+    "Wiki": "https://residentevil.fandom.com/wiki/Resident_Evil:_Vendetta",
+    "Image": "https://localhost:51452/img/resident-evil/re-biohazard-200.png"
+  },
+  {
+    "Id": "resident-evil-outbreak-series",
+    "MediaType": "Game",
+    "Title": "Resident Evil Outbreak series",
+    "Wiki": "",
+    "Image": "https://localhost:51452/img/resident-evil/re-biohazard-200.png"
+  },
+  {
+    "Id": "re0",
+    "MediaType": "Game",
+    "Title": "Resident Evil 0",
+    "Wiki": "",
+    "Image": "https://localhost:51452/img/resident-evil/re-biohazard-200.png"
+  },
+  {
+    "Id": "re",
+    "MediaType": "Game",
+    "Title": "Resident Evil",
+    "Wiki": "",
+    "Image": "https://localhost:51452/img/resident-evil/re-biohazard-200.png"
+  },
+  {
+    "Id": "re-revelations",
+    "MediaType": "Game",
+    "Title": "Resident Evil: Revelations",
+    "Wiki": "https://residentevil.fandom.com/wiki/Resident_Evil:_Revelations",
+    "Image": "https://localhost:51452/img/resident-evil/re-biohazard-200.png"
+  },
+  {
+    "Id": "re-revelations2",
+    "MediaType": "Game",
+    "Title": "Resident Evil: Revelations 2",
+    "Wiki": "https://residentevil.fandom.com/wiki/Resident_Evil:_Revelations_2",
+    "Image": "https://localhost:51452/img/resident-evil/re-biohazard-200.png"
+  },
+  {
+    "Id": "re2",
+    "MediaType": "Game",
+    "Title": "Resident Evil 2",
+    "Wiki": "",
+    "Image": "https://localhost:51452/img/resident-evil/re-biohazard-200.png"
+  },
+  {
+    "Id": "re3-nemesis",
+    "MediaType": "Game",
+    "Title": "Resident Evil 3: Nemesis",
+    "Wiki": "",
+    "Image": "https://localhost:51452/img/resident-evil/re-biohazard-200.png"
+  },
+  {
+    "Id": "re4",
+    "MediaType": "Game",
+    "Title": "Resident Evil 4",
+    "Wiki": "",
+    "Image": "https://localhost:51452/img/resident-evil/re-biohazard-200.png"
+  },
+  {
+    "Id": "re5",
+    "MediaType": "Game",
+    "Title": "Resident Evil 5",
+    "Wiki": "",
+    "Image": "https://localhost:51452/img/resident-evil/re-biohazard-200.png"
+  },
+  {
+    "Id": "re5-nightmare",
+    "MediaType": "Game",
+    "Title": "Resident Evil 5: Lost in Nightmares",
+    "Wiki": "",
+    "Image": "https://localhost:51452/img/resident-evil/re-biohazard-200.png"
+  },
+  {
+    "Id": "re6",
+    "MediaType": "Game",
+    "Title": "Resident Evil 6",
+    "Wiki": "",
+    "Image": "https://localhost:51452/img/resident-evil/re-biohazard-200.png"
+  },
+  {
+    "Id": "re7-biohazard",
+    "MediaType": "Game",
+    "Title": "Resident Evil 7: Biohazard",
+    "Wiki": "",
+    "Image": "https://localhost:51452/img/resident-evil/re-biohazard-200.png"
+  },
+  {
+    "Id": "re-umbrella-chronicles",
+    "MediaType": "Game",
+    "Title": "Resident Evil: The Umbrella Chronicles",
+    "Wiki": "",
+    "Image": "https://localhost:51452/img/resident-evil/re-biohazard-200.png"
+  },
+  {
+    "Id": "re-darkside-chronicles",
+    "MediaType": "Game",
+    "Title": "Resident Evil: The Darkside Chronicles",
+    "Wiki": "",
+    "Image": "https://localhost:51452/img/resident-evil/re-biohazard-200.png"
+  },
+  {
+    "Id": "re-darkside-chronicles",
+    "MediaType": "GraphicNovel",
+    "Title": "Resident Evil: The Darkside Chronicles",
+    "Wiki": "",
+    "Image": "https://localhost:51452/img/resident-evil/re-biohazard-200.png"
+  }
+]

@@ -1,0 +1,37 @@
+@using Storyline.WebApp.Common;
+@code {
+    [Parameter]
+    public IEnumerable<Models.Storyline.StoryEvent> StoryEvents { get; set; } = [];
+
+    [Parameter]
+    public Models.Storyline.StoryEvent? SelectedStoryEvent { get; set; } = null;
+
+    [Parameter]
+    public EventCallback<Models.Storyline.StoryEvent> OnStoryEventSelect { get; set; }
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+    }
+
+    protected void SelectStoryEvent(Models.Storyline.StoryEvent item)
+    {
+        this.SelectedStoryEvent = item;
+        this.OnStoryEventSelect.InvokeAsync(item);
+    }
+}
+
+<div class="event-timeline-selector">
+    @foreach (var e in this.StoryEvents)
+    {
+        string selectedItemClass = this.SelectedStoryEvent?.Id == e.Id ? "selected" : "";
+
+        <div class="event-item @selectedItemClass" @onclick="() => SelectStoryEvent(e)" title="@e.Title">
+            <i id="@e.Id"></i>
+            <div>
+                @e.Title<br/>
+                <div class="event-date">@Helper.DateHelper.TimeLineInfo(e.EventTimeStart, e.EventTimeEnd, isShort: false, showYearOnly: true)</div>
+            </div>
+        </div>
+    }
+</div>

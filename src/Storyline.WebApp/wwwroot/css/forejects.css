@@ -1,0 +1,40 @@
+
+
+
+@keyframes animX {
+    0% {
+        opacity: 0;
+        height: 0%;
+        width: 0%;
+    }
+
+    50% {
+        opacity: 0.85;
+        height: 100%;
+        width: 100%;
+    }
+
+    100% {
+        opacity: 0.2;
+        height: 0%;
+        width: 0%;
+    }
+}
+
+
+.foreject-spawn {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    position: absolute;
+}
+
+    .foreject-spawn .point {
+        background-color: rgb(240 240 240 / 50%);
+        border-radius: 50%;
+    }
+
+        .foreject-spawn .point.x {
+            animation-name: animX;
+            animation-timing-function: ease-in-out;
+        }

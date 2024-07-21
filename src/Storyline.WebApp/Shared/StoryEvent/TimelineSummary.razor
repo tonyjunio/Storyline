@@ -1,0 +1,67 @@
+@using Storyline.WebApp.Common;
+
+@code {
+    [Inject]
+    protected IJSRuntime? JS { get; set; }
+
+    [Parameter]
+    public IEnumerable<Models.Storyline.StoryEvent> StoryEvents { get; set; } = [];
+
+    [Parameter]
+    public Models.Storyline.StoryEvent? SelectedStoryEvent { get; set; }
+
+    [Parameter]
+    public EventCallback<Models.Storyline.StoryEvent> OnStoryEventSelect { get; set; }
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+    }
+
+    protected override Task OnAfterRenderAsync(bool firstRender)
+    {
+        return base.OnAfterRenderAsync(firstRender);
+    }
+
+    protected int[] GetYears()
+    {
+        IEnumerable<int> startYears = this.StoryEvents.Select(x => x.EventTimeStart.Year) ?? [];
+        IEnumerable<int> endYears = this.StoryEvents.Where(x => x.EventTimeEnd.HasValue).Select(x => x.EventTimeEnd!.Value.Year) ?? [];
+
+        return startYears.Concat(endYears).Distinct().OrderBy(x => x).ToArray();
+    }
+
+    protected void SelectStoryEvent(Models.Storyline.StoryEvent item)
+    {
+        this.SelectedStoryEvent = item;
+        this.OnStoryEventSelect.InvokeAsync(item);
+    }
+}
+
+@if (this.StoryEvents is not null)
+{
+    int[] years = this.GetYears();
+    <div class="timeline-summary hide">
+        <div class="ts-options">
+            <i class="fa fa-x fa-lg" title="Close Timeline Section" onclick="ToggleTimelineSummaryView();"></i>
+            <i class="fa fa-arrows-rotate fa-lg" title="Refresh Timeline" onclick="RenderTimelineSummary();"></i>
+        </div>
+        @foreach (int year in years)
+        {
+            Models.Storyline.StoryEvent[] events = this.StoryEvents.Where(x => x.EventTimeStart.Year == year).ToArray();
+            <div class="timeline-period" data-year="@year">
+                <div class="year">@year</div>
+                <div class="events">
+                    @foreach (var e in events)
+                    {
+                        int startYear = e.EventTimeStart.Year;
+                        int endYear = e.EventTimeEnd?.Year ?? startYear;
+                        string selectedItemClass = this.SelectedStoryEvent?.Id == e.Id ? "selected" : "";
+
+                        <span class="event-item @selectedItemClass" data-start-year="@startYear" data-end-year="@endYear" data-event-id="@e.Id" data-event-title="@e.Title" title="@e.Title" @onclick="() => SelectStoryEvent(e)">@e.Title</span>
+                    }
+                </div>
+            </div>
+        }
+    </div>
+}

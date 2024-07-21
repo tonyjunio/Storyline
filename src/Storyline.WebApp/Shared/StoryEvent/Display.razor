@@ -1,82 +1,34 @@
 ﻿@inherits DisplayBase
 
-<div style="
-    background-image: url(https://www.teamhitless.com/wp-content/uploads/2021/06/1718854918_preview_resident-evil-2-remake-ps4-eu-22jun18.png);
-    display: inline-block;
-    width: 420px;
-    height: 200px;
-    position: fixed;
-    top: -47px;
-    z-index: 0;
-    background-position: center;"></div>
-
-@if (this.StoryEvents != null)
+@if (this.Story is not null)
 {
-<div class="story-events">
-    @foreach (var story in this.StoryEvents.OrderBy(x => x.EventTimeStart))
-        {
-    <div class="event-backdrop" style="background-image:url(@story.BannerImage)">
-        <div class="event">
-            <button @onclick="@(() => EditStoryEvent(story))">
-                <i class="fa fa-pencil-alt fa-lg"></i>
-            </button>
-            <article>
-                <h2>@story.Title</h2>
-                <div class="event-time">@($"{story.EventTimeStart:MMMM yyyy}")@((story.EventTimeEnd.HasValue ? $" - {story.EventTimeEnd:MMMM yyyy}" : ""))</div>
-                <p class="summary">@story.Summary</p>
+    <PageTitle>@(this.SelectedStoryEvent is not null ? this.SelectedStoryEvent.Title : "")</PageTitle>
 
-                @if (story.CharacterTags != null)
-                            {
-                <div class="characters">
-                    @foreach (var entry in story.CharacterTags)
-                                    {
-                    <span class="character">@entry</span>
-                                    }
-                </div>
-                            }
-
-                @if (story.OrganizationTags != null)
-                            {
-                <div class="organizations">
-                    @foreach (var entry in story.OrganizationTags)
-                                    {
-                    <span class="character">@entry</span>
-                                    }
-                </div>
-                            }
-
-                @if (story.VirusTags != null)
-                            {
-                <div class="viruses">
-                    @foreach (var entry in story.VirusTags)
-                                    {
-                    <span class="character">@entry</span>
-                                    }
-                </div>
-                            }
-
-                @if (story.GameTags != null)
-                            {
-                <div class="viruses">
-                    @foreach (var entry in story.GameTags)
-                                    {
-                    <span class="character">@entry</span>
-                                    }
-                </div>
-                            }
-
-                @if (story.MovieTags != null)
-                            {
-                <div class="viruses">
-                    @foreach (var entry in story.MovieTags)
-                                    {
-                    <span class="character">@entry</span>
-                                    }
-                </div>
-                            }
-            </article>
+    <CascadingValue Value="SelectedStoryEvent">
+        <div class="story-header">
+            <img src="@this.Story.LogoImage" alt="@this.Story.Title" />
+            <h2>@this.Story.Title</h2>
         </div>
-    </div>
-        }
-</div>
+
+        <TimelineSummary StoryEvents="@this.Story.StoryEvents" SelectedStoryEvent="this.SelectedStoryEvent" OnStoryEventSelect="@(x => this.ChangeStoryEvent(x))"></TimelineSummary>
+
+        <div class="story-body">
+            <div class="content-one">
+
+                <div class="timeline-options">
+                    <i class="fa fa-timeline fa-lg" title="Toggle Timeline Section" onclick="ToggleTimelineSummaryView();"></i>
+                    <i class="fa fa-search fa-lg" title="Search Information"></i>
+                    <i class="fa fa-plus fa-lg" title="Add Story Event"></i>
+                </div>
+
+                <TimelineSelector StoryEvents="@this.Story.StoryEvents" SelectedStoryEvent="this.SelectedStoryEvent" OnStoryEventSelect="@(x => this.ChangeStoryEvent(x))"></TimelineSelector>
+            </div>
+            <div class="content-two">
+                @if (this.SelectedStoryEvent is not null)
+                {
+                    <TimelineDetails StoryEvent="@this.SelectedStoryEvent"></TimelineDetails>
+                }
+            </div>
+        </div>
+    </CascadingValue>
 }

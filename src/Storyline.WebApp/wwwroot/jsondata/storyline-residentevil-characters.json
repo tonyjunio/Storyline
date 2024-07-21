@@ -1,37 +1,240 @@
 ﻿[
   {
-    "code": "rebecca.c",
-    "name": "Rebecca Chambers",
-    "Biography": ""
+    "Id": "rebecca.c",
+    "Name": "Rebecca Chambers",
+    "Profile": "",
+    "Image": "https://localhost:51452/img/resident-evil/char-rebeccachambers-200.png",
+    "Wiki": "https://residentevil.fandom.com/wiki/Rebecca_Chambers"
   },
   {
-    "code": "chris.r",
-    "name": "Chris Redfield",
-    "Biography": ""
+    "Id": "chris.r",
+    "Name": "Chris Redfield",
+    "Profile": "",
+    "Image": "https://localhost:51452/img/resident-evil/char-chrisredfield-200.png",
+    "Wiki": "https://residentevil.fandom.com/wiki/Chris_Redfield"
   },
   {
-    "code": "jill.v",
-    "name": "Jill Valentine",
-    "Biography": ""
+    "Id": "jill.v",
+    "Name": "Jill Valentine",
+    "Profile": "",
+    "Image": "https://localhost:51452/img/resident-evil/char-jillvalentine-200.png",
+    "Wiki": "https://residentevil.fandom.com/wiki/Jill_Valentine"
   },
   {
-    "code": "leon.k",
-    "name": "Leon S. Kennedy",
-    "Biography": ""
+    "Id": "leon.k",
+    "Name": "Leon Kennedy",
+    "Profile": "",
+    "Image": "https://localhost:51452/img/resident-evil/char-leonkennedy-200.png",
+    "Wiki": "https://residentevil.fandom.com/wiki/Leon_Scott_Kennedy"
   },
   {
-    "code": "claire.r",
-    "name": "Claire Redfield",
-    "Biography": ""
+    "Id": "ada.w",
+    "Name": "Ada Wong",
+    "Profile": "",
+    "Image": "https://localhost:51452/img/resident-evil/char-adawong-220.png",
+    "Wiki": "https://residentevil.fandom.com/wiki/Ada_Wong"
   },
   {
-    "code": "barry.b",
-    "name": "Barry Burton",
-    "Biography": ""
+    "Id": "claire.r",
+    "Name": "Claire Redfield",
+    "Profile": "",
+    "Image": "https://localhost:51452/img/resident-evil/char-claireredfield-200.png",
+    "Wiki": "https://residentevil.fandom.com/wiki/Claire_Redfield"
   },
   {
-    "code": "albert.w",
-    "name": "Albert Wesker",
-    "Biography": ""
+    "Id": "barry.b",
+    "Name": "Barry Burton",
+    "Profile": "",
+    "Image": "https://localhost:51452/img/resident-evil/char-barryburton-200.png",
+    "Wiki": "https://residentevil.fandom.com/wiki/Barry_Burton"
+  },
+  {
+    "Id": "sheva.a",
+    "Name": "Sheva Alomar",
+    "Profile": "",
+    "Image": "https://localhost:51452/img/resident-evil/char-shevaalomar-200.png",
+    "Wiki": "https://residentevil.fandom.com/wiki/Sheva_Alomar"
+  },
+  {
+    "Id": "albert.w",
+    "Name": "Albert Wesker",
+    "Profile": "",
+    "Image": "https://localhost:51452/img/resident-evil/char-albertwesker-200.png",
+    "Wiki": "https://residentevil.fandom.com/wiki/Albert_Wesker"
+  },
+  {
+    "Id": "ingrid.h",
+    "Name": "Ingrid Hunnigan",
+    "Profile": "",
+    "Image": "https://localhost:51452/img/resident-evil/char-ingridhunnigan-200.png",
+    "Wiki": "https://residentevil.fandom.com/wiki/Ingrid_Hunnigan"
+  },
+  {
+    "Id": "svetlana.b",
+    "Name": "Svetlana Belikova",
+    "Profile": "",
+    "Image": "https://localhost:51452/img/resident-evil/char-svetlanabelikova-200.jpg",
+    "Wiki": "https://residentevil.fandom.com/wiki/Svetlana_Belikova"
+  },
+  {
+    "Id": "william.b",
+    "Name": "William Birkin",
+    "Profile": "",
+    "Image": "https://localhost:51452/img/resident-evil/char-williambirkin-200.png",
+    "Wiki": "https://residentevil.fandom.com/wiki/William_Birkin"
+  },
+  {
+    "Id": "sherry.b",
+    "Name": "Sherry Birkin",
+    "Profile": "",
+    "Image": "https://localhost:51452/img/resident-evil/char-sherrybirkin-200.png",
+    "Wiki": "https://residentevil.fandom.com/wiki/Sherry_Birkin"
+  },
+  {
+    "Id": "jake.m",
+    "Name": "Jake Muller",
+    "Profile": "",
+    "Image": "https://localhost:51452/img/resident-evil/char-jakemuller-200.png",
+    "Wiki": "https://residentevil.fandom.com/wiki/Jake_Muller"
+  },
+  {
+    "Id": "helena.h",
+    "Name": "Helena Harper",
+    "Profile": "",
+    "Image": "https://localhost:51452/img/resident-evil/char-helenaharper-200.png",
+    "Wiki": "https://residentevil.fandom.com/wiki/Helena_Harper"
+  },
+  {
+    "Id": "lisa.t",
+    "Name": "Lisa Trevor",
+    "Profile": "",
+    "Image": "https://localhost:51452/img/resident-evil/char-holder-200.jpg",
+    "Wiki": "https://residentevil.fandom.com/wiki/Lisa_Trevor"
+  },
+  {
+    "Id": "kevin.d",
+    "Name": "Kevin Dooley",
+    "Profile": "",
+    "Image": "https://localhost:51452/img/resident-evil/char-holder-200.jpg",
+    "Wiki": "https://residentevil.fandom.com/wiki/Kevin_Dooley"
+  },
+  {
+    "Id": "joseph.f",
+    "Name": "Joseph Frost",
+    "Profile": "",
+    "Image": "https://localhost:51452/img/resident-evil/char-holder-200.jpg",
+    "Wiki": "https://residentevil.fandom.com/wiki/Joseph_Frost"
+  },
+  {
+    "Id": "shen.m",
+    "Name": "Shen Mei",
+    "Profile": "",
+    "Image": "https://localhost:51452/img/resident-evil/char-shenmei-200.png",
+    "Wiki": "https://residentevil.fandom.com/wiki/Shenmei"
+  },
+  {
+    "Id": "agent.jason",
+    "Name": "Wilson",
+    "Profile": "",
+    "Image": "https://localhost:51452/img/resident-evil/char-agentjason-200.png",
+    "Wiki": "https://residentevil.fandom.com/wiki/Wilson"
+  },
+  {
+    "Id": "secdef.wilson",
+    "Name": "Jason",
+    "Profile": "",
+    "Image": "https://localhost:51452/img/resident-evil/char-secdefwilson-220.png",
+    "Wiki": "https://residentevil.fandom.com/wiki/Jason"
+  },
+  {
+    "Id": "javier.h",
+    "Name": "Javier Hidalgo",
+    "Profile": "",
+    "Image": "https://localhost:51452/img/resident-evil/char-holder-200.jpg",
+    "Wiki": "https://residentevil.fandom.com/wiki/Javier_Hidalgo"
+  },
+  {
+    "Id": "jack.k",
+    "Name": "Jack Krauser",
+    "Profile": "",
+    "Image": "https://localhost:51452/img/resident-evil/char-holder-200.jpg",
+    "Wiki": "https://residentevil.fandom.com/wiki/Jack_Krauser"
+  },
+  {
+    "Id": "glen.a",
+    "Name": "Glen Arias",
+    "Profile": "",
+    "Image": "https://localhost:51452/img/resident-evil/char-glenarias-200.png",
+    "Wiki": "https://residentevil.fandom.com/wiki/Glenn_Arias"
+  },
+  {
+    "Id": "maria.g",
+    "Name": "Maria Gómez",
+    "Profile": "",
+    "Image": "https://localhost:51452/img/resident-evil/char-mariagomezbow-200.png",
+    "Wiki": "https://residentevil.fandom.com/wiki/Mar%C3%ADa_G%C3%B3mez"
+  },
+  {
+    "Id": "diego.g",
+    "Name": "Diego Gómez",
+    "Profile": "",
+    "Image": "https://localhost:51452/img/resident-evil/char-diegogomezbow-200.png",
+    "Wiki": "https://residentevil.fandom.com/wiki/Diego_G%C3%B3mez"
+  },
+  {
+    "Id": "derek.s",
+    "Name": "Derek Simmons",
+    "Profile": "",
+    "Image": "https://localhost:51452/img/resident-evil/char-dereksimmons-200.jpg",
+    "Wiki": "https://residentevil.fandom.com/wiki/Derek_C._Simmons"
+  },
+  {
+    "Id": "e001",
+    "Name": "E-001 (Eveline)",
+    "Profile": "",
+    "Image": "https://localhost:51452/img/resident-evil/char-e001-200.jpg",
+    "Wiki": "https://residentevil.fandom.com/wiki/Eveline"
+  },
+  {
+    "Id": "morganlandsdale",
+    "Name": "Morgan Lansdale",
+    "Profile": "",
+    "Image": "https://localhost:51452/img/resident-evil/char-morganlansdale-200.png",
+    "Wiki": "https://residentevil.fandom.com/wiki/Morgan_Lansdale"
+  },
+  {
+    "Id": "mothermiranda",
+    "Name": "Mother Miranda",
+    "Profile": "",
+    "Image": "https://localhost:51452/img/resident-evil/char-mothermiranda-200.png",
+    "Wiki": "https://residentevil.fandom.com/wiki/Miranda"
+  },
+  {
+    "Id": "ethan.w",
+    "Name": "Ethan Winters",
+    "Profile": "",
+    "Image": "https://localhost:51452/img/resident-evil/char-ethanwinters-200.png",
+    "Wiki": "https://residentevil.fandom.com/wiki/Ethan_Winters"
+  },
+  {
+    "Id": "rosemary.w",
+    "Name": "Rosemary Winters",
+    "Profile": "",
+    "Image": "https://localhost:51452/img/resident-evil/char-rosemarywinters-200.png",
+    "Wiki": "https://residentevil.fandom.com/wiki/Rosemary_Winters"
+  },
+  {
+    "Id": "dylan.b",
+    "Name": "Dylan Blake",
+    "Profile": "",
+    "Image": "https://localhost:51452/img/resident-evil/char-holder-200.jpg",
+    "Wiki": "https://residentevil.fandom.com/wiki/Dylan_Blake"
+  },
+  {
+    "Id": "antonio.t",
+    "Name": "Antonio Taylor",
+    "Profile": "",
+    "Image": "https://localhost:51452/img/resident-evil/char-holder-200.jpg",
+    "Wiki": "https://residentevil.fandom.com/wiki/Antonio_Taylor"
   }
 ]

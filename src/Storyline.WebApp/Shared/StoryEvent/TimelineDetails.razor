@@ -1,0 +1,101 @@
+@using Storyline.WebApp.Common;
+@code {
+
+    [Parameter]
+    public Models.Storyline.StoryEvent? StoryEvent { get; set; }
+
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+    }
+}
+
+@if (this.StoryEvent is not null)
+{
+    var item = this.StoryEvent;
+    <div class="event-details">
+        <div class="summary rad-mask event-bg" style="background-image: var(--summary-radial-gradient), var(--summary-linear-gradient), url('@item.Image');">
+            <div>
+                <h3>
+                    @item.Title
+                    <span class="event-date">@Helper.DateHelper.TimeLineInfo(this.StoryEvent.EventTimeStart, this.StoryEvent.EventTimeEnd) / @this.StoryEvent.Location</span>
+                </h3>
+                <div>@((MarkupString)item.Summary)</div>
+                <a class="wiki-link" href="@this.StoryEvent.Wiki" target="_blank">Read More</a>
+            </div>
+        </div>
+        <div class="moreinfo">
+            <div>
+                @if (item.Characters?.Any() ?? false)
+                {
+                    <h5>Characters</h5>
+                    <ul class="ref-list">
+                        @foreach (var i in item.Characters)
+                        {
+                            <li class="ref-bg" style="background-image: var(--moreinfo-gradient), url('@i.Image');">
+                                <a href="@i.Wiki" target="_blank">@i.Name</a>
+                            </li>
+                        }
+                    </ul>
+                }
+
+                @if (item.Organizations?.Any() ?? false)
+                {
+                    <h5>Organizations</h5>
+                    <ul class="ref-list">
+                        @foreach (var i in item.Organizations)
+                        {
+                            <li class="ref-bg" style="background-image: var(--moreinfo-gradient), url('@i.Image');">
+                                <a href="@i.Wiki" target="_blank">@i.Name</a>
+                            </li>
+                        }
+                    </ul>
+                }
+
+                @if (item.Viruses?.Any() ?? false)
+                {
+                    <h5>Viruses</h5>
+                    <ul class="ref-list">
+                        @foreach (var i in item.Viruses)
+                        {
+                            <li class="ref-bg" style="background-image: var(--moreinfo-gradient), url('@i.Image');">
+                                <a href="@i.Wiki" target="_blank">@i.Name</a>
+                            </li>
+                        }
+                    </ul>
+                }
+
+                @if (item.Games?.Any() ?? false)
+                {
+                    <h5>Games</h5>
+                    <ul class="ref-list">
+                        @foreach (var i in item.Games)
+                        {
+                            <li class="ref-bg" style="background-image: var(--moreinfo-gradient), url('@i.Image');">
+                                <a href="@i.Wiki" target="_blank">@i.Title</a>
+                            </li>
+                        }
+                    </ul>
+                }
+
+                @if (item.Movies?.Any() ?? false)
+                {
+                    <h5>Movies</h5>
+                    <ul class="ref-list">
+                        @foreach (var i in item.Movies)
+                        {
+                            <li class="ref-bg" style="background-image: var(--moreinfo-gradient), url('@i.Image');">
+                                <a href="@i.Wiki" target="_blank">@i.Title</a>
+                            </li>
+                        }
+                    </ul>
+                }
+            </div>
+        </div>
+    </div>
+}
+else
+{
+    <div>?</div>
+}

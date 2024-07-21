@@ -1,0 +1,182 @@
+﻿[
+  {
+    "Id": "umbrella",
+    "EntityType": "Organization",
+    "Name": "Umbrella Corp.",
+    "Profile": "",
+    "Wiki": "https://residentevil.fandom.com/wiki/Umbrella_Corporation",
+    "Image": "https://localhost:51452/img/resident-evil/org-umbrella-corp-200.jpg",
+    "Founded": null
+  },
+  {
+    "Id": "tricell",
+    "EntityType": "Organization",
+    "Name": "Tricell",
+    "Profile": "",
+    "Wiki": "https://residentevil.fandom.com/wiki/TRICELL",
+    "Image": "https://localhost:51452/img/resident-evil/org-tricell-200.jpg",
+    "Founded": null
+  },
+  {
+    "Id": "whilpharma",
+    "EntityType": "Organization",
+    "Name": "WhilPharma",
+    "Profile": "",
+    "Wiki": "https://residentevil.fandom.com/wiki/WP_Corporation",
+    "Image": "https://localhost:51452/img/resident-evil/org-wilpharma-200.jpg",
+    "Founded": null
+  },
+  {
+    "Id": "terrasave",
+    "EntityType": "Organization",
+    "Name": "Terrasave",
+    "Profile": "",
+    "Wiki": "https://residentevil.fandom.com/wiki/TerraSave",
+    "Image": "https://localhost:51452/img/resident-evil/org-terrasave-200.jpg",
+    "Founded": null
+  },
+  {
+    "Id": "stars",
+    "EntityType": "Organization",
+    "Name": "S.T.A.R.S",
+    "Profile": "",
+    "Wiki": "https://residentevil.fandom.com/wiki/Special_Tactics_and_Rescue_Service",
+    "Image": "https://localhost:51452/img/resident-evil/org-stars01-200.jpg",
+    "Founded": null
+  },
+  {
+    "Id": "stars-bravo",
+    "EntityType": "Organization",
+    "Name": "S.T.A.R.S Bravo",
+    "Profile": "",
+    "Wiki": "https://residentevil.fandom.com/wiki/Special_Tactics_and_Rescue_Service",
+    "Image": "https://localhost:51452/img/resident-evil/org-stars01-200.jpg",
+    "Founded": null
+  },
+  {
+    "Id": "bsaa",
+    "EntityType": "Organization",
+    "Name": "BSAA",
+    "Profile": "",
+    "Wiki": "https://residentevil.fandom.com/wiki/Bioterrorism_Security_Assessment_Alliance",
+    "Image": "https://localhost:51452/img/resident-evil/org-bsaa-200.jpg",
+    "Founded": null
+  },
+  {
+    "Id": "neoumbrella",
+    "EntityType": "Organization",
+    "Name": "Neo-Umbrella",
+    "Profile": "",
+    "Wiki": "https://residentevil.fandom.com/wiki/Neo_Umbrella",
+    "Image": "https://localhost:51452/img/resident-evil/org-neoumbrella-200.jpg",
+    "Founded": null
+  },
+  {
+    "Id": "blueumbrella",
+    "EntityType": "Organization",
+    "Name": "Blue Umbrella",
+    "Profile": "",
+    "Wiki": "https://residentevil.fandom.com/wiki/Blue_Umbrella",
+    "Image": "https://localhost:51452/img/resident-evil/org-blueumbrella-200.png",
+    "Founded": "2007"
+  },
+  {
+    "Id": "losilluminados",
+    "EntityType": "Organization",
+    "Name": "Los Illuminados",
+    "Profile": "",
+    "Wiki": "https://residentevil.fandom.com/wiki/Los_Iluminados",
+    "Image": "https://localhost:51452/img/resident-evil/org-losilluminados-200.png",
+    "Founded": null
+  },
+  {
+    "Id": "sacredsnakes",
+    "EntityType": "Organization",
+    "Name": "The Sacred Snakes",
+    "Profile": "",
+    "Wiki": "https://residentevil.fandom.com/wiki/Sacred_Snakes",
+    "Image": "https://localhost:51452/img/resident-evil/org-sacredserpent-200.jpg",
+    "Founded": null
+  },
+  {
+    "Id": "thefamily",
+    "EntityType": "Organization",
+    "Name": "The Family",
+    "Profile": "",
+    "Wiki": "https://residentevil.fandom.com/wiki/The_Family",
+    "Image": "https://localhost:51452/img/resident-evil/org-sacredserpent-200.jpg",
+    "Founded": null
+  },
+  {
+    "Id": "theconnections",
+    "EntityType": "Organization",
+    "Name": "The Connections",
+    "Profile": "",
+    "Wiki": "https://residentevil.fandom.com/wiki/The_Connections",
+    "Image": "https://localhost:51452/img/resident-evil/org-sacredserpent-200.jpg",
+    "Founded": null
+  },
+  {
+    "Id": "usgovt",
+    "EntityType": "Organization",
+    "Name": "US Government",
+    "Profile": "",
+    "Wiki": "https://residentevil.fandom.com/wiki/United_States_Army",
+    "Image": "https://localhost:51452/img/resident-evil/org-usgovt-200.jpg",
+    "Founded": null
+  },
+  {
+    "Id": "usstratcom",
+    "EntityType": "Organization",
+    "Name": "US Stratcom/AUPIT",
+    "Profile": "",
+    "Wiki": "https://residentevil.fandom.com/wiki/United_States_Strategic_Command",
+    "Image": "https://localhost:51452/img/resident-evil/org-usstratcom-200.jpg",
+    "Founded": null
+  },
+  {
+    "Id": "maddogs",
+    "EntityType": "Organization",
+    "Name": "Mad Dogs",
+    "Profile": "",
+    "Wiki": "https://residentevil.fandom.com/wiki/Mad_Dogs",
+    "Image": "https://localhost:51452/img/resident-evil/org-maddogs-200.jpg",
+    "Founded": null
+  },
+  {
+    "Id": "nypd",
+    "EntityType": "Organization",
+    "Name": "NYPD",
+    "Profile": "",
+    "Wiki": "https://residentevil.fandom.com/wiki/Mad_Dogs",
+    "Image": "https://localhost:51452/img/resident-evil/char-holder-200.jpg",
+    "Founded": null
+  },
+  {
+    "Id": "fourhouses",
+    "EntityType": "Organization",
+    "Name": "Four Houses",
+    "Profile": "",
+    "Wiki": "https://residentevil.fandom.com/wiki/Four_Houses",
+    "Image": "https://localhost:51452/img/resident-evil/org-fourhouses-200.jpg",
+    "Founded": null
+  },
+  {
+    "Id": "ilveltro",
+    "EntityType": "Organization",
+    "Name": "Il Veltro",
+    "Profile": "",
+    "Wiki": "https://residentevil.fandom.com/wiki/Il_Veltro",
+    "Image": "https://localhost:51452/img/resident-evil/org-ilveltro-200.jpg",
+    "Founded": null
+  },
+  {
+    "Id": "fbc",
+    "EntityType": "Organization",
+    "Name": "Federal Bioterrorism Commission",
+    "Profile": "",
+    "Wiki": "https://residentevil.fandom.com/wiki/Federal_Bioterrorism_Commission",
+    "Image": "https://localhost:51452/img/resident-evil/org-fbc-200.jpg",
+    "Founded": null
+  }
+]

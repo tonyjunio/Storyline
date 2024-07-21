@@ -1,59 +1,59 @@
 ﻿using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.JSInterop;
 using Storyline.WebApp.Shared.StoryEvent;
-using System;
-using System.Collections.Generic;
-using System.Net.Http;
-using System.Net.Http.Json;
-using System.Threading.Tasks;
+using Storyline.WebApp.Service;
 
-namespace Storyline.WebApp.Pages
+namespace Storyline.WebApp.Pages;
+
+public class IndexBase : ComponentBase
 {
-    public class IndexBase : ComponentBase
+    [Inject]
+    protected IJSRuntime? JS { get; set; }
+
+    [Inject]
+    protected IWebHostEnvironment? HostEnv { get; set; }
+
+    [Inject]
+    protected IStorylineService? StorylineService { get; set; }
+
+    protected Models.Storyline.Story Story { get; set; } = new();
+
+    protected string ErrMsg { get; set; } = "";
+
+    public AddEdit? RefAddEditEventForm { get; set; }
+
+    public Display? RefEventsDisplay { get; set; }
+
+    protected override async Task OnInitializedAsync()
     {
-        [Inject]
-        protected IJSRuntime JS { get; set; }
+        await LoadDataAsync();
+    }
 
-        [Inject]
-        protected HttpClient Http { get; set; }
-
-        [Inject]
-        protected IWebHostEnvironment HostEnv { get; set; }
-
-        [Inject]
-        protected NavigationManager Navigator { get; set; }
-
-        protected IEnumerable<Models.StoryEvent> StoryEvents { get; set; }
-        protected string ErrMsg { get; set; }
-
-        public Shared.StoryEvent.AddEdit RefAddEditEventForm { get; set; }
-
-        public Shared.StoryEvent.Display RefEventsDisplay { get; set; }
-
-        protected override async Task OnInitializedAsync()
+    public async Task LoadDataAsync()
+    {
+        try
         {
-            this.Http.BaseAddress = new Uri(Navigator.BaseUri);
-            await this.LoadDataAsync();
-        }
-
-        public async Task LoadDataAsync()
-        {
-            try
+            if (StorylineService is not null)
             {
-                this.StoryEvents = await Http.GetFromJsonAsync<IEnumerable<Models.StoryEvent>>("jsondata/storyline-residentevil.json");
-            }
-            catch (Exception ex)
-            {
-                ErrMsg = ex.Message + " | " + ex.StackTrace;
+                this.Story = await StorylineService.LoadStoryAsync();
             }
         }
-
-        protected void CreateStoryEvent()
+        catch (Exception ex)
         {
-            this.RefAddEditEventForm.SetSelected(new());
+            ErrMsg = ex.Message + " | " + ex.StackTrace;
+        }
+    }
 
-            Task.Run(async () => await this.JS.InvokeVoidAsync("ToggleMainOffCanvas"));
+    /// <summary>
+    /// TODO: When adding from Create modal.
+    /// </summary>
+    protected void CreateStoryEvent()
+    {
+        RefAddEditEventForm.SetSelected(new());
+
+        if (JS is not null)
+        {
+            Task.Run(async () => await JS.InvokeVoidAsync("ToggleMainOffCanvas"));
         }
     }
 }
