@@ -1,8 +1,8 @@
 ﻿@page "/"
 @inherits IndexBase
 
-<CascadingValue Name="RefAddEditForm" Value="this.RefAddEditEventForm">
-    <CascadingValue Name="RefEventsDisplay" Value="this.RefEventsDisplay">
+<CascadingValue Name="RefAddEditForm" Value="RefAddEditEventForm">
+    <CascadingValue Name="RefEventsDisplay" Value="RefEventsDisplay">
 
         <div class="top-menu">
             <i class="fa fa-regular fa-lightbulb m-2"></i>
@@ -19,6 +19,6 @@
             </div>
         </div>
 
-        <Storyline.WebApp.Shared.StoryEvent.Display @ref="RefEventsDisplay" Story="this.Story"></Storyline.WebApp.Shared.StoryEvent.Display>
+        <Storyline.WebApp.Shared.StoryEvent.Display @ref="RefEventsDisplay" Story="Story"></Storyline.WebApp.Shared.StoryEvent.Display>
     </CascadingValue>
 </CascadingValue>

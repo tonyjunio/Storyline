@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
-using System.Threading.Tasks;
 using Storyline.WebApp.Shared.StoryEvent;
 using Storyline.WebApp.Service;
 
@@ -9,32 +8,35 @@ namespace Storyline.WebApp.Pages;
 public class IndexBase : ComponentBase
 {
     [Inject]
-    protected IJSRuntime JS { get; set; }
+    protected IJSRuntime? JS { get; set; }
 
     [Inject]
-    protected IWebHostEnvironment HostEnv { get; set; }
+    protected IWebHostEnvironment? HostEnv { get; set; }
 
     [Inject]
-    protected IStorylineService StorylineService { get; set; }
+    protected IStorylineService? StorylineService { get; set; }
 
-    protected Models.Storyline.Story Story { get; set; }
+    protected Models.Storyline.Story Story { get; set; } = new();
 
-    protected string ErrMsg { get; set; }
+    protected string ErrMsg { get; set; } = "";
 
-    public AddEdit RefAddEditEventForm { get; set; }
+    public AddEdit? RefAddEditEventForm { get; set; }
 
-    public Display RefEventsDisplay { get; set; }
+    public Display? RefEventsDisplay { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
-        await this.LoadDataAsync();
+        await LoadDataAsync();
     }
 
     public async Task LoadDataAsync()
     {
         try
         {
-            this.Story = await this.StorylineService.LoadStoryAsync();
+            if (StorylineService is not null)
+            {
+                this.Story = await StorylineService.LoadStoryAsync();
+            }
         }
         catch (Exception ex)
         {
@@ -42,10 +44,16 @@ public class IndexBase : ComponentBase
         }
     }
 
+    /// <summary>
+    /// TODO: When adding from Create modal.
+    /// </summary>
     protected void CreateStoryEvent()
     {
-        this.RefAddEditEventForm.SetSelected(new());
+        RefAddEditEventForm.SetSelected(new());
 
-        Task.Run(async () => await this.JS.InvokeVoidAsync("ToggleMainOffCanvas"));
+        if (JS is not null)
+        {
+            Task.Run(async () => await JS.InvokeVoidAsync("ToggleMainOffCanvas"));
+        }
     }
 }
