@@ -14,8 +14,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="..\..\configuration\appsettings.Development.json" Link="appsettings.Development.json" />
-    <Content Include="..\..\configuration\appsettings.json" Link="appsettings.json" />
+    <Content Include="..\..\configuration\appsettings.Development.json" Link="appsettings.Development.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\configuration\appsettings.json" Link="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>
